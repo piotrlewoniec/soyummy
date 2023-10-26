@@ -13,9 +13,9 @@ jobs:
 
       - name: Install, lint, build 🔧
         run: |
-          npm install --prefix fronted/
-          npm run lint:js --prefix fronted/
-          npm run build --prefix fronted/
+          npm install --prefix frontend/
+          npm run lint:js --prefix frontend/
+          npm run build --prefix frontend/
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
