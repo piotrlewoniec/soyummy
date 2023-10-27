@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/soyummy/static/css/main.777dfafa.css",
-    "main.js": "/soyummy/static/js/main.71fa2897.js",
+    "main.css": "/soyummy/static/css/main.1184cb57.css",
+    "main.js": "/soyummy/static/js/main.f33a202a.js",
     "static/media/wellcomePage-desktop.png": "/soyummy/static/media/wellcomePage-desktop.adc7abf378fc81c02ea1.png",
     "static/media/wellcomePage-tablet.png": "/soyummy/static/media/wellcomePage-tablet.aee07e6990b637f0d69c.png",
     "static/media/wellcomePage-mobile.png": "/soyummy/static/media/wellcomePage-mobile.02d450f51af2e2f3c4b1.png",
     "static/media/HeroMain.webp": "/soyummy/static/media/HeroMain.32c6c25879c4c54a8b92.webp",
     "static/media/spinach.png": "/soyummy/static/media/spinach.91fb3299601622554925.png",
     "index.html": "/soyummy/index.html",
-    "main.777dfafa.css.map": "/soyummy/static/css/main.777dfafa.css.map",
-    "main.71fa2897.js.map": "/soyummy/static/js/main.71fa2897.js.map"
+    "main.1184cb57.css.map": "/soyummy/static/css/main.1184cb57.css.map",
+    "main.f33a202a.js.map": "/soyummy/static/js/main.f33a202a.js.map"
   },
   "entrypoints": [
-    "static/css/main.777dfafa.css",
-    "static/js/main.71fa2897.js"
+    "static/css/main.1184cb57.css",
+    "static/js/main.f33a202a.js"
   ]
 }
