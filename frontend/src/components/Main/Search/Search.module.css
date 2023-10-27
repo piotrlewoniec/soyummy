@@ -1,0 +1,59 @@
+@media (max-width: 767px) {
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media (min-width: 1024px) {
+  .divFlex {
+    margin-top: 200px;
+    margin-left: 90px;
+    width: 450px;
+  }
+
+  .soYummy {
+    color: black;
+    font-size: 100px;
+    margin-bottom: 30px;
+  }
+
+  .so {
+    color: #8baa36;
+  }
+
+  .text {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .input {
+    height: 40px;
+    margin-left: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+
+  .button {
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    border: none;
+    outline: none;
+    background: black;
+    border-radius: 24px 44px;
+    padding: 10px;
+    width: 161px;
+  }
+
+  .border {
+    height: 71px;
+    width: 400px;
+    background-color: transparent;
+    color: green;
+    border-radius: 24px 44px;
+    border: 1px solid green;
+    display: flex;
+    justify-content: space-between;
+  }
+}
