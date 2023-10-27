@@ -1,0 +1,27 @@
+@media (max-width: 767px) {
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media (min-width: 1024px) {
+  .seeRecipe {
+    /* border: 2px solid black; */
+    padding: 20px;
+    width: 278px;
+    height: 94px;
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 400px;
+    margin-left: 300px;
+  }
+
+  .span {
+    color: #8baa36;
+  }
+
+  .see {
+    margin-left: 140px;
+    margin-top: 10px;
+  }
+}
