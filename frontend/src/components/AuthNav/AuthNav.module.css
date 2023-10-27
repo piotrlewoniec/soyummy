@@ -1,0 +1,95 @@
+.authContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  transition: background-image 0.5s ease; /* Efekt przejścia na zmianę obrazu tła */
+}
+
+/* Obraz tła na urządzeniach mobilnych */
+@media (max-width: 767px) {
+  .authContainer {
+    background-image: url('/assets/images/wellcomePage-mobile.png');
+  }
+}
+
+/* Obraz tła na tabletach */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .authContainer {
+    background-image: url('/assets/images/wellcomePage-tablet.png');
+  }
+}
+
+/* Obraz tła na komputerach */
+@media (min-width: 1024px) {
+  .authContainer {
+    background-image: url('/assets/images/wellcomePage-desktop.png');
+  }
+}
+
+.authContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.logoSvg {
+  width: 54px;
+  height: 54px;
+  background: #8baa36;
+  border-radius: 12px;
+  fill: #fafafa;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.authButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.diagonalButton {
+  background: transparent; /* Ustawienie tła na przeźroczyste */
+  border: 2px solid #fafafa;
+  border-radius: 12px;
+  color: #fff;
+  width: 95px;
+  height: 45px;
+  padding: 10px;
+  margin-right: 10px; /* Dodanie odstępu po prawej stronie przycisku */
+  transform: skew(20deg);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.textButton {
+  transform: skew(
+    -20deg
+  ); /* Przeciwna transformacja, aby zniwelować efekt na tekście */
+  display: inline-block;
+}
+.diagonalButton:hover {
+  background: #8baa36; /* Kolor tła po najechaniu myszą */
+  border: none;
+}

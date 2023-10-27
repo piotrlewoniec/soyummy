@@ -1,0 +1,9 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Dostosuj kolor tła według potrzeb */
+  font-family: Arial, sans-serif; /* Dostosuj czcionkę według potrzeb */
+}
