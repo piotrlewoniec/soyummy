@@ -7,16 +7,13 @@ import { SigninPage } from '../pages/SigninPage/SigninPage';
 
 export const App = () => {
   return (
-    <div className={styles.appContainer}>
+    <div>
       <Routes>
         <Route path="/" element={<WelcomePage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/signin" element={<SigninPage />} />
-         <Route path="/main" element={<Main />} />
-
+        <Route path="/main" element={<Main />} />
       </Routes>
     </div>
   );
 };
-
-
