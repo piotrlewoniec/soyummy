@@ -1,3 +1,79 @@
+--- In short (see below long Long description)
+
+a) Simple project (SP) - komponentow mniej niz 10-15
+
+b) Intermediate project (IP) - pojawiają się strony
+
+c) Advanced Project (AP) - pojawiają się features
+
+- assets (Intermediate Project) all images, css files, font files, etc. anything
+  that isn’t code related will be stored in this folder.
+
+- components (Simple project) in the simple folder structure (Intermediate
+  project) ui folder which contains all our UI components like buttons, modals,
+  cards, etc. form folder for form specific controls like checkboxes, inputs,
+  date pickers, etc.
+
+- config store environment variables in config.js
+
+- context (Intermediate Project) context files that are used across multiple
+  pages
+
+- data (Intermediate Project) JSON files(store items, theme information, etc)can
+  also store a file that contains global constant variables.
+
+- features (Advanced Project) grouping by feature. can copy of all the folders
+  inside the src folder (other than the features folder obviously) and an
+  index.js file. This means that within your feature all your code can be
+  organized by type (context, hook, etc.) while still be collocated together.
+
+- hooks (Simple project) every single custom hook (Intermediate Project) store
+  the global hooks that are used across multiple pages. all page specific hooks
+  are stored in the pages folder.
+
+- layouts (Advanced Project) sidebar, navbar, container, etc. header footer
+
+- lib (Advanced Project) different libraries in project. For example axios
+  library
+
+- middleware This folder consists of middle ware that allows for side effects in
+  the application. It is used when we are using reduce with it. Here we keep all
+  our custom middle ware.
+
+- pages (Intermediate Project) one folder for each page in your application.
+  Inside of those page specific folders should be a single root file that is
+  your page (generally index.js) alongside all the files that are only
+  applicable to that page. For example in the above image we have a Login page
+  which contains the root file index.js, a component called LoginForm, and a
+  custom hook called useLogin. This component and hook are only ever used in the
+  Login page so they are stored with this page instead of being stored in the
+  global hooks or components folders.
+
+(Advanced Project) now only contains one file per page and the reason for this
+is that all the logic for the features on the pages are in the features folder.
+
+- routes This folder consists of all routes of the application. It consists of
+  private, protected, and all types of routes. Here we can even call our
+  sub-route.
+
+- services (Advanced project) contains all your code for interfacing with any
+  external API.
+
+- utils (Intermediate projects) all utility functions such as formatters. some
+  repeatedly used functions that are commonly used in the project. It should
+  contain only common js functions & objects like dropdown options, regex
+  condition, data formatting, etc.
+
+- \_\_tests\_\_ (Simple project) The final folder in this structure is for all
+  your test code. Generally on smaller projects like this I find that people
+  tend to store all their tests in one folder (that is if they write any tests
+  at all). Overall, I think this is fine for smaller projects, but again this is
+  something I would change as your project grows in size.
+
+---
+
+Long description
+
 Outside the src folder your files will be very project dependent so there is no
 good universal structure to apply since it will depend heavily on your project
 and the libraries you use.
@@ -300,75 +376,3 @@ https://www.youtube.com/watch?v=UUga4-z7b6s
 https://medium.com/@kthamodaran/react-8-best-practices-folder-structure-5dbda48a69e
 https://www.xenonstack.com/insights/reactjs-project-structure
 https://profy.dev/article/react-folder-structure
-
---- In shortcut
-
-a) Simple project (SP) - komponentow mniej niz 10-15
-
-b) Intermediate project (IP) - pojawiają się strony
-
-c) Advanced Project (AP) - pojawiają się features
-
-- assets (Intermediate Project) all images, css files, font files, etc. anything
-  that isn’t code related will be stored in this folder.
-
-- components (Simple project) in the simple folder structure (Intermediate
-  project) ui folder which contains all our UI components like buttons, modals,
-  cards, etc. form folder for form specific controls like checkboxes, inputs,
-  date pickers, etc.
-
-- config store environment variables in config.js
-
-- context (Intermediate Project) context files that are used across multiple
-  pages
-
-- data (Intermediate Project) JSON files(store items, theme information, etc)can
-  also store a file that contains global constant variables.
-
-- features (Advanced Project) grouping by feature. can copy of all the folders
-  inside the src folder (other than the features folder obviously) and an
-  index.js file. This means that within your feature all your code can be
-  organized by type (context, hook, etc.) while still be collocated together.
-
-- hooks (Simple project) every single custom hook (Intermediate Project) store
-  the global hooks that are used across multiple pages. all page specific hooks
-  are stored in the pages folder.
-
-- layouts (Advanced Project) sidebar, navbar, container, etc. header footer
-
-- lib (Advanced Project) different libraries in project. For example axios
-  library
-
-- middleware This folder consists of middle ware that allows for side effects in
-  the application. It is used when we are using reduce with it. Here we keep all
-  our custom middle ware.
-
-- pages (Intermediate Project) one folder for each page in your application.
-  Inside of those page specific folders should be a single root file that is
-  your page (generally index.js) alongside all the files that are only
-  applicable to that page. For example in the above image we have a Login page
-  which contains the root file index.js, a component called LoginForm, and a
-  custom hook called useLogin. This component and hook are only ever used in the
-  Login page so they are stored with this page instead of being stored in the
-  global hooks or components folders.
-
-(Advanced Project) now only contains one file per page and the reason for this
-is that all the logic for the features on the pages are in the features folder.
-
-- routes This folder consists of all routes of the application. It consists of
-  private, protected, and all types of routes. Here we can even call our
-  sub-route.
-
-- services (Advanced project) contains all your code for interfacing with any
-  external API.
-
-- utils (Intermediate projects) all utility functions such as formatters. some
-  repeatedly used functions that are commonly used in the project. It should
-  contain only common js functions & objects like dropdown options, regex
-  condition, data formatting, etc.
-
-- \_\_tests\_\_ (Simple project) The final folder in this structure is for all
-  your test code. Generally on smaller projects like this I find that people
-  tend to store all their tests in one folder (that is if they write any tests
-  at all). Overall, I think this is fine for smaller projects, but again this is
-  something I would change as your project grows in size.
