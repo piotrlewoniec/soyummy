@@ -1,0 +1,108 @@
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 435px;
+  background-color: #22252a;
+  color: #fafafa;
+}
+.soYummy {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  margin-bottom: 32px;
+}
+.logoSvg {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #ebf3d4;
+}
+.brandName {
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 100% */
+  letter-spacing: 0.27px;
+}
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 32px;
+}
+.navMenu a {
+  color: inherit;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.28px;
+  text-decoration: none;
+}
+.subscription {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.subscriptionEmail {
+  max-width: 204px;
+  width: auto;
+  height: 38px;
+  background: none;
+  border: 1px solid #ffffff15;
+  border-radius: 5px;
+  padding-left: 14px;
+}
+
+.subscriptionEmail.active {
+  border: 1px solid red;
+}
+.subscriptionEmail::placeholder {
+  color: #fafafa;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  opacity: 1;
+}
+.subscriptionButton {
+  display: flex;
+  width: 204px;
+  height: 38px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: #8baa36;
+  border-style: none;
+  gap: 8px;
+  padding: 0;
+  color: #fafafa;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+}
+@media (max-width: 767px) {
+}
+
+/* Obraz tła na tabletach */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Obraz tła na komputerach */
+@media (min-width: 1024px) {
+}
