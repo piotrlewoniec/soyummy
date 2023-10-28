@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import styles from './AuthNav.module.css';
+import icons from '../../assets/icons/icons.svg';
 
 export const AuthNav = () => {
   return (
     <div className={styles.authContainer}>
       <div className={styles.authContent}>
         <svg className={styles.logoSvg}>
-          <use xlinkHref="/assets/icons/symbol-devs.svg#icon-logo" />
+          <use xlinkHref={`${icons}#icon-logo-1`} className={styles.logo} />
         </svg>
 
         <h1 className={styles.authTitle}>Welcome to the app!</h1>

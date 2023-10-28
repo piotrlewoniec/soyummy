@@ -7,55 +7,55 @@
 }
 @media (max-width: 767px) and (min-resolution: 1dppx) {
   .topImage {
-    background-image: url('/assets/images/Order food-pana-mobile@1x.png');
+    background-image: url('../../assets/images/wellcom/Order-food-pana-mobile@1x.png');
   }
 }
 
 @media (max-width: 767px) and (min-resolution: 2dppx) {
   .topImage {
-    background-image: url('/assets/images/Order food-pana-mobile@2x.png');
+    background-image: url('../../assets/images/wellcom/Order-food-pana-mobile@2x.png');
   }
 }
 
 @media (max-width: 767px) and (min-resolution: 3dppx) {
   .topImage {
-    background-image: url('/assets/images/Order food-pana-mobile@3x.png');
+    background-image: url('../../assets/images/wellcom/Order-food-pana-mobile@3x.png');
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 1dppx) {
   .topImage {
-    background-image: url('/assets/images/Order food-pana-tablet@1x.png');
+    background-image: url('../../assets/images/wellcom/Order-food-pana-tablet@1x.png');
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 2dppx) {
   .topImage {
-    background-image: url('/assets/images/Order food-pana-tablet@2x.png');
+    background-image: url('../../assets/images/wellcom/Order-food-pana-tablet@2x.png');
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 3dppx) {
   .topImage {
-    background-image: url('/assets/images/Order food-pana-tablet@3x.png');
+    background-image: url('../../assets/images/wellcom/Order-food-pana-tablet@3x.png');
   }
 }
 
 @media (min-width: 1024px) and (min-resolution: 1dppx) {
   .topImage {
-    background-image: url('/assets/images/Order food-pana-desktop@1x.png');
+    background-image: url('../../assets/images/wellcom/Order-food-pana-desktop@1x.png');
   }
 }
 
 @media (min-width: 1024px) and (min-resolution: 2dppx) {
   .topImage {
-    background-image: url('/assets/images/Order food-pana-desktop@2x.png');
+    background-image: url('../../assets/images/wellcom/Order-food-pana-desktop@2x.png');
   }
 }
 
 @media (min-width: 1024px) and (min-resolution: 3dppx) {
   .topImage {
-    background-image: url('/assets/images/Order food-pana-desktop@3x.png');
+    background-image: url('../../assets/images/wellcom/Order-food-pana-desktop@3x.png');
   }
 }
 .bottomImage {
@@ -72,54 +72,54 @@
 
 @media (max-width: 767px) and (min-resolution: 1dppx) {
   .bottomImage {
-    background-image: url('/assets/images/Rectangle 8970-mobile@1x.png');
+    background-image: url('../../assets/images/wellcom/Rectangle-8970-mobile@1x.png');
   }
 }
 
 @media (max-width: 767px) and (min-resolution: 2dppx) {
   .bottomImage {
-    background-image: url('/assets/images/Rectangle 8970-mobile@2x.png');
+    background-image: url('../../assets/images/wellcom/Rectangle-8970-mobile@2x.png');
   }
 }
 
 @media (max-width: 767px) and (min-resolution: 3dppx) {
   .bottomImage {
-    background-image: url('/assets/images/Rectangle 8970-mobile@3x.png');
+    background-image: url('../../assets/images/wellcom/Rectangle-8970-mobile@3x.png');
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 1dppx) {
   .bottomImage {
-    background-image: url('/assets/images/Rectangle 8970-tablet@1x.png');
+    background-image: url('../../assets/images/wellcom/Rectangle-8970-tablet@1x.png');
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 2dppx) {
   .bottomImage {
-    background-image: url('/assets/images/Rectangle 8970-tablet@2x.png');
+    background-image: url('../../assets/images/wellcom/Rectangle-8970-tablet@2x.png');
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 3dppx) {
   .bottomImage {
-    background-image: url('/assets/images/Rectangle 8970-tablet@3x.png');
+    background-image: url('../../assets/images/wellcom/Rectangle-8970-tablet@3x.png');
   }
 }
 
 @media (min-width: 1024px) and (min-resolution: 1dppx) {
   .bottomImage {
-    background-image: url('/assets/images/Rectangle 8970-desktop@1x.png');
+    background-image: url('../../assets/images/wellcom/Rectangle-8970-desktop@1x.png');
   }
 }
 
 @media (min-width: 1024px) and (min-resolution: 2dppx) {
   .bottomImage {
-    background-image: url('/assets/images/Rectangle 8970-desktop@2x.png');
+    background-image: url('../../assets/images/wellcom/Rectangle-8970-desktop@2x.png');
   }
 }
 
 @media (min-width: 1024px) and (min-resolution: 3dppx) {
   .bottomImage {
-    background-image: url('/assets/images/Rectangle 8970-desktop@3x.png');
+    background-image: url('../../assets/images/wellcom/Rectangle-8970-desktop@3x.png');
   }
 }

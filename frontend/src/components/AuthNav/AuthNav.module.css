@@ -31,8 +31,19 @@
   height: 54px;
   background: #8baa36;
   border-radius: 12px;
-  fill: #fafafa;
+  padding: 16px;
 }
+.logo {
+  fill: #fafafa; /* Kolor wypełnienia */
+  stroke: #8baa36; /* Kolor konturu */
+  stroke-width: 2;
+  width: 32.27px;
+  height: 32.27px;
+  top: 16.4px;
+  left: 16.4px;
+  border: 3px;
+}
+
 @media (min-width: 768px) {
   .logoSvg {
     width: 68px;
