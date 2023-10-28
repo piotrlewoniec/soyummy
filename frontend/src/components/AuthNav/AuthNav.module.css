@@ -3,32 +3,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  max-width: 305px;
+  max-height: 281px;
   background-size: cover;
-  transition: background-image 0.5s ease; /* Efekt przejścia na zmianę obrazu tła */
+  transition: background-image 0.5s ease;
 }
-
-/* Obraz tła na urządzeniach mobilnych */
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .authContainer {
-    background-image: url('/assets/images/wellcomePage-mobile.png');
+    width: 500px;
+    height: 1024px;
   }
 }
-
-/* Obraz tła na tabletach */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .authContainer {
-    background-image: url('/assets/images/wellcomePage-tablet.png');
-  }
-}
-
-/* Obraz tła na komputerach */
-@media (min-width: 1024px) {
-  .authContainer {
-    background-image: url('/assets/images/wellcomePage-desktop.png');
-  }
-}
-
 .authContent {
   display: flex;
   flex-direction: column;
@@ -48,48 +33,84 @@
   border-radius: 12px;
   fill: #fafafa;
 }
-
-h1 {
-  font-size: 32px;
-  margin: 10px 0;
+@media (min-width: 768px) {
+  .logoSvg {
+    width: 68px;
+    height: 68px;
+  }
 }
 
-p {
-  font-size: 18px;
-  margin: 10px 0;
+.authTitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .authTitle {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+}
+.authDescriptions {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  width: 305px;
+}
+@media (min-width: 768px) {
+  .authDescriptions {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    width: 540px;
+    height: 72px;
+  }
 }
 
 .authButtons {
   display: flex;
-  justify-content: space-between;
+
   margin-top: 20px;
 }
 
 .diagonalButton {
-  background: transparent; /* Ustawienie tła na przeźroczyste */
+  text-decoration: none;
+  background: transparent;
   border: 2px solid #fafafa;
-  border-radius: 12px;
+  border-radius: 24px 44px;
   color: #fff;
-  width: 95px;
+  min-width: 95px;
   height: 45px;
   padding: 10px;
-  margin-right: 10px; /* Dodanie odstępu po prawej stronie przycisku */
-  transform: skew(20deg);
+  margin-right: 10px;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
-  letter-spacing: 0em;
-  text-align: left;
+  justify-content: center;
+  text-align: center;
   cursor: pointer;
   transition: background-color 0.3s;
 }
-.textButton {
-  transform: skew(
-    -20deg
-  ); /* Przeciwna transformacja, aby zniwelować efekt na tekście */
-  display: inline-block;
+@media (min-width: 768px) {
+  .diagonalButton {
+    height: 67px;
+    min-width: 141px;
+    width: 184px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .diagonalButton:hover {
-  background: #8baa36; /* Kolor tła po najechaniu myszą */
+  background: #8baa36;
   border: none;
 }
