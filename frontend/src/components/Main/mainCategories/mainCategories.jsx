@@ -1,28 +1,25 @@
+import React, { useEffect } from 'react';
 import s from './mainCategories.module.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchCategories } from 'redux/categories/actions';
+import { v4 as uuidv4 } from 'uuid';
 
 export const MainCategories = () => {
+  const dispatch = useDispatch();
+  const categories = useSelector(state => state.categories.items);
+
+  useEffect(() => {
+    dispatch(fetchCategories());
+  }, [dispatch]);
+
+  // const { title, thumb, description } = categories;
+
   return (
     <div className={s.margin}>
-      <div className={s.divy}>1 Categoria z backendu</div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, quibusdam
-        laudantium repellendus non perspiciatis magnam!
-      </div>
-      <div className={s.divy}>2 Categoria z backendu</div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, quibusdam
-        laudantium repellendus non perspiciatis magnam!
-      </div>
-      <div className={s.divy}>3 Categoria z backendu</div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, quibusdam
-        laudantium repellendus non perspiciatis magnam!
-      </div>
-      <div className={s.divy}>4 Categoria z backendu</div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, quibusdam
-        laudantium repellendus non perspiciatis magnam!
-      </div>
+      {' '}
+      {categories.map(category => (
+        <h2 key={uuidv4()}>{category.title}</h2>
+      ))}
     </div>
   );
 };
