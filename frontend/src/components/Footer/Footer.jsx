@@ -6,11 +6,14 @@ export const Footer = () => {
   return (
     <div className={styles.footerContainer}>
       <div className={styles.soYummy}>
-        <svg className={styles.logoSvg}>
-          <use href={`${svgsprite}#icon-logo`} />
-        </svg>
-        <p className={styles.brandName}>So Yummy</p>
+        <NavLink to="/">
+          <svg className={styles.logoSvg}>
+            <use href={`${svgsprite}#icon-logo`} />
+          </svg>
+          <p className={styles.brandName}>So Yummy</p>
+        </NavLink>
       </div>
+
       <div className={styles.navMenu}>
         <NavLink to="/">Ingredients</NavLink>
         <NavLink to="/">Add recipes</NavLink>
@@ -54,6 +57,11 @@ export const Footer = () => {
             <use href={`${svgsprite}#icon-instagram`} />
           </svg>
         </a>
+      </div>
+
+      <div className={styles.copyrights}>
+        <p>© 2023 All Rights Reserved.</p>
+        <a href="/tos">Terms of Service</a>
       </div>
     </div>
   );

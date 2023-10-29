@@ -2,16 +2,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 435px;
+  height: 433px;
   background-color: #22252a;
   color: #fafafa;
+  font-family: Poppins;
+  font-style: normal;
 }
 .soYummy {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   margin-top: 28px;
   margin-bottom: 32px;
+}
+.soYummy a {
+  color: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
 }
 .logoSvg {
   display: flex;
@@ -28,7 +35,6 @@
 }
 
 .brandName {
-  font-family: Poppins;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -45,7 +51,7 @@
 }
 .navMenu a {
   color: inherit;
-  font-family: Poppins;
+
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -68,6 +74,11 @@
   border: 1px solid #ffffff15;
   border-radius: 5px;
   padding-left: 14px;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.2px;
 }
 
 .subscriptionEmail.active {
@@ -97,10 +108,12 @@
   color: #fafafa;
   font-family: Poppins;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
   line-height: 16px; /* 114.286% */
   margin-bottom: 44px;
+}
+.subscriptionButton:hover {
+  cursor: pointer;
 }
 .socialsIcons {
   display: flex;
@@ -111,6 +124,52 @@
   height: 20px;
   stroke: none;
   fill: #8baa36;
+}
+.copyrights {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: none;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.copyrights::before {
+  content: '';
+  background-image: url('../../../assets/images/footer-background.png');
+  background-size: 160px 172px;
+  transform: rotate(-24deg);
+  position: absolute;
+  right: -20px;
+  width: 160px;
+  height: 172px;
+  filter: blur(4.5px);
+  z-index: -1;
+}
+
+.copyrights p {
+  color: #22252a;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  line-height: 10px; /* 100% */
+  letter-spacing: -0.1px;
+  font-weight: 500;
+  opacity: 0.5;
+  margin: 0;
+}
+.copyrights a {
+  color: #22252a;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  line-height: 10px; /* 100% */
+  letter-spacing: -0.1px;
+  font-weight: 400;
+  opacity: 0.5;
 }
 @media (max-width: 767px) {
 }
