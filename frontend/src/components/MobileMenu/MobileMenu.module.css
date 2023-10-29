@@ -28,32 +28,32 @@
 
 @media (max-width: 768px) {
   .modalContent {
-    background-image: url('../../../assets/images/mobileMenuSpinach_img_1x.png');
+    background-image: url('./images/spinachMenu-mobile_1x.png');
   }
   @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     .modalContent {
-      background-image: url('../../../assets/images/mobileMenuSpinach_img_2x.png');
+      background-image: url('./images/spinachMenu-mobile_2x.png');
     }
   }
   @media (min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
     .modalContent {
-      background-image: url('../../../assets/images/mobileMenuSpinach_img_3x.png');
+      background-image: url('./images/spinachMenu-mobile_3x.png');
     }
   }
 }
 
 @media (min-width: 769px) and (max-width: 1260px) {
   .modalContent {
-    background-image: url('../../../assets/images/tabletMenuSpinach_img_1x.png');
+    background-image: url('./images/spinachMenu-tablet_1x.png');
   }
   @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     .modalContent {
-      background-image: url('../../../assets/images/tabletMenuSpinach_img_2x.png');
+      background-image: url('./images/spinachMenu-tablet_2x.png');
     }
   }
   @media (min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
     .modalContent {
-      background-image: url('../../../assets/images/tabletMenuSpinach_img_3x.png');
+      background-image: url('./images/spinachMenu-tablet_3x.png');
     }
   }
 }
