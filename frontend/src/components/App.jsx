@@ -4,7 +4,7 @@ import { WelcomePage } from '../pages/WellcomPage/WellcomePage';
 import { RegisterPage } from '../pages/RegisterPage/RegisterPage';
 import { SigninPage } from '../pages/SigninPage/SigninPage';
 
-function App() {
+export const App = () => {
   return (
     <div>
       <Routes>
@@ -15,6 +15,4 @@ function App() {
       </Routes>
     </div>
   );
-}
-
-export default App;
+};
