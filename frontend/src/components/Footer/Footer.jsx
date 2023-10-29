@@ -1,12 +1,13 @@
 import { NavLink } from 'react-router-dom';
 import styles from './Footer.module.css';
+import svgsprite from './symbol-defs.svg';
 
 export const Footer = () => {
   return (
     <div className={styles.footerContainer}>
       <div className={styles.soYummy}>
         <svg className={styles.logoSvg}>
-          <use xlinkHref="/assets/icons/symbol-defs.svg#icon-logo" />
+          <use href={`${svgsprite}#icon-logo`} />
         </svg>
         <p className={styles.brandName}>So Yummy</p>
       </div>
@@ -32,6 +33,28 @@ export const Footer = () => {
           Subscribe
         </button>
       </form>
+      <div className={styles.socialsIcons}>
+        <a href="https://facebook.com/">
+          <svg className={styles.logoSvg2}>
+            <use href={`${svgsprite}#icon-facebook`} />
+          </svg>
+        </a>
+        <a href="https://youtube.com/">
+          <svg className={styles.logoSvg2}>
+            <use href={`${svgsprite}#icon-you-tube`} />
+          </svg>
+        </a>
+        <a href="https://twitter.com/">
+          <svg className={styles.logoSvg2}>
+            <use href={`${svgsprite}#icon-twiter`} />
+          </svg>
+        </a>
+        <a href="https://instagram.com/">
+          <svg className={styles.logoSvg2}>
+            <use href={`${svgsprite}#icon-instagram`} />
+          </svg>
+        </a>
+      </div>
     </div>
   );
 };
