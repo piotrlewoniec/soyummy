@@ -1,0 +1,16 @@
+.menuButton {
+  background: none;
+  border: 0px;
+}
+
+.icon_menu {
+  fill: #22252a;
+  width: 30px;
+  height: 30px;
+}
+
+@media (min-width: 1261px) {
+  .menuButton {
+    display: none;
+  }
+}
