@@ -1,13 +1,19 @@
+.registerPageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .topImage {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 250px;
-  width: 285px;
+  margin-top: 87px;
 }
 @media (max-width: 767px) and (min-resolution: 1dppx) {
   .topImage {
     background-image: url('../../assets/images/wellcom/Order-food-pana-mobile@1x.png');
+    height: 250px;
+    width: 285px;
   }
 }
 
@@ -26,6 +32,8 @@
 @media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 1dppx) {
   .topImage {
     background-image: url('../../assets/images/wellcom/Order-food-pana-tablet@1x.png');
+    width: 409px;
+    height: 359px;
   }
 }
 
@@ -44,6 +52,8 @@
 @media (min-width: 1024px) and (min-resolution: 1dppx) {
   .topImage {
     background-image: url('../../assets/images/wellcom/Order-food-pana-desktop@1x.png');
+    width: 532px;
+    height: 468px;
   }
 }
 
@@ -62,17 +72,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 375px;
-  height: 490px;
-  top: 322px;
 }
 
 @media (max-width: 767px) and (min-resolution: 1dppx) {
   .bottomImage {
     background-image: url('../../assets/images/wellcom/Rectangle-8970-mobile@1x.png');
+    width: 375px;
+    height: 490px;
   }
 }
 
@@ -91,6 +97,8 @@
 @media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 1dppx) {
   .bottomImage {
     background-image: url('../../assets/images/wellcom/Rectangle-8970-tablet@1x.png');
+    width: 768px;
+    height: 606px;
   }
 }
 
@@ -109,6 +117,8 @@
 @media (min-width: 1024px) and (min-resolution: 1dppx) {
   .bottomImage {
     background-image: url('../../assets/images/wellcom/Rectangle-8970-desktop@1x.png');
+    width: 1440px;
+    height: 325px;
   }
 }
 
@@ -121,5 +131,34 @@
 @media (min-width: 1024px) and (min-resolution: 3dppx) {
   .bottomImage {
     background-image: url('../../assets/images/wellcom/Rectangle-8970-desktop@3x.png');
+  }
+}
+.registerFormOverlay {
+  position: absolute;
+  top: 305px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .registerFormOverlay {
+    top: 444px;
+  }
+}
+@media (min-width: 1024px) {
+  .registerPageContainer {
+    flex-direction: row;
+  }
+
+  .topImage {
+    top: 0;
+  }
+
+  .bottomImage {
+    order: 3;
+    margin-top: 300px;
+  }
+
+  .registerFormOverlay {
+    top: 0;
+    margin-top: 20px;
+    margin-left: 700px;
   }
 }

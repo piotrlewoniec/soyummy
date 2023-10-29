@@ -1,27 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './SigninForm.module.css';
+import icons from '../../assets/icons/icons.svg';
 
 export const SigninForm = () => {
   return (
-    <div className={styles.registerForm}>
-      <h2 className={styles.registrationTitle}>Sign in</h2>
-      <form>
+    <div>
+      <form className={styles.signinForm}>
+        <h2 className={styles.signinTitle}>Sign in</h2>
         <div className={styles.inputContainer}>
-          <svg className={styles.icon}>
-            <use xlinkHref="" />
-          </svg>
-          <input className={styles.input} type="email" placeholder="Email" />
-        </div>
-        <div className={styles.inputContainer}>
-          <svg className={styles.icon}>
-            <use xlinkHref="" />
-          </svg>
-          <input
-            className={styles.input}
-            type="password"
-            placeholder="Password"
-          />
+          <label className={styles.label}>
+            <svg className={styles.icon}>
+              <use href={`${icons}#icon-leter-1`} />
+            </svg>
+            <input
+              className={styles.input}
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+          </label>
+
+          <label className={styles.label}>
+            <svg className={styles.icon}>
+              <use href={`${icons}#icon-lock-02-1`} />
+            </svg>
+
+            <input
+              className={styles.input}
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
+          </label>
         </div>
         <button className={styles.signinButton} type="submit">
           Sign in
