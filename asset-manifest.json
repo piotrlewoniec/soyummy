@@ -1,18 +1,25 @@
 {
   "files": {
-    "main.css": "/soyummy/static/css/main.1184cb57.css",
-    "main.js": "/soyummy/static/js/main.f33a202a.js",
+    "main.css": "/soyummy/static/css/main.b8699032.css",
+    "main.js": "/soyummy/static/js/main.4109e1bb.js",
     "static/media/wellcomePage-desktop.png": "/soyummy/static/media/wellcomePage-desktop.adc7abf378fc81c02ea1.png",
     "static/media/wellcomePage-tablet.png": "/soyummy/static/media/wellcomePage-tablet.aee07e6990b637f0d69c.png",
     "static/media/wellcomePage-mobile.png": "/soyummy/static/media/wellcomePage-mobile.02d450f51af2e2f3c4b1.png",
+    "static/media/spinachMenu-tablet_3x.png": "/soyummy/static/media/spinachMenu-tablet_3x.1a370d76318dc1ff8158.png",
+    "static/media/spinachMenu-tablet_2x.png": "/soyummy/static/media/spinachMenu-tablet_2x.38ff06548fac1e54c32c.png",
+    "static/media/spinachMenu-mobile_3x.png": "/soyummy/static/media/spinachMenu-mobile_3x.81f42c8fb40a497151cc.png",
     "static/media/HeroMain.webp": "/soyummy/static/media/HeroMain.32c6c25879c4c54a8b92.webp",
     "static/media/spinach.png": "/soyummy/static/media/spinach.91fb3299601622554925.png",
+    "static/media/spinachMenu-mobile_2x.png": "/soyummy/static/media/spinachMenu-mobile_2x.ba770971888ec3c4e93c.png",
+    "static/media/spinachMenu-tablet_1x.png": "/soyummy/static/media/spinachMenu-tablet_1x.df47f777180cdd250fe4.png",
+    "static/media/spinachMenu-mobile_1x.png": "/soyummy/static/media/spinachMenu-mobile_1x.aaa24fe2c9eb44d5ba6a.png",
+    "static/media/symbol-defs.svg": "/soyummy/static/media/symbol-defs.ade75f5c7ff93b15cd547597fcba4b82.svg",
     "index.html": "/soyummy/index.html",
-    "main.1184cb57.css.map": "/soyummy/static/css/main.1184cb57.css.map",
-    "main.f33a202a.js.map": "/soyummy/static/js/main.f33a202a.js.map"
+    "main.b8699032.css.map": "/soyummy/static/css/main.b8699032.css.map",
+    "main.4109e1bb.js.map": "/soyummy/static/js/main.4109e1bb.js.map"
   },
   "entrypoints": [
-    "static/css/main.1184cb57.css",
-    "static/js/main.f33a202a.js"
+    "static/css/main.b8699032.css",
+    "static/js/main.4109e1bb.js"
   ]
 }
