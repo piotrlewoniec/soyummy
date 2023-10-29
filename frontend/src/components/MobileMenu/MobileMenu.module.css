@@ -28,32 +28,32 @@
 
 @media (max-width: 768px) {
   .modalContent {
-    background-image: url('../../../assets/images/mobileMenu/spinachMenu-mobile_1x.png');
+    background-image: url('../../../assets/images/mobileMenu/spinachMenu-mobile@1x.png');
   }
   @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     .modalContent {
-      background-image: url('../../../assets/images/mobileMenu/spinachMenu-mobile_2x.png');
+      background-image: url('../../../assets/images/mobileMenu/spinachMenu-mobile@2x.png');
     }
   }
   @media (min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
     .modalContent {
-      background-image: url('../../../assets/images/mobileMenu/spinachMenu-mobile_3x.png');
+      background-image: url('../../../assets/images/mobileMenu/spinachMenu-mobile@3x.png');
     }
   }
 }
 
 @media (min-width: 769px) and (max-width: 1260px) {
   .modalContent {
-    background-image: url('../../../assets/images/mobileMenu/spinachMenu-tablet_1x.png');
+    background-image: url('../../../assets/images/mobileMenu/spinachMenu-tablet@1x.png');
   }
   @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     .modalContent {
-      background-image: url('../../../assets/images/mobileMenu/spinachMenu-tablet_2x.png');
+      background-image: url('../../../assets/images/mobileMenu/spinachMenu-tablet@2x.png');
     }
   }
   @media (min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
     .modalContent {
-      background-image: url('../../../assets/images/mobileMenu/spinachMenu-tablet_3x.png');
+      background-image: url('../../../assets/images/mobileMenu/spinachMenu-tablet@3x.png');
     }
   }
 }
@@ -66,51 +66,18 @@
   color: #333;
 }
 
-.navigation {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: auto;
-  align-items: center;
-  margin-top: 100px;
-}
-
-.navigation > * {
-  text-decoration: none;
-  color: #22252a;
-  line-height: 18px;
-  padding-bottom: 32px;
-  letter-spacing: -2%;
-  font-size: 18px;
-  font-family: Arial, sans-serif;
-  font-weight: 600;
-}
-
-.navigation :last-child {
-  padding-bottom: 0;
-}
 .icon_close {
   fill: #22252a;
   z-index: 9999999999;
   width: 20px;
   height: 20px;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 25px;
-  position: absolute;
-  right: 25px;
-  top: 15px;
-}
-
-.icon_logo_background {
-  background-color: #8baa36;
-  border-radius: 12px;
-  width: 50px;
-  height: 50px;
-  margin-top: 25px;
-  margin-left: 25px;
-}
-
-.icon_logo {
-  fill: #fafafa;
-  width: 30px;
-  height: 30px;
-  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
