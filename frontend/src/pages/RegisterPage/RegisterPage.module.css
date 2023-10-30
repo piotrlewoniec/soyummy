@@ -1,14 +1,68 @@
 .registerPageContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.owerlayContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .topImage {
+    flex-direction: row;
+    position: absolute;
+    left: 0;
+    top: 7%;
+  }
+}
 .topImage {
+  z-index: 2;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  margin-top: 87px;
+  transition: background-image 0.5s ease;
 }
+
+.bottomImage {
+  position: relative;
+  flex: 0 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: background-image 0.5s ease;
+  z-index: 1;
+}
+@media (min-width: 1024px) {
+  .bottomImage {
+    margin-top: 260px;
+  }
+}
+.registerFormOverlay {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 768px) {
+  .registerFormOverlay {
+    margin-top: 47px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .registerFormOverlay {
+    margin-top: 120px;
+  }
+}
+@media (min-width: 1024px) {
+  .registerFormOverlay {
+    top: 50%;
+    left: 75%;
+  }
+}
+
 @media (max-width: 767px) and (min-resolution: 1dppx) {
   .topImage {
     background-image: url('../../assets/images/wellcom/Order-food-pana-mobile@1x.png');
@@ -68,11 +122,6 @@
     background-image: url('../../assets/images/wellcom/Order-food-pana-desktop@3x.png');
   }
 }
-.bottomImage {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
 
 @media (max-width: 767px) and (min-resolution: 1dppx) {
   .bottomImage {
@@ -131,34 +180,5 @@
 @media (min-width: 1024px) and (min-resolution: 3dppx) {
   .bottomImage {
     background-image: url('../../assets/images/wellcom/Rectangle-8970-desktop@3x.png');
-  }
-}
-.registerFormOverlay {
-  position: absolute;
-  top: 305px;
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .registerFormOverlay {
-    top: 444px;
-  }
-}
-@media (min-width: 1024px) {
-  .registerPageContainer {
-    flex-direction: row;
-  }
-
-  .topImage {
-    top: 0;
-  }
-
-  .bottomImage {
-    order: 3;
-    margin-top: 300px;
-  }
-
-  .registerFormOverlay {
-    top: 0;
-    margin-top: 20px;
-    margin-left: 700px;
   }
 }
