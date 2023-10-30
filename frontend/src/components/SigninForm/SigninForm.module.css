@@ -1,0 +1,125 @@
+.signinForm {
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  background-color: #2a2c36;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .signinForm {
+    width: 335px;
+    height: 350px;
+  }
+}
+@media (min-width: 768px) {
+  .signinForm {
+    min-width: 500px;
+    height: 481px;
+  }
+}
+
+.signinTitle {
+  color: #fafafa;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .signinTitle {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+  }
+}
+@media (min-width: 768px) {
+  .signinTitle {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+  }
+}
+
+.inputContainer {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  fill: #f2f2f2;
+  transform: translateY(-50%);
+  left: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.input {
+  background-color: #2a2c36;
+  color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  padding-left: 40px;
+}
+@media (max-width: 767px) {
+  .input {
+    width: 279px;
+    height: 45px;
+  }
+}
+@media (min-width: 768px) {
+  .input {
+    width: 400px;
+    height: 59px;
+  }
+}
+.signinButton {
+  background-color: #8baa36;
+  color: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .signinButton {
+    width: 279px;
+    height: 45px;
+  }
+}
+@media (min-width: 768px) {
+  .signinButton {
+    width: 400px;
+    height: 59px;
+  }
+}
+.link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #f2f2f2;
+}
