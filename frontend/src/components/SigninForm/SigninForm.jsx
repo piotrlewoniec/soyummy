@@ -11,7 +11,7 @@ export const SigninForm = () => {
         <div className={styles.inputContainer}>
           <label className={styles.label}>
             <svg className={styles.icon}>
-              <use href={`${icons}#icon-leter-1`} />
+              <use href={`${icons}#icon-input-envelope`} />
             </svg>
             <input
               className={styles.input}
@@ -23,7 +23,7 @@ export const SigninForm = () => {
 
           <label className={styles.label}>
             <svg className={styles.icon}>
-              <use href={`${icons}#icon-lock-02-1`} />
+              <use href={`${icons}#icon-input-lock`} />
             </svg>
 
             <input

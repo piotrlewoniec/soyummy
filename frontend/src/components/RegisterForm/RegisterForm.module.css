@@ -1,13 +1,9 @@
 .registerForm {
-  margin: 0 auto;
-  padding: 20px;
   border: 1px solid #ccc;
   border-radius: 30px;
   background-color: #2a2c36;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 @media (max-width: 767px) {
   .registerForm {
@@ -17,7 +13,7 @@
 }
 @media (min-width: 768px) {
   .registerForm {
-    min-width: 500px;
+    width: 500px;
     height: 481px;
   }
 }
@@ -29,6 +25,7 @@
   line-height: 30px;
   letter-spacing: -0.02em;
   text-align: left;
+  margin-left: 28px;
 }
 @media (max-width: 767px) {
   .registerTitle {
@@ -63,16 +60,27 @@
 
 .icon {
   position: absolute;
-  width: 24px;
-  height: 24px;
+
   top: 50%;
-  fill: #f2f2f2;
+  fill: #2a2c36;
+  stroke: #fafafa;
   transform: translateY(-50%);
   left: 10px;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
+@media (max-width: 767px) {
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
 .input {
   background-color: #2a2c36;
   color: #f2f2f2;

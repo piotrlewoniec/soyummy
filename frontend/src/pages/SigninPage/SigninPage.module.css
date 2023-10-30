@@ -1,15 +1,68 @@
 .signinPageContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.owerlayContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
 .topImage {
+  z-index: 2;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  margin-top: 87px;
   transition: background-image 0.5s ease;
 }
+@media (min-width: 1024px) {
+  .topImage {
+    flex-direction: row;
+    position: absolute;
+    left: 0;
+    top: 7%;
+  }
+}
+.bottomImage {
+  position: relative;
+  flex: 0 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: background-image 0.5s ease;
+  z-index: 1;
+}
+@media (min-width: 1024px) {
+  .bottomImage {
+    margin-top: 260px;
+  }
+}
+.signinFormOverlay {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 768px) {
+  .signinFormOverlay {
+    margin-top: 47px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .signinFormOverlay {
+    margin-top: 90px;
+  }
+}
+@media (min-width: 1024px) {
+  .signinFormOverlay {
+    top: 50%;
+    left: 75%;
+  }
+}
+
 @media (max-width: 767px) and (min-resolution: 1dppx) {
   .topImage {
     background-image: url('../../assets/images/wellcom/Order-food-pana-mobile@1x.png');
@@ -70,12 +123,6 @@
     background-image: url('../../assets/images/wellcom/Order-food-pana-desktop@3x.png');
   }
 }
-.bottomImage {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  transition: background-image 0.5s ease;
-}
 
 @media (max-width: 767px) and (min-resolution: 1dppx) {
   .bottomImage {
@@ -134,34 +181,5 @@
 @media (min-width: 1024px) and (min-resolution: 3dppx) {
   .bottomImage {
     background-image: url('../../assets/images/wellcom/Rectangle-8970-desktop@3x.png');
-  }
-}
-.signinFormOverlay {
-  position: absolute;
-  top: 305px;
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .signinFormOverlay {
-    top: 444px;
-  }
-}
-@media (min-width: 1024px) {
-  .signinPageContainer {
-    flex-direction: row;
-  }
-
-  .topImage {
-    top: 0;
-  }
-
-  .bottomImage {
-    order: 3;
-    margin-top: 300px;
-  }
-
-  .signinFormOverlay {
-    top: 0;
-    margin-top: 20px;
-    margin-left: 700px;
   }
 }
