@@ -1,33 +1,49 @@
 import { NavLink } from 'react-router-dom';
 import styles from './Footer.module.css';
-import svgsprite from './symbol-defs.svg';
+import svgsprite from '../../assets/icons/icons.svg';
 
 export const Footer = () => {
   return (
-    <div className={styles.footerContainer}>
-      <div className={styles.soYummy}>
-        <NavLink to="/">
-          <svg className={styles.logoSvg}>
-            <use href={`${svgsprite}#icon-logo`} />
-          </svg>
-          <p className={styles.brandName}>So Yummy</p>
-        </NavLink>
+    <section className={styles.footerContainer}>
+      <div className={styles.footerDescription}>
+        <div className={styles.descriptionBody}>
+          <div className={styles.soYummy}>
+            <NavLink to="/">
+              <svg className={styles.logoSvg}>
+                <use href={`${svgsprite}#icon-logo`} />
+              </svg>
+              <p className={styles.brandName}>So Yummy</p>
+            </NavLink>
+          </div>
+
+          <ul className={styles.descriptionList}>
+            <li>Database of recipes that can be replenished </li>
+            <li>Flexible search for desired and unwanted ingredients</li>
+            <li>Ability to add your own recipes with photos</li>
+            <li>Convenient and easy to use</li>
+          </ul>
+        </div>
+        <div className={styles.navMenu}>
+          <NavLink to="/">Ingredients</NavLink>
+          <NavLink to="/">Add recipes</NavLink>
+          <NavLink to="/">My recipes</NavLink>
+          <NavLink to="/">Favorite</NavLink>
+          <NavLink to="/">Shopping list</NavLink>
+        </div>
       </div>
 
-      <div className={styles.navMenu}>
-        <NavLink to="/">Ingredients</NavLink>
-        <NavLink to="/">Add recipes</NavLink>
-        <NavLink to="/">My recipes</NavLink>
-        <NavLink to="/">Favorite</NavLink>
-        <NavLink to="/">Shopping list</NavLink>
-      </div>
       <form className={styles.subscription}>
-        <input
-          id="subscriptionEmail"
-          className={styles.subscriptionEmail}
-          type="text"
-          placeholder="Enter your email address"
-        ></input>
+        <label className={styles.subscriptionEmail}>
+          <svg className={styles.subscriptionInputIcon}>
+            <use href={`${svgsprite}#icon-input-envelope`} />
+          </svg>
+          <input
+            id="subscriptionEmail"
+            type="text"
+            placeholder="Enter your email address"
+            className={styles.subscriptionEmailInput}
+          ></input>
+        </label>
         <button
           id="subscriptionButton"
           className={styles.subscriptionButton}
@@ -44,12 +60,12 @@ export const Footer = () => {
         </a>
         <a href="https://youtube.com/">
           <svg className={styles.logoSvg2}>
-            <use href={`${svgsprite}#icon-you-tube`} />
+            <use href={`${svgsprite}#icon-youtube`} />
           </svg>
         </a>
         <a href="https://twitter.com/">
           <svg className={styles.logoSvg2}>
-            <use href={`${svgsprite}#icon-twiter`} />
+            <use href={`${svgsprite}#icon-twitter`} />
           </svg>
         </a>
         <a href="https://instagram.com/">
@@ -63,6 +79,6 @@ export const Footer = () => {
         <p>© 2023 All Rights Reserved.</p>
         <a href="/tos">Terms of Service</a>
       </div>
-    </div>
+    </section>
   );
 };

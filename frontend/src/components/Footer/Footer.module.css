@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 433px;
+  height: 450px;
   background-color: #22252a;
   color: #fafafa;
   font-family: Poppins;
@@ -40,6 +40,7 @@
   font-weight: 700;
   line-height: 18px; /* 100% */
   letter-spacing: 0.27px;
+  margin: 0;
 }
 .navMenu {
   display: flex;
@@ -51,7 +52,6 @@
 }
 .navMenu a {
   color: inherit;
-
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -66,33 +66,49 @@
   position: relative;
 }
 .subscriptionEmail {
-  max-width: 204px;
-  color: white;
-  width: auto;
+  display: flex;
+  align-items: center;
+  width: 204px;
   height: 38px;
-  background: none;
   border: 1px solid #ffffff15;
   border-radius: 5px;
-  padding-left: 14px;
+  &:focus {
+    border: 1px solid white;
+  }
+}
+
+.subscriptionEmailInput {
+  background: none;
+  border-style: none;
+  font-family: Poppins;
+  color: white;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.2px;
+  padding-left: 10px;
+  width: 150px;
+  outline: none;
+  &:focus {
+    border: 1px solid white;
+  }
 }
-
+.subscriptionEmailInput::placeholder {
+  opacity: 1;
+}
 .subscriptionEmail.active {
   border: 1px solid red;
 }
-.subscriptionEmail::placeholder {
-  color: #fafafa;
-  font-family: Poppins;
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.2px;
-  opacity: 1;
+
+.subscriptionInputIcon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-left: 14px;
 }
 .subscriptionButton {
   display: flex;
@@ -170,14 +186,80 @@
   letter-spacing: -0.1px;
   font-weight: 400;
   opacity: 0.5;
+  text-decoration: none;
 }
-@media (max-width: 767px) {
+.descriptionList {
+  display: none;
 }
 
 /* Obraz tła na tabletach */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1439px) {
+  .soYummy {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+  .soYummy a {
+    gap: 12px;
+  }
+  .logoSvg {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brandName {
+    font-size: 28px;
+    line-height: 28px; /* 100% */
+    letter-spacing: 0.42px;
+    margin: 0;
+  }
+  .footerDescription {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 72px;
+  }
+
+  .descriptionList {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    gap: 10px;
+    margin: 0;
+  }
+  .descriptionList li {
+    color: #fafafa;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+  }
+  .descriptionBody {
+    display: flex;
+    flex-direction: column;
+  }
+  .navMenu {
+    margin: 0;
+    gap: 20px;
+  }
+  .subscription {
+    flex-direction: row;
+  }
+  .subscriptionEmail {
+    width: 259px;
+  }
+  .subscriptionEmailInput {
+    width: 200px;
+  }
+  .subscriptionButton {
+    width: 187px;
+    font-size: 16px;
+    line-height: 18px; /* 112.5% */
+  }
 }
 
 /* Obraz tła na komputerach */
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
 }
