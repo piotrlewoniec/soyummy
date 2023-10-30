@@ -6,7 +6,7 @@ export const AuthNav = () => {
     <div className={styles.authContainer}>
       <div className={styles.authContent}>
         <svg className={styles.logoSvg}>
-          <use xlinkHref={`${icons}#icon-logo`} className={styles.logo} />
+          <use href={`${icons}#icon-logo`} className={styles.logo} />
         </svg>
 
         <h1 className={styles.authTitle}>Welcome to the app!</h1>
