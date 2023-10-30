@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styles from './AuthNav.module.css';
 import icons from '../../assets/icons/icons.svg';
 
@@ -7,7 +6,7 @@ export const AuthNav = () => {
     <div className={styles.authContainer}>
       <div className={styles.authContent}>
         <svg className={styles.logoSvg}>
-          <use xlinkHref={`${icons}#icon-logo-1`} className={styles.logo} />
+          <use xlinkHref={`${icons}#icon-logo`} className={styles.logo} />
         </svg>
 
         <h1 className={styles.authTitle}>Welcome to the app!</h1>
@@ -17,14 +16,18 @@ export const AuthNav = () => {
           retrieve your own recipes at any time.
         </p>
 
-        <div className={styles.authButtons}>
-          <Link to="/register" className={styles.diagonalButton}>
-            Registration
-          </Link>
-          <Link to="/signin" className={styles.diagonalButton}>
-            Sign In
-          </Link>
-        </div>
+        <nav className={styles.authButtons}>
+          <button className={styles.diagonalButton}>
+            <a className={styles.diagonalButtonText} href="/soyummy/register">
+              Registration
+            </a>
+          </button>
+          <button className={styles.diagonalButton}>
+            <a className={styles.diagonalButtonText} href="/soyummy/signin">
+              Sign in
+            </a>
+          </button>
+        </nav>
       </div>
     </div>
   );

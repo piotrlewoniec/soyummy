@@ -10,7 +10,7 @@ export const RegisterForm = () => {
         <div className={styles.inputContainer}>
           <label className={styles.label}>
             <svg className={styles.icon}>
-              <use href={`${icons}#icon-user-1`} />
+              <use href={`${icons}#icon-input-user`} />
             </svg>
             <input
               className={styles.input}
@@ -22,7 +22,7 @@ export const RegisterForm = () => {
 
           <label className={styles.label}>
             <svg className={styles.icon}>
-              <use href={`${icons}#icon-leter-1`} />
+              <use href={`${icons}#icon-input-envelope`} />
             </svg>
             <input
               className={styles.input}
@@ -34,7 +34,7 @@ export const RegisterForm = () => {
 
           <label className={styles.label}>
             <svg className={styles.icon}>
-              <use href={`${icons}#icon-lock-02-1`} />
+              <use href={`${icons}#icon-input-lock`} />
             </svg>
 
             <input

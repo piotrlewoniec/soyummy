@@ -34,8 +34,8 @@
   padding: 16px;
 }
 .logo {
-  fill: #fafafa; /* Kolor wypełnienia */
-  stroke: #8baa36; /* Kolor konturu */
+  fill: #8baa36;
+  stroke: #fafafa;
   stroke-width: 2;
   width: 32.27px;
   height: 32.27px;
@@ -95,18 +95,13 @@
 }
 
 .diagonalButton {
-  text-decoration: none;
   background: transparent;
   border: 2px solid #fafafa;
   border-radius: 24px 44px;
-  color: #fff;
   min-width: 95px;
   height: 45px;
   padding: 10px;
   margin-right: 10px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
   justify-content: center;
   text-align: center;
   cursor: pointer;
@@ -116,7 +111,17 @@
   .diagonalButton {
     height: 67px;
     min-width: 141px;
-    width: 184px;
+  }
+}
+.diagonalButtonText {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+@media (min-width: 768px) {
+  .diagonalButtonText {
     font-size: 16px;
     line-height: 24px;
   }
