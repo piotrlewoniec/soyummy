@@ -1,4 +1,4 @@
-import s from './mainCategories.module.css';
+import s from './tets.module.css';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 

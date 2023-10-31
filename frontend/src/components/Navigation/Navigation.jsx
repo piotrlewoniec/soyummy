@@ -6,7 +6,7 @@ import IconSearch from 'components/IconSearch/IconSearch';
 const Navigation = () => {
   return (
     <nav className={(css.navigation, css.navigationMobileMenu)}>
-      <NavLink to="/categories/:categoryName">Categories</NavLink>
+      <NavLink to="/categories/Beef">Categories</NavLink>
       <NavLink to="/addrecipes">Add recipes</NavLink>
       <NavLink to="/myrecipes">My recipes</NavLink>
       <NavLink to="/favorites">Favorites</NavLink>
