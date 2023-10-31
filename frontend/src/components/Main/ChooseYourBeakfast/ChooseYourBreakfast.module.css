@@ -1,10 +1,55 @@
-@media (max-width: 767px) {
+.seeRecipe {
+  /* border: 2px solid black; */
+  padding-left: 12px;
+  padding-top: 12px;
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  border-radius: 4px;
+  /* margin-top: 400px; */
+  position: relative;
+  left: 19px;
+  top: -300px;
+  font-size: 14px;
+  margin: 0 auto;
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+.span {
+  color: #8baa36;
 }
 
-@media (min-width: 1024px) {
+.see {
+  margin-left: 60px;
+  /* margin-top: 5px; */
+}
+
+/* tablet */
+@media (min-width: 768px) {
+  .seeRecipe {
+    /* border: 2px solid black; */
+    padding: 20px;
+    width: 278px;
+    height: 80px;
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 400px;
+    position: relative;
+    left: 20px;
+    top: -120px;
+  }
+
+  .span {
+    color: #8baa36;
+  }
+
+  .see {
+    margin-left: 140px;
+    margin-top: 5px;
+  }
+}
+
+/* dsktop */
+@media (min-width: 1280px) {
   .seeRecipe {
     /* border: 2px solid black; */
     padding: 20px;
@@ -13,7 +58,9 @@
     background-color: white;
     border-radius: 4px;
     margin-top: 400px;
-    margin-left: 300px;
+    position: relative;
+    /* left: 250px;
+     */
   }
 
   .span {

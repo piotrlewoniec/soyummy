@@ -4,6 +4,8 @@ import { WelcomePage } from '../pages/WellcomPage/WellcomePage';
 import { RegisterPage } from '../pages/RegisterPage/RegisterPage';
 import { SigninPage } from '../pages/SigninPage/SigninPage';
 import { Footer } from './Footer/Footer';
+import { NotFoundPage } from '../pages/NotFoundPage/NotFoundPage';
+import { ShoppingListPage } from '../pages/ShoppingListPage/ShoppingListPage';
 
 export const App = () => {
   return (
@@ -14,6 +16,8 @@ export const App = () => {
         <Route path="/signin" element={<SigninPage />} />
         <Route path="/main" element={<Main />} />
         <Route path="/footer" element={<Footer />} />
+        <Route path="/shopping-list" element={<ShoppingListPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );

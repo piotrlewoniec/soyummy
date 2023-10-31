@@ -1,0 +1,133 @@
+.shoppingList {
+  list-style: none;
+  padding: 0;
+}
+
+.shoppingListHeader {
+  display: flex;
+  width: 359px;
+  padding: 8px 16px;
+  background: #8baa36;
+  border-radius: 8px;
+  color: #fafafa;
+  justify-content: center;
+  align-items: center;
+}
+.productSpan {
+  margin-right: 170px;
+}
+.numberSpan {
+  margin-right: 20px;
+}
+
+.removeSpan {
+  margin-right: 5px;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .shoppingListHeader {
+    width: 704px;
+    height: 58px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .productSpan {
+    margin-right: 440px;
+  }
+  .numberSpan {
+    margin-right: 50px;
+  }
+  .removeSpan {
+    margin-right: 5px;
+  }
+}
+@media (min-width: 1440px) {
+  .shoppingListHeader {
+    width: 1240px;
+    height: 60px;
+  }
+  .productSpan {
+    margin-right: 760px;
+  }
+  .numberSpan {
+    margin-right: 200px;
+  }
+  .removeSpan {
+    margin-right: 5px;
+  }
+}
+.shoppingListItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.productInfo {
+  display: flex;
+  align-items: center;
+}
+
+.ingredientImage {
+  width: 50px;
+  height: 50px;
+  margin-right: 16px;
+}
+
+.ingredientName {
+  margin-right: 16px;
+  width: 70px;
+}
+
+.ingredientQuantity {
+  margin-right: 60px;
+  margin-left: 80px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 4px;
+  width: 37px;
+  height: 23px;
+  text-align: center;
+  background-color: #8baa36;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .ingredientQuantity {
+    margin-left: 340px;
+    margin-right: 70px;
+    width: 68px;
+    height: 35px;
+    font-size: 16px;
+  }
+  .removeIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .ingredientQuantity {
+    margin-left: 710px;
+    margin-right: 225px;
+  }
+  .removeIcon {
+    margin-right: 40px;
+  }
+}
+.removeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 20px;
+}
+
+.removeIcon {
+  width: 14px;
+  height: 14px;
+  fill: #fafafa;
+  stroke: #2a2c36;
+}
