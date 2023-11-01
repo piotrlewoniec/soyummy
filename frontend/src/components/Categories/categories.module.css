@@ -27,9 +27,9 @@
   color: black;
 }
 
-.categories .category.active {
+/* .categories .category.active {
   color: #8baa36;
-}
+} */
 
 .categories .category:hover {
   color: #8baa36;

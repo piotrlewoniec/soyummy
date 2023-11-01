@@ -70,7 +70,7 @@ export const MainData = () => {
                 {categoryRecipes[category.strCategory] &&
                   categoryRecipes[category.strCategory].map(recipe => (
                     <div className={s.recipe} key={recipe.idMeal}>
-                      <Link to={`/recipePage/${recipe.idMeal}`}>
+                      <Link to={`/recipes/${recipe.idMeal}`}>
                         <img
                           className={s.img}
                           src={recipe.strMealThumb}

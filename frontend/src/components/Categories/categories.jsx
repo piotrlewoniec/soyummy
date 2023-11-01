@@ -1,6 +1,6 @@
 import s from './categories.module.css';
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const CategoriesData = () => {
   const [categories, setCategories] = useState([]);
@@ -41,7 +41,7 @@ export const CategoriesData = () => {
       <div className={s.container}>
         <div className={s.categories}>
           {categories.map(category => (
-            <Link
+            <NavLink
               key={category.strCategory}
               to={`/categories/${category.strCategory}`}
               className={`${s.category} ${
@@ -50,7 +50,7 @@ export const CategoriesData = () => {
               onClick={() => handleCategoryClick(category.strCategory)}
             >
               {category.strCategory}
-            </Link>
+            </NavLink>
           ))}
         </div>
       </div>
@@ -61,14 +61,14 @@ export const CategoriesData = () => {
           .sort((a, b) => a.strMeal.localeCompare(b.strMeal))
           .slice(0, 8)
           .map(recipe => (
-            <Link
-              to={`/recipePage/${recipe.idMeal}`}
+            <NavLink
+              to={`/recipes/${recipe.idMeal}`}
               key={recipe.idMeal}
               className={s.recipe}
             >
               <img src={recipe.strMealThumb} alt={recipe.strMeal} />
               <div className={s.overlay}>{recipe.strMeal}</div>
-            </Link>
+            </NavLink>
           ))}
       </div>
     </div>

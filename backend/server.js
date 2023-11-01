@@ -8,6 +8,7 @@ const { User } = require("./features/users");
 auth.strategyJWT({ secret: secret, User: User });
 
 processexec.processSystemHandle();
+const uriDbENV = process.env.URIDB;
 
 (async () => {
   try {

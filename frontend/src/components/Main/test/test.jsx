@@ -1,57 +1,36 @@
-import s from './tets.module.css';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  fetchCategoryMeals,
+  fetchSomeCategories,
+} from 'redux/categories/actions';
+import {
+  selectCategories,
+  selectCategoryRecipes,
+  selectLoading,
+} from 'redux/categories/slice';
+
+import s from './tets.module.css';
 
 export const MainData = () => {
-  const [categories, setCategories] = useState([]);
-  const [categoryRecipes, setCategoryRecipes] = useState({});
-  const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
+  const categories = useSelector(selectCategories);
+  const categoryRecipes = useSelector(selectCategoryRecipes);
+  const loading = useSelector(selectLoading);
 
   useEffect(() => {
-    fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
-      .then(response => response.json())
-      .then(data => {
-        const selectedCategories = data.categories.filter(category =>
-          ['Breakfast', 'Chicken', 'Miscellaneous', 'Dessert'].includes(
-            category.strCategory
-          )
-        );
-        setCategories(selectedCategories);
-      })
-      .catch(error => console.error('error', error));
-  }, []);
+    dispatch(fetchSomeCategories());
+  }, [dispatch]);
+  // useEffect(() => {
+  //   console.log(categories); // Wyświetl kategorie w konsoli
+  //   console.log(categoryRecipes); // Wyświetl przepisy w konsoli
+  // }, [categories, categoryRecipes]);
 
   useEffect(() => {
-    setLoading(true);
-    Promise.all(
-      categories.map(category => {
-        return fetch(
-          `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category.strCategory}`
-        )
-          .then(response => response.json())
-          .then(data => {
-            return {
-              category: category.strCategory,
-              meals: data.meals.slice(0, 4),
-            };
-          })
-          .catch(error => {
-            console.error('error', error);
-            return {
-              category: category.strCategory,
-              meals: [],
-            };
-          });
-      })
-    ).then(results => {
-      const categoryRecipes = {};
-      results.forEach(result => {
-        categoryRecipes[result.category] = result.meals;
-      });
-      setCategoryRecipes(categoryRecipes);
-      setLoading(false);
-    });
-  }, [categories]);
+    const categoryNames = categories.map(category => category.strCategory);
+    dispatch(fetchCategoryMeals(categoryNames));
+  }, [categories, dispatch]);
 
   return (
     <div className={s.App}>

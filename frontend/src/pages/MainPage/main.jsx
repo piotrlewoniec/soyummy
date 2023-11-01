@@ -4,6 +4,8 @@ import s from './main.module.css';
 import { ChooseYourBreakfast } from 'components/Main/ChooseYourBeakfast/ChooseYourBreakfast';
 import { Search } from 'components/Main/Search/Search';
 import { MainData } from 'components/Main/mainCategories/mainCategories';
+import { Footer } from 'components/Footer/Footer';
+// import { MainData } from 'components/Main/test/test';
 
 export const Main = () => {
   return (
@@ -15,6 +17,7 @@ export const Main = () => {
           <ChooseYourBreakfast />
 
           <MainData />
+          <Footer />
         </div>
       </div>
     </div>
