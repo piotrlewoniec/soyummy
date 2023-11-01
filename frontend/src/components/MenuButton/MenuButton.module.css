@@ -1,0 +1,24 @@
+.menuButton {
+  background: none;
+  border: 0px;
+}
+
+.iconMenu {
+  stroke: #22252a;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .iconMenu {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (min-width: 1281px) {
+  .menuButton {
+    display: none;
+  }
+}

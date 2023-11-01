@@ -1,0 +1,18 @@
+.logoBackgroung {
+  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.iconLogo {
+  fill: #8baa36;
+  stroke: #fafafa;
+}
+
+@media (max-width: 768px) {
+  .logoBackgroung {
+    width: 40px;
+    height: 40px;
+  }
+}

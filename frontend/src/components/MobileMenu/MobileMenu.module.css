@@ -1,0 +1,80 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+@media (min-width: 1281px) {
+  .modal {
+    display: none;
+  }
+}
+
+.modalContent {
+  background-color: #ebf3d4;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    background-image: url('../../assets/images/mobileMenu/spinachMenu-mobile@1x.png');
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .modalContent {
+      background-image: url('../../assets/images/mobileMenu/spinachMenu-mobile@2x.png');
+    }
+  }
+  @media (min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+    .modalContent {
+      background-image: url('../../assets/images/mobileMenu/spinachMenu-mobile@3x.png');
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .modalContent {
+    background-image: url('../../assets/images/mobileMenu/spinachMenu-tablet@1x.png');
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .modalContent {
+      background-image: url('../../assets/images/mobileMenu/spinachMenu-tablet@2x.png');
+    }
+  }
+  @media (min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+    .modalContent {
+      background-image: url('../../assets/images/mobileMenu/spinachMenu-tablet@3x.png');
+    }
+  }
+}
+
+.modalCloseButton {
+  background: none;
+  border: none;
+}
+
+.iconClose {
+  stroke: #22252a;
+  width: 13.33px;
+  height: 13.33px;
+  cursor: pointer;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+}

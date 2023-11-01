@@ -1,0 +1,63 @@
+.wellcomePageBackground {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  transition: background-image 0.5s ease;
+}
+
+@media (max-width: 767px) and (min-resolution: 1dppx) {
+  .wellcomePageBackground {
+    background-image: url('../../assets/images/wellcom/wellcomePage-mobile@1x.jpg');
+  }
+}
+
+@media (max-width: 767px) and (min-resolution: 2dppx) {
+  .wellcomePageBackground {
+    background-image: url('../../assets/images/wellcom/wellcomePage-mobile@2x.jpg');
+  }
+}
+
+@media (max-width: 767px) and (min-resolution: 3dppx) {
+  .wellcomePageBackground {
+    background-image: url('../../assets/images/wellcom/wellcomePage-mobile@3x.jpg');
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 1dppx) {
+  .wellcomePageBackground {
+    background-image: url('../../assets/images/wellcom/wellcomePage-tablet@1x.jpg');
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 2dppx) {
+  .wellcomePageBackground {
+    background-image: url('../../assets/images/wellcom/wellcomePage-tablet@2x.jpg');
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 3dppx) {
+  .wellcomePageBackground {
+    background-image: url('../../assets/images/wellcom/wellcomePage-tablet@3x.jpg');
+  }
+}
+
+@media (min-width: 1024px) and (min-resolution: 1dppx) {
+  .wellcomePageBackground {
+    background-image: url('../../assets/images/wellcom/wellcomePage-desktop@1x.jpg');
+  }
+}
+
+@media (min-width: 1024px) and (min-resolution: 2dppx) {
+  .wellcomePageBackground {
+    background-image: url('../../assets/images/wellcom/wellcomePage-desktop@2x.jpg');
+  }
+}
+
+@media (min-width: 1024px) and (min-resolution: 3dppx) {
+  .wellcomePageBackground {
+    background-image: url('../../assets/images/wellcom/wellcomePage-desktop@3x.jpg');
+  }
+}

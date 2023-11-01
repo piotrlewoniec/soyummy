@@ -1,28 +1,33 @@
 import styles from './AuthNav.module.css';
+import icons from '../../assets/icons/icons.svg';
 
 export const AuthNav = () => {
   return (
     <div className={styles.authContainer}>
       <div className={styles.authContent}>
         <svg className={styles.logoSvg}>
-          <use xlinkHref="/assets/icons/symbol-devs.svg#icon-logo" />
+          <use href={`${icons}#icon-logo`} className={styles.logo} />
         </svg>
 
-        <h1>Welcome to the app!</h1>
-        <p>
+        <h1 className={styles.authTitle}>Welcome to the app!</h1>
+        <p className={styles.authDescriptions}>
           This app offers more than just a collection of recipes - it is
           designed to be your very own digital cookbook. You can easily save and
           retrieve your own recipes at any time.
         </p>
 
-        <div className={styles.authButtons}>
+        <nav className={styles.authButtons}>
           <button className={styles.diagonalButton}>
-            <span className={styles.textButton}>Registration</span>
+            <a className={styles.diagonalButtonText} href="/soyummy/register">
+              Registration
+            </a>
           </button>
           <button className={styles.diagonalButton}>
-            <span className={styles.textButton}>Sign In</span>
+            <a className={styles.diagonalButtonText} href="/soyummy/signin">
+              Sign in
+            </a>
           </button>
-        </div>
+        </nav>
       </div>
     </div>
   );

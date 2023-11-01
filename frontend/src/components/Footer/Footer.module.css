@@ -1,0 +1,430 @@
+.footer {
+  color: #fafafa;
+  font-family: Poppins;
+  font-style: normal;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #22252a;
+  width: 100%;
+}
+.elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.soYummy {
+  margin-top: 28px;
+  margin-bottom: 32px;
+}
+.soYummy a {
+  color: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.logoSvg {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #ebf3d4;
+  stroke: #8baa36;
+  fill: none;
+}
+
+.brandName {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 100% */
+  letter-spacing: 0.27px;
+  margin: 0;
+}
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 32px;
+}
+.navMenu a {
+  color: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.28px;
+  text-decoration: none;
+}
+.newsletterInvite {
+  display: none;
+}
+.subscription {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+label {
+  display: flex;
+  align-items: center;
+  height: 38px;
+}
+
+.subscriptionEmail {
+  background: none;
+  font-family: Poppins;
+  color: white;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  outline: none;
+  width: 100%;
+  height: 38px;
+  border: 1px solid #ffffff15;
+  border-radius: 5px;
+  padding-left: 40px;
+  &:focus {
+    border: 1px solid white;
+  }
+}
+
+.subscriptionEmail::placeholder {
+  opacity: 1;
+}
+.subscriptionEmail.active {
+  border: 1px solid red;
+}
+
+.subscriptionInputIcon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-left: 14px;
+  position: absolute;
+}
+.subscriptionButton {
+  display: flex;
+  width: 204px;
+  height: 38px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: #8baa36;
+  border-style: none;
+  gap: 8px;
+  padding: 0;
+  color: #fafafa;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+  margin-bottom: 44px;
+}
+.subscriptionButton:hover {
+  cursor: pointer;
+}
+.socialsIcons {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.logoSvg2 {
+  width: 20px;
+  height: 20px;
+  stroke: none;
+  fill: #8baa36;
+}
+.copyrights {
+  display: flex;
+  width: 100%;
+  height: 66px;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: none;
+  position: relative;
+  overflow: hidden;
+}
+.copyrights::before {
+  content: '';
+  background-image: url('../../../assets/images/footer-background.png');
+  background-size: 160px 172px;
+  transform: rotate(-24deg);
+  position: absolute;
+  right: -20px;
+  width: 160px;
+  height: 172px;
+  filter: blur(4.5px);
+  z-index: -1;
+}
+
+.copyrights p {
+  color: #22252a;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  line-height: 10px; /* 100% */
+  letter-spacing: -0.1px;
+  font-weight: 500;
+  opacity: 0.5;
+  margin: 0;
+}
+.copyrights a {
+  color: #22252a;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  line-height: 10px; /* 100% */
+  letter-spacing: -0.1px;
+  font-weight: 400;
+  opacity: 0.5;
+  text-decoration: none;
+}
+.descriptionList {
+  display: none;
+}
+
+/* Obraz tła na tabletach */
+@media (min-width: 768px) and (max-width: 1439px) {
+  .soYummy {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+  .soYummy a {
+    gap: 12px;
+  }
+  .logoSvg {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brandName {
+    font-size: 28px;
+    line-height: 28px; /* 100% */
+    letter-spacing: 0.42px;
+    margin: 0;
+  }
+  .description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 72px;
+    width: 100%;
+  }
+
+  .descriptionList {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    gap: 10px;
+    margin: 0;
+  }
+  .descriptionList li {
+    color: #fafafa;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+  }
+  .descriptionBody {
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
+  }
+  .navMenu {
+    margin: 0;
+    gap: 20px;
+    margin-right: 94px;
+  }
+  .subscription {
+    flex-direction: row;
+  }
+  label {
+    width: 259px;
+  }
+  .subscriptionEmail {
+    font-size: 14px;
+    letter-spacing: -0.28px;
+  }
+
+  .subscriptionButton {
+    width: 187px;
+    font-size: 16px;
+    line-height: 18px; /* 112.5% */
+  }
+  .copyrights {
+    height: 78px;
+  }
+  .copyrights a {
+    font-size: 14px;
+    line-height: 14px; /* 100% */
+    letter-spacing: -0.14px;
+  }
+  .copyrights p {
+    font-size: 14px;
+    line-height: 14px; /* 100% */
+    letter-spacing: -0.14px;
+  }
+  .copyrights::before {
+    background-size: 290px 313px;
+    width: 290px;
+    height: 313px;
+  }
+}
+
+/* Obraz tła na komputerach */
+@media (min-width: 1440px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 414px;
+  }
+  .elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 64px;
+  }
+  .soYummy {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+  .soYummy a {
+    gap: 12px;
+  }
+  .logoSvg {
+    width: 44px;
+    height: 44px;
+  }
+  .descriptionBody {
+    display: flex;
+    flex-direction: column;
+  }
+  .brandName {
+    font-size: 28px;
+    line-height: 28px; /* 100% */
+    letter-spacing: 0.42px;
+    margin: 0;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 72px;
+    width: 100%;
+    margin-left: 100px;
+  }
+  .descriptionList li {
+    color: #fafafa;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: -0.36px;
+  }
+  .descriptionList {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    gap: 10px;
+    margin: 0;
+    width: 418px;
+  }
+  .subscription {
+    margin-right: 100px;
+    width: 339px;
+  }
+  .subscription label {
+    height: 59px;
+  }
+  .subscriptionEmail {
+    height: 59px;
+    font-size: 18px;
+    letter-spacing: -0.36px;
+  }
+
+  .subscriptionButton {
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    line-height: 18px; /* 112.5% */
+  }
+  .newsletterInvite {
+    display: block;
+    width: 339px;
+    margin-bottom: 28px;
+  }
+  .newsletterInvite p {
+    color: #fafafa;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 14px;
+    margin-top: 0;
+  }
+  .newsletterInvite span {
+    color: #fafafa;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+  }
+  .descriptionBody,
+  .navMenu,
+  .subscription {
+    flex: 1; /* Równa szerokość dla wszystkich trzech elementów */
+  }
+  .navMenu {
+    text-align: center;
+    position: absolute;
+    left: 47.5%;
+    margin-top: 0;
+  }
+
+  .copyrights {
+    height: 114px;
+  }
+  .copyrights a {
+    font-size: 14px;
+    line-height: 14px; /* 100% */
+    letter-spacing: -0.14px;
+  }
+  .copyrights p {
+    font-size: 14px;
+    line-height: 14px; /* 100% */
+    letter-spacing: -0.14px;
+  }
+  .copyrights::before {
+    background-size: 438px 474px;
+    width: 438px;
+    height: 474px;
+  }
+}

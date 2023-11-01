@@ -1,0 +1,87 @@
+.navigation > *,
+.navigationMobileMenu > * {
+  text-decoration: none;
+  color: #22252a;
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0px;
+  margin-right: 30px;
+}
+
+.navigation :last-child,
+.navigationMobileMenu :last-child {
+  margin-right: 0px;
+}
+
+@media (min-width: 1281px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigationMobileMenu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    align-items: center;
+    margin-top: 124px;
+  }
+
+  .navigationMobileMenu > * {
+    line-height: 18px;
+    padding-bottom: 32px;
+    letter-spacing: -2%;
+    font-size: 18px;
+    margin-right: 0px;
+  }
+
+  .navigationMobileMenu :last-child {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .navigationMobileMenu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    align-items: center;
+    margin-top: 124px;
+  }
+
+  .navigationMobileMenu > * {
+    line-height: 24px;
+    padding-bottom: 32px;
+    letter-spacing: -2%;
+    font-size: 24px;
+    margin-right: 0px;
+  }
+
+  .navigationMobileMenu :last-child {
+    padding-bottom: 0;
+  }
+}
+
+.navigation,
+.navigationMobileMenu {
+  display: flex;
+}
+
+.searchLink {
+  display: flex;
+  align-items: center;
+}
+
+.searchText {
+  padding-left: 8px;
+  cursor: pointer;
+}
+
+@media (min-width: 1281px) {
+  .searchText {
+    display: none;
+  }
+}
