@@ -79,9 +79,11 @@ const postUserRegister = async (req, res, next) => {
         code: 201,
         message: "Registration successful",
         data: {
+          name: newUser.name,
           email: newUser.email,
-          subscription: newUser.subscription,
           avatarURL: newUser.avatarURL,
+          subscription: newUser.subscription,
+          newslettersubscription: newUser.newslettersubscription,
         },
       });
     }
