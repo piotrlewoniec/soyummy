@@ -1,6 +1,6 @@
 import React from 'react';
 import css from './MobileMenu.module.css';
-import sprite from './symbol-defs.svg';
+import sprite from '../../assets/icons/icons.svg';
 import Navigation from 'components/Navigation/Navigation';
 import Logo from 'components/Logo/Logo';
 
@@ -13,7 +13,7 @@ const MobileMenuModal = ({ isOpen, onClose }) => {
         <div className={css.topContainer}>
           <Logo />
           <button className={css.modalCloseButton} type="button">
-            <svg className={css.icon_close} onClick={onClose}>
+            <svg className={css.iconClose} onClick={onClose}>
               <use href={`${sprite}#icon-close`}></use>
             </svg>
           </button>
