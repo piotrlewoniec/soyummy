@@ -19,7 +19,7 @@ const MobileMenuModal = ({ isOpen, onClose }) => {
         }`}
       >
         <div className={css.topContainer}>
-          <Logo />
+          <Logo onClose={onClose} />
           <button
             className={css.modalCloseButton}
             type="button"
@@ -34,7 +34,7 @@ const MobileMenuModal = ({ isOpen, onClose }) => {
             </svg>
           </button>
         </div>
-        <Navigation />
+        <Navigation onClose={onClose} />
         <div className={css.toggleBox}>
           <ToggleSwitch />
         </div>

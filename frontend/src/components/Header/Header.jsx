@@ -13,7 +13,6 @@ const Header = () => {
         <nav className={css.navigationHeader}>
           <Navigation />
         </nav>
-
         <div className={css.userInfo}>
           <div>User Picture</div>
           <div>User Name</div>

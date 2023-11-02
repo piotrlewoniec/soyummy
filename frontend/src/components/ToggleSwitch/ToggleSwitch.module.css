@@ -19,6 +19,8 @@
   border-radius: 50px;
   transition: 0.4s;
   box-shadow: inset 0px 6px 8px 3px #0000001a;
+  width: 61px;
+  height: 27px;
 }
 
 .slider:before {

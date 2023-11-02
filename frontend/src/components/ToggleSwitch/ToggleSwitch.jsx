@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import css from './ToggleSwitch.module.css';
 import { useTheme } from './ThemeContext';
