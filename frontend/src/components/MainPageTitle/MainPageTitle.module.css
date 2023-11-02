@@ -92,7 +92,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
   .container {
     padding-top: 104px;
     width: 1240px;
