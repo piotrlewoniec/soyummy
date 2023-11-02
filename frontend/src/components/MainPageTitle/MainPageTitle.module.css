@@ -1,13 +1,8 @@
 .container {
   display: block;
   position: relative;
-  width: 343px;
+  width: 450px;
   padding-top: 50px;
-}
-
-.section {
-  display: flex;
-  justify-content: center;
 }
 
 .title {
@@ -50,6 +45,15 @@
   top: 80px;
   transform: rotate(25deg);
 }
+.element_four {
+  background-image: url('../../assets/images/mainPageTitle/kisspng-pasta-spinach-mobile@1x.jpg');
+  position: absolute;
+  width: 256px;
+  height: 392px;
+  top: 430px;
+  left: 0;
+  z-index: -1;
+}
 
 @media (min-width: 768px) {
   .container {
@@ -90,9 +94,15 @@
     left: 390px;
     top: 102px;
   }
+  .element_four {
+    background-image: url('../../assets/images/mainPageTitle/kisspng-pasta-spinach-tablet@1x.png');
+    width: 423px;
+    height: 646px;
+    top: 600px;
+  }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
   .container {
     padding-top: 104px;
     width: 1240px;
@@ -121,5 +131,11 @@
     position: absolute;
     left: 710px;
     top: 140px;
+  }
+  .element_four {
+    background-image: url('../../assets/images/mainPageTitle/kisspng-pasta-spinach-desktop@1x.png');
+    width: 558px;
+    height: 852px;
+    top: 730px;
   }
 }

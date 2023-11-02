@@ -17,7 +17,7 @@
   background-position: center center;
   transition: background-image 0.5s ease;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .topImage {
     flex-direction: row;
     position: absolute;
@@ -34,7 +34,7 @@
   transition: background-image 0.5s ease;
   z-index: 1;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1279px) {
   .bottomImage {
     margin-top: 260px;
   }
@@ -51,12 +51,12 @@
     margin-top: 47px;
   }
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1279px) {
   .signinFormOverlay {
     margin-top: 90px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .signinFormOverlay {
     top: 50%;
     left: 75%;
@@ -83,7 +83,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 1dppx) {
+@media (min-width: 768px) and (max-width: 1279px) and (min-resolution: 1dppx) {
   .topImage {
     background-image: url('../../assets/images/wellcom/Order-food-pana-tablet@1x.png');
     width: 409px;
@@ -91,19 +91,19 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 2dppx) {
+@media (min-width: 768px) and (max-width: 1279px) and (min-resolution: 2dppx) {
   .topImage {
     background-image: url('../../assets/images/wellcom/Order-food-pana-tablet@2x.png');
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 3dppx) {
+@media (min-width: 768px) and (max-width: 1279px) and (min-resolution: 3dppx) {
   .topImage {
     background-image: url('../../assets/images/wellcom/Order-food-pana-tablet@3x.png');
   }
 }
 
-@media (min-width: 1024px) and (min-resolution: 1dppx) {
+@media (min-width: 1280px) and (min-resolution: 1dppx) {
   .topImage {
     background-image: url('../../assets/images/wellcom/Order-food-pana-desktop@1x.png');
     width: 532px;
@@ -112,13 +112,13 @@
   }
 }
 
-@media (min-width: 1024px) and (min-resolution: 2dppx) {
+@media (min-width: 1280px) and (min-resolution: 2dppx) {
   .topImage {
     background-image: url('../../assets/images/wellcom/Order-food-pana-desktop@2x.png');
   }
 }
 
-@media (min-width: 1024px) and (min-resolution: 3dppx) {
+@media (min-width: 1280px) and (min-resolution: 3dppx) {
   .topImage {
     background-image: url('../../assets/images/wellcom/Order-food-pana-desktop@3x.png');
   }
@@ -144,7 +144,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 1dppx) {
+@media (min-width: 768px) and (max-width: 1279px) and (min-resolution: 1dppx) {
   .bottomImage {
     background-image: url('../../assets/images/wellcom/Rectangle-8970-tablet@1x.png');
     width: 768px;
@@ -152,19 +152,19 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 2dppx) {
+@media (min-width: 768px) and (max-width: 1279px) and (min-resolution: 2dppx) {
   .bottomImage {
     background-image: url('../../assets/images/wellcom/Rectangle-8970-tablet@2x.png');
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 3dppx) {
+@media (min-width: 768px) and (max-width: 1279px) and (min-resolution: 3dppx) {
   .bottomImage {
     background-image: url('../../assets/images/wellcom/Rectangle-8970-tablet@3x.png');
   }
 }
 
-@media (min-width: 1024px) and (min-resolution: 1dppx) {
+@media (min-width: 1280px) and (min-resolution: 1dppx) {
   .bottomImage {
     background-image: url('../../assets/images/wellcom/Rectangle-8970-desktop@1x.png');
     width: 1440px;
@@ -172,13 +172,13 @@
   }
 }
 
-@media (min-width: 1024px) and (min-resolution: 2dppx) {
+@media (min-width: 1280px) and (min-resolution: 2dppx) {
   .bottomImage {
     background-image: url('../../assets/images/wellcom/Rectangle-8970-desktop@2x.png');
   }
 }
 
-@media (min-width: 1024px) and (min-resolution: 3dppx) {
+@media (min-width: 1280px) and (min-resolution: 3dppx) {
   .bottomImage {
     background-image: url('../../assets/images/wellcom/Rectangle-8970-desktop@3x.png');
   }
