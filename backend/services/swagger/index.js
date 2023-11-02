@@ -8,7 +8,8 @@ module.exports = {
 
 */
 
-const app = require("./app");
+const swagger = require("./swagger");
 
-module.exports = { app: app.app };
-
+module.exports = {
+  swaggerRouter: swagger.router,
+};
