@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import {
   fetchCategories,
   fetchCategoryMeals,
+  fetchRecipes,
   fetchSomeCategories,
 } from './actions';
 
@@ -18,7 +19,9 @@ const categoriesSlice = createSlice({
   name: 'categories',
   initialState: {
     items: [],
-    categoryRecipes: {},
+    mealsFiltered: [],
+    somecategories: [],
+    recipes: [],
     isLoading: false,
     error: null,
   },
@@ -34,25 +37,24 @@ const categoriesSlice = createSlice({
     [fetchSomeCategories.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.error = null;
-      state.items = action.payload;
+      state.somecategories = action.payload;
     },
     [fetchSomeCategories.rejected]: handleRejected,
     [fetchCategoryMeals.pending]: handlePending,
     [fetchCategoryMeals.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.error = null;
-      const categoryMeals = action.payload;
-      categoryMeals.forEach(categoryMeal => {
-        state.categoryRecipes[categoryMeal.category] = categoryMeal.meals;
-      });
-      console.log('categoryRecipes in reducer:', state.categoryRecipes);
+      state.mealsFiltered = action.payload;
     },
     [fetchCategoryMeals.rejected]: handleRejected,
+    [fetchRecipes.pending]: handlePending,
+    [fetchRecipes.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.error = null;
+      state.recipes = action.payload;
+    },
+    [fetchRecipes.rejected]: handleRejected,
   },
 });
-
-export const selectCategories = state => state.categories.items;
-export const selectCategoryRecipes = state => state.categories.categoryRecipes;
-export const selectLoading = state => state.categories.isLoading;
 
 export const categoriesReducer = categoriesSlice.reducer;

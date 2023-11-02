@@ -2,39 +2,36 @@ import s from './categories.module.css';
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchCategories, fetchRecipes } from 'redux/categories/actions';
+
 export const CategoriesData = () => {
-  const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('Beef');
   const [recipes, setRecipes] = useState([]);
-  const [loading, setLoading] = useState(false);
+
+  const dispatch = useDispatch();
+  const categories = useSelector(state => state.categories.items);
+  const posilki = useSelector(state => state.categories.recipes);
 
   useEffect(() => {
-    fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
-      .then(response => response.json())
-      .then(data => setCategories(data.categories))
-      .catch(error => console.error('error', error));
+    dispatch(fetchCategories());
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
-    setLoading(true);
-    fetch(
-      `https://www.themealdb.com/api/json/v1/1/filter.php?c=${selectedCategory}`
-    )
-      .then(response => response.json())
-      .then(data => {
-        setRecipes(data.meals);
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error('error', error);
-        setLoading(false);
-      });
+    dispatch(fetchRecipes(selectedCategory));
+    const filtermeals = posilki.filter(
+      one => one.category === selectedCategory
+    );
+    setRecipes(filtermeals);
+    // eslint-disable-next-line
   }, [selectedCategory]);
 
   const handleCategoryClick = category => {
     setSelectedCategory(category);
   };
 
+  console.log('recipes', recipes);
   return (
     <div className={s.App}>
       <div className={s.name}>Categories</div>
@@ -42,34 +39,28 @@ export const CategoriesData = () => {
         <div className={s.categories}>
           {categories.map(category => (
             <NavLink
-              key={category.strCategory}
-              to={`/categories/${category.strCategory}`}
-              className={`${s.category} ${
-                category.strCategory === selectedCategory ? s.active : ''
-              }`}
-              onClick={() => handleCategoryClick(category.strCategory)}
+              key={category.title}
+              to={`/categories/${category.title}`}
+              className={s.category}
+              onClick={() => handleCategoryClick(category.title)}
             >
-              {category.strCategory}
+              {category.title}
             </NavLink>
           ))}
         </div>
       </div>
 
       <div className={s.recipes}>
-        {loading && <p>Ładowanie...</p>}
-        {recipes
-          .sort((a, b) => a.strMeal.localeCompare(b.strMeal))
-          .slice(0, 8)
-          .map(recipe => (
-            <NavLink
-              to={`/recipes/${recipe.idMeal}`}
-              key={recipe.idMeal}
-              className={s.recipe}
-            >
-              <img src={recipe.strMealThumb} alt={recipe.strMeal} />
-              <div className={s.overlay}>{recipe.strMeal}</div>
-            </NavLink>
-          ))}
+        {recipes.slice(0, 8).map(recipe => (
+          <NavLink
+            to={`/recipes/${recipe._id}`}
+            key={recipe._id}
+            className={s.recipe}
+          >
+            <img src={recipe.thumb} alt={recipe.thumb} />
+            <div className={s.overlay}>{recipe.title}</div>
+          </NavLink>
+        ))}
       </div>
     </div>
   );

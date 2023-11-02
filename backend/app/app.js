@@ -20,7 +20,7 @@ app.use(express.json());
 
 app.use("/api/v1/users", usersRouter);
 app.use("/soyummy/recipes", categoriesRouter);
-app.use("/soyummy/", recipeRouter);
+app.use("/soyummy", recipeRouter);
 
 app.use("/info", swaggerRouter);
 
