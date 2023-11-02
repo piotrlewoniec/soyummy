@@ -9,10 +9,12 @@ import {
   REGISTER,
 } from 'redux-persist';
 import { categoriesReducer } from './categories/slice';
+import { currentUserSlice } from './user/slice';
 
 export const store = configureStore({
   reducer: {
     categories: categoriesReducer,
+    user: currentUserSlice,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
