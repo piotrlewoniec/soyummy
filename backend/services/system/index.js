@@ -7,3 +7,7 @@ module.exports = {
 }
 
 */
+
+const processexec = require("./processexec");
+
+module.exports = { processSystemHandle: processexec.processSystemHandle };

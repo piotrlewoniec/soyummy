@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="css/main.min.css" rel="stylesheet" />
+    <title>SoYummy - Rest API Welcome Page</title>
+  </head>
+  <body>
+    <main>
+      <section class="container section">
+        <h1 class="links__title">SoYummy - Rest API for food service</h1>
+        <ul class="links__wrapper">
+          <li>
+            <a
+              class="links__link"
+              href="https://piotrlewoniec.github.io/soyummy/"
+              target="_blank"
+              >SoYummy WebPage</a
+            >
+          </li>
+          <li>
+            <a class="links__link" href="<%= hostAddress %><%= swaggerRoute %>"
+              >SoYummy API-Docs</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
