@@ -2,6 +2,7 @@
   color: #fafafa;
   font-family: Poppins;
   font-style: normal;
+  width: 100vw;
 }
 .container {
   display: flex;
