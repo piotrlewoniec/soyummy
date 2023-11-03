@@ -4,6 +4,7 @@ import { SearchedRecipesList } from '../../components/SearchedRecipesList/Search
 import Header from '../../components/Header/Header';
 import styles from './SearchPage.module.css';
 import { Footer } from '../../components/Footer/Footer';
+import { Pagination } from 'components/Pagination/Pagination';
 export const SearchPage = () => {
   return (
     <div className={styles.searchPage}>
@@ -11,6 +12,7 @@ export const SearchPage = () => {
       <MainPageTitle title="Search" />
       <SearchBar />
       <SearchedRecipesList />
+      <Pagination />
       <Footer />
     </div>
   );
