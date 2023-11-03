@@ -2,7 +2,7 @@ import Header from 'components/Header/Header';
 import { ChooseYourBreakfast } from './ChooseYourBeakfast/ChooseYourBreakfast';
 import { Search } from './Search/Search';
 import s from './main.module.css';
-import { MainCategories } from './mainCategories/mainCategories';
+import { MainData } from './mainCategories/mainCategories';
 
 export const Main = () => {
   return (
@@ -11,7 +11,7 @@ export const Main = () => {
       <div className={s.position}>
         <Search />
         <ChooseYourBreakfast />
-        <MainCategories />
+        <MainData />
       </div>
     </div>
   );

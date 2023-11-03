@@ -4,7 +4,7 @@ import styles from './SigninPage.module.css';
 export const SigninPage = () => {
   return (
     <div className={styles.signinPageContainer}>
-      <div className={styles.overlayContainer}>
+      <div className={styles.signinContainer}>
         <div className={styles.topImage}></div>
         <div className={styles.signinFormOverlay}>
           <SigninForm />
