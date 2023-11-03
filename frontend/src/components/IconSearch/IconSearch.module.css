@@ -1,6 +1,24 @@
 .iconSearch {
-  stroke: #000000;
+  stroke: #22252a;
   fill: none;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 768px) {
+  .iconSearch {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .iconSearch {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.darkTheme {
+  stroke: #fafafa;
 }

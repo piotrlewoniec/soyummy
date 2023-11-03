@@ -3,6 +3,7 @@ import React from 'react';
 import css from './Header.module.css';
 import Navigation from 'components/Navigation/Navigation';
 import Logo from 'components/Logo/Logo';
+import ToggleSwitch from 'components/ToggleSwitch/ToggleSwitch';
 
 const Header = () => {
   return (
@@ -16,7 +17,9 @@ const Header = () => {
           <div>User Picture</div>
           <div>User Name</div>
         </div>
-        <div className={css.toggleSwitch}>Toggle Switch</div>
+        <div className={css.toggleSwitch}>
+          <ToggleSwitch />
+        </div>
         <MenuButton />
       </div>
     </section>
