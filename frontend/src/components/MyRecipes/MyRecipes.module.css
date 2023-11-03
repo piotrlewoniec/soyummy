@@ -1,0 +1,338 @@
+.containerMyRecipes {
+  width: 100vw;
+  padding-top: 64px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+}
+.recipeContainer {
+  width: 343px;
+  height: 152px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #fff;
+}
+.recipePhoto {
+  width: 124px;
+  height: 124px;
+  border-radius: 8px;
+  margin-left: 8px;
+}
+.recipeInfo {
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  height: 124px;
+  border-radius: 8px;
+  position: relative;
+  gap: 14px;
+}
+.recipeTitle {
+  color: #3e4462;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 100% */
+  letter-spacing: -0.24px;
+  margin: 0;
+}
+.recipeDescription {
+  overflow: hidden;
+  color: #23262a;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  font-family: Poppins;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 10px; /* 125% */
+  letter-spacing: -0.16px;
+  width: 163px;
+  height: 39px;
+}
+.recipeShortDescription {
+  display: none;
+}
+.recipePrepTime {
+  color: #3e4462;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.deleteButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: #8baa36;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+}
+.deleteIcon {
+  width: 14px;
+  height: 14px;
+  stroke: white;
+  fill: none;
+  padding: 0;
+}
+.openRecipeButton {
+  background: transparent;
+  border: none;
+  padding: 0;
+  width: 87px;
+  height: 27px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='87' height='27' viewBox='0 0 87 27' fill='none'><path d='M0 9C0 4.02944 4.02944 0 9 0H69C78.9411 0 87 8.05888 87 18C87 22.9706 82.9706 27 78 27H18C8.05887 27 0 18.9411 0 9Z' fill='%238BAA36'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.openRecipeButton span {
+  color: #fafafa;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.pagination {
+  width: 275px;
+  height: 51px;
+  border-radius: 26px;
+  background: #fafafa;
+  box-shadow: 0px 4px 4px 0px rgba(135, 135, 135, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+.pagination span {
+  color: #656565;
+  text-align: center;
+  font-feature-settings: 'ss04' on;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.arrowButton {
+  width: 8px;
+  height: 13.909px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.pageNumberButtonActive {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  border: none;
+  background: #ebf3d4;
+}
+.pageNumberButton {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+}
+.arrowButtonIcon {
+  width: 8px;
+  height: 13.909px;
+  fill: rgba(169, 169, 169, 0.73);
+  padding: 0;
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+  .recipeContainer {
+    width: 704px;
+    height: 288px;
+    gap: 16px;
+  }
+  .recipePhoto {
+    width: 228px;
+    height: 232px;
+    margin-left: 24px;
+  }
+  .recipeInfo {
+    width: 420px;
+    height: 232px;
+  }
+  .recipeTitle {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 14px;
+  }
+  .recipeDescription {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.28px;
+    width: 353px;
+    height: auto;
+  }
+  .recipeShortDescription {
+    display: block;
+    overflow: hidden;
+    color: #23262a;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.28px;
+    width: 353px;
+    height: 21px;
+  }
+  .recipePrepTime {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+  }
+  .deleteButton {
+    width: 38px;
+    height: 38px;
+  }
+  .deleteIcon {
+    width: 22px;
+    height: 22px;
+  }
+  .openRecipeButton {
+    width: 138px;
+    height: 45px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='138' height='45' viewBox='0 0 138 45' fill='none'><path d='M0 15C0 6.71573 6.71573 0 15 0H108C124.569 0 138 13.4315 138 30C138 38.2843 131.284 45 123 45H30C13.4315 45 0 31.5685 0 15Z' fill='%238BAA36'/></svg>");
+  }
+  .openRecipeButton span {
+    font-size: 14px;
+  }
+  .pagination {
+    width: 324px;
+    height: 55px;
+  }
+  .arrowButton {
+    width: 8px;
+    height: 15px;
+  }
+  .arrowButtonIcon {
+    width: 8px;
+    height: 15px;
+  }
+  .pageNumberButtonActive {
+    width: 27.81px;
+    height: 27px;
+  }
+  .pageNumberButton {
+    width: 27.81px;
+    height: 27px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .recipeContainer {
+    width: 1240px;
+    height: 404px;
+    gap: 54px;
+  }
+  .recipePhoto {
+    width: 318px;
+    height: 324px;
+    margin-left: 40px;
+  }
+  .recipeInfo {
+    width: 806px;
+    height: 324px;
+  }
+  .recipeTitle {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 26px;
+  }
+  .recipeDescription {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.36px;
+    width: 806px;
+    height: auto;
+  }
+  .recipeShortDescription {
+    display: block;
+    overflow: hidden;
+    color: #23262a;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.36px;
+    width: 806px;
+    height: 50px;
+  }
+  .recipePrepTime {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+  }
+  .deleteButton {
+    width: 44px;
+    height: 44px;
+  }
+  .deleteIcon {
+    width: 24px;
+    height: 24px;
+  }
+  .openRecipeButton {
+    width: 172px;
+    height: 59px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='172' height='59' viewBox='0 0 138 45' fill='none'><path d='M0 15C0 6.71573 6.71573 0 15 0H108C124.569 0 138 13.4315 138 30C138 38.2843 131.284 45 123 45H30C13.4315 45 0 31.5685 0 15Z' fill='%238BAA36'/></svg>");
+  }
+  .openRecipeButton span {
+    font-size: 16px;
+  }
+  .pagination {
+    width: 324px;
+    height: 55px;
+  }
+  .arrowButton {
+    width: 8px;
+    height: 15px;
+  }
+  .arrowButtonIcon {
+    width: 8px;
+    height: 15px;
+  }
+  .pageNumberButtonActive {
+    width: 27.81px;
+    height: 27px;
+  }
+  .pageNumberButton {
+    width: 27.81px;
+    height: 27px;
+  }
+}
