@@ -3,12 +3,39 @@
   font-family: Poppins;
   font-style: normal;
   width: 100vw;
+  background-color: #fafafa;
+  position: relative;
+  overflow: visible;
+  z-index: 2;
+}
+.footer::before {
+  content: '';
+  background-image: url('../../assets/images/footer/spinach-background-image@x1.png');
+  background-size: 256px 392px;
+  position: absolute;
+  top: -180px;
+  left: -5px;
+  width: 256px;
+  height: 392px;
+  filter: blur(2px);
+  z-index: -1;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .footer::before {
+    background-image: url('../../assets/images/footer/spinach-background-image@x2.png');
+  }
+}
+@media (min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+  .footer::before {
+    background-image: url('../../assets/images/footer/spinach-background-image@x3.png');
+  }
 }
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #22252a;
+  width: 100%;
 }
 .elements {
   display: flex;
@@ -164,17 +191,26 @@ label {
 }
 .copyrights::before {
   content: '';
-  background-image: url('../../../assets/images/footer-background.png');
-  background-size: 160px 172px;
-  transform: rotate(-24deg);
+  background-image: url('../../assets/images/footer/footer-background-image@x1.png');
+  background-size: 100% 100%;
+  filter: blur(4.5px);
   position: absolute;
-  right: -20px;
+  right: -10px;
+  bottom: -1px;
   width: 160px;
   height: 172px;
-  filter: blur(4.5px);
-  z-index: -1;
+  z-index: 1;
 }
-
+@media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .copyrights::before {
+    background-image: url('../../assets/images/footer/footer-background-image@x2.png');
+  }
+}
+@media (min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+  .copyrights::before {
+    background-image: url('../../assets/images/footer/footer-background-image@x3.png');
+  }
+}
 .copyrights p {
   color: #22252a;
   font-family: Poppins;
@@ -214,7 +250,14 @@ label {
     width: 44px;
     height: 44px;
   }
-
+  .footer::before {
+    background-size: 423px 646px;
+    position: absolute;
+    top: -350px;
+    left: -15px;
+    width: 423px;
+    height: 646px;
+  }
   .brandName {
     font-size: 28px;
     line-height: 28px; /* 100% */
@@ -306,6 +349,14 @@ label {
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 64px;
+  }
+  .footer::before {
+    background-size: 558px 852px;
+    position: absolute;
+    top: -445px;
+    left: -15px;
+    width: 558px;
+    height: 852px;
   }
   .soYummy {
     margin-top: 0;
@@ -400,7 +451,7 @@ label {
   .descriptionBody,
   .navMenu,
   .subscription {
-    flex: 1; /* Równa szerokość dla wszystkich trzech elementów */
+    flex: 1;
   }
   .navMenu {
     text-align: center;
