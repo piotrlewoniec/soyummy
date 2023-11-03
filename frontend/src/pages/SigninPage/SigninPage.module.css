@@ -34,9 +34,9 @@
   transition: background-image 0.5s ease;
   z-index: 1;
 }
-@media (min-width: 1279px) {
+@media (min-width: 1280px) {
   .bottomImage {
-    margin-top: 260px;
+    margin-top: 280px;
   }
 }
 .signinFormOverlay {
@@ -53,7 +53,7 @@
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .signinFormOverlay {
-    margin-top: 90px;
+    margin-top: 120px;
   }
 }
 @media (min-width: 1280px) {
@@ -108,7 +108,6 @@
     background-image: url('../../assets/images/wellcom/Order-food-pana-desktop@1x.png');
     width: 532px;
     height: 468px;
-    margin-top: 0;
   }
 }
 
@@ -127,7 +126,7 @@
 @media (max-width: 767px) and (min-resolution: 1dppx) {
   .bottomImage {
     background-image: url('../../assets/images/wellcom/Rectangle-8970-mobile@1x.png');
-    width: 375px;
+    width: 100vw;
     height: 490px;
   }
 }
@@ -147,7 +146,7 @@
 @media (min-width: 768px) and (max-width: 1279px) and (min-resolution: 1dppx) {
   .bottomImage {
     background-image: url('../../assets/images/wellcom/Rectangle-8970-tablet@1x.png');
-    width: 768px;
+    width: 100vw;
     height: 606px;
   }
 }
@@ -167,7 +166,7 @@
 @media (min-width: 1280px) and (min-resolution: 1dppx) {
   .bottomImage {
     background-image: url('../../assets/images/wellcom/Rectangle-8970-desktop@1x.png');
-    width: 1440px;
+    width: 100vw;
     height: 325px;
   }
 }
