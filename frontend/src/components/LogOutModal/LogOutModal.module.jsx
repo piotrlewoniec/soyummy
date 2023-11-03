@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const LogOutContainer = styled.div`
   position: absolute;
   top: 50%;
@@ -37,7 +38,6 @@ export const LogOutText = styled.p`
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  /* identical to box height, or 133% */
 
   text-align: center;
   letter-spacing: -0.02em;
