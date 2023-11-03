@@ -1,4 +1,5 @@
 const Recipe = require("./recipe.model");
+const Categories = require("./recipe.model");
 
 const getRecipe = async (req, res, next) => {
   try {
@@ -9,6 +10,16 @@ const getRecipe = async (req, res, next) => {
   }
 };
 
+const getCategories = async (req, res, next) => {
+  try {
+    const categories = await Categories.find();
+    res.status(200).json({ categories });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
+  getCategories,
   getRecipe,
 };

@@ -19,7 +19,7 @@ const categoriesSlice = createSlice({
   name: 'categories',
   initialState: {
     items: [],
-    mealsFiltered: [],
+    meals: [],
     somecategories: [],
     recipes: [],
     isLoading: false,
@@ -44,7 +44,7 @@ const categoriesSlice = createSlice({
     [fetchCategoryMeals.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.error = null;
-      state.mealsFiltered = action.payload;
+      state.meals = action.payload;
     },
     [fetchCategoryMeals.rejected]: handleRejected,
     [fetchRecipes.pending]: handlePending,
