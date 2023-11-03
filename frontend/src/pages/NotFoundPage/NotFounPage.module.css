@@ -33,7 +33,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 1dppx) {
+@media (min-width: 768px) and (max-width: 1279px) and (min-resolution: 1dppx) {
   .image {
     background-image: url('../../assets/images/404/404-tablet@1x.png');
     width: 498px;
@@ -43,19 +43,19 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 2dppx) {
+@media (min-width: 768px) and (max-width: 1279px) and (min-resolution: 2dppx) {
   .image {
     background-image: url('../../assets/images/404/404-tablet@2x.png');
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 3dppx) {
+@media (min-width: 768px) and (max-width: 1279px) and (min-resolution: 3dppx) {
   .image {
     background-image: url('../../assets/images/404/404-tablet@3x.png');
   }
 }
 
-@media (min-width: 1024px) and (min-resolution: 1dppx) {
+@media (min-width: 1280px) and (min-resolution: 1dppx) {
   .image {
     background-image: url('../../assets/images/404/404-desktop@1x.png');
     width: 498px;
@@ -65,13 +65,13 @@
   }
 }
 
-@media (min-width: 1024px) and (min-resolution: 2dppx) {
+@media (min-width: 1280px) and (min-resolution: 2dppx) {
   .image {
     background-image: url('../../assets/images/404/404-desktop@2x.png');
   }
 }
 
-@media (min-width: 1024px) and (min-resolution: 3dppx) {
+@media (min-width: 1280px) and (min-resolution: 3dppx) {
   .image {
     background-image: url('../../assets/images/404/404-desktop@3x.png');
   }
@@ -113,7 +113,7 @@
     padding-bottom: 204px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .image {
     height: 331px;
   }

@@ -1,4 +1,5 @@
 node_modules/
+adoner/
 .env
 .idea
 .vscode

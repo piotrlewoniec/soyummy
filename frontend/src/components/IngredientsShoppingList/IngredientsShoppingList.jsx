@@ -1,32 +1,42 @@
 import React, { useState, useEffect } from 'react';
 import styles from './IngredientsShoppingList.module.css';
 import icons from '../../assets/icons/icons.svg';
-
+import salomon from '../../assets/images/test-shopp-list/1.png';
+import cucamber from '../../assets/images/test-shopp-list/2.png';
+import lime from '../../assets/images/test-shopp-list/3.png';
+import avocado from '../../assets/images/test-shopp-list/4.png';
+import mint from '../../assets/images/test-shopp-list/5.png';
 export const IngredientsShoppingList = () => {
   const [shoppingList] = useState([
     {
       id: 1,
-      name: 'Apples',
+      name: 'cucamber',
       quantity: 5,
-      image: 'apple.jpg',
+      image: salomon,
     },
     {
       id: 2,
-      name: 'Milk',
+      name: 'lime',
       quantity: 1,
-      image: 'milk.jpg',
+      image: cucamber,
     },
     {
       id: 3,
-      name: 'Bread',
+      name: 'avocado',
       quantity: 2,
-      image: 'bread.jpg',
+      image: lime,
     },
     {
       id: 4,
-      name: 'Eggs',
+      name: 'mint',
       quantity: 12,
-      image: 'eggs.jpg',
+      image: avocado,
+    },
+    {
+      id: 5,
+      name: 'salomon',
+      quantity: 12,
+      image: mint,
     },
   ]);
 

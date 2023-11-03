@@ -1,0 +1,89 @@
+/*!web site main variables*/
+:root {
+  --main-text-color: #212121;
+  --second-text-color: #757575;
+  --third-text-color: rgba(255, 255, 255, 0.6);
+  --fourth-text-color: #fff;
+  --selected-item-color: #2196f3;
+  --background-color1: #f5f4fa;
+  --background-color2: #2f303a;
+  --background-color3: #d9d9d9;
+  --decorations-first-color: #afb1b8;
+  --errors-color: #f11;
+  --main-fonts: "Roboto", "Raleway", sans-serif; /*! Decorations*/
+  --links-hoverfocus-animation1: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  --icons-hoverfocus-animation1: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  --background-hoverfocus-animation1: background-color 250ms
+    cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  --box-hoverfocus-animation1: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  --border-hoverfocus-animation1: border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--main-fonts);
+  color: var(--main-text-color);
+}
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.links__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+  padding-bottom: 30px;
+}
+
+.links__link {
+  color: #2196f3;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: var(--links-hoverfocus-animation1);
+  transition: var(--links-hoverfocus-animation1);
+}
+.links__link:focus,
+.links__link:hover {
+  color: #2196f3;
+}
+.links__link:visited {
+  color: #2196f3;
+}
+
+.links__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  flex-direction: column;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
