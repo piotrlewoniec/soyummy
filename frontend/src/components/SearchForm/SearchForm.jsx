@@ -1,5 +1,4 @@
 import styles from './SearchForm.module.css';
-import Button from '../../components/MenuButton/MenuButton';
 
 export const SearchForm = () => {
   const handleSubmit = e => {
@@ -11,21 +10,21 @@ export const SearchForm = () => {
   const query = urlSearchParams.get('query');
 
   return (
-    <form className={styles.container} onSubmit={handleSubmit}>
-      <div className={styles.serchForm}>
-        <input
-          className={styles.input}
-          type="text"
-          autoComplete="off"
-          autoFocus
-          required
-          minLength={3}
-          placeholder="Search..."
-          name="query"
-          defaultValue={query}
-        ></input>
-        <Button>Search</Button>
-      </div>
+    <form className={styles.searchForm} onSubmit={handleSubmit}>
+      <input
+        className={styles.input}
+        type="text"
+        autoComplete="off"
+        autoFocus
+        required
+        minLength={3}
+        placeholder="Search..."
+        name="query"
+        defaultValue={query}
+      ></input>
+      <button type="submit" className={styles.buttonSearch}>
+        Search
+      </button>
     </form>
   );
 };
