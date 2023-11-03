@@ -6,7 +6,6 @@
 .headerContent {
   display: flex;
   padding-left: 100px;
-  padding-right: 100px;
   justify-content: space-between;
   align-items: center;
 }
