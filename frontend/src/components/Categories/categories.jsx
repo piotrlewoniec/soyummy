@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchCategories, fetchRecipes } from 'redux/categories/actions';
 
 export const CategoriesData = () => {
-  const [selectedCategory, setSelectedCategory] = useState('Beef');
+  const [selectedCategory, setSelectedCategory] = useState(['Beef']);
   const [recipes, setRecipes] = useState([]);
 
   const dispatch = useDispatch();
@@ -15,6 +15,8 @@ export const CategoriesData = () => {
 
   useEffect(() => {
     dispatch(fetchCategories());
+    dispatch(fetchRecipes());
+    setRecipes(posilki);
     // eslint-disable-next-line
   }, []);
 
@@ -25,7 +27,7 @@ export const CategoriesData = () => {
     );
     setRecipes(filtermeals);
     // eslint-disable-next-line
-  }, [selectedCategory]);
+  }, [selectedCategory, dispatch]);
 
   const handleCategoryClick = category => {
     setSelectedCategory(category);
