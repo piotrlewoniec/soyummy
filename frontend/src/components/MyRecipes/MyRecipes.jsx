@@ -4,7 +4,7 @@ export const MyRecipes = () => {
   return (
     <div className={styles.containerMyRecipes}>
       <div className={styles.recipeContainer}>
-        <img className={styles.recipePhoto} />
+        <img alt="some" className={styles.recipePhoto} />
         <div className={styles.recipeInfo}>
           <p className={styles.recipeTitle}>Apple Frangipan Tart</p>
           <span className={styles.recipeDescription}>
