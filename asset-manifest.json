@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/soyummy/static/css/main.39f30edf.css",
-    "main.js": "/soyummy/static/js/main.df46e21b.js",
+    "main.css": "/soyummy/static/css/main.30f44d35.css",
+    "main.js": "/soyummy/static/js/main.12266e6f.js",
     "static/media/wellcomePage-desktop@3x.jpg": "/soyummy/static/media/wellcomePage-desktop@3x.ec0298f5e0856a8bf3cf.jpg",
     "static/media/wellcomePage-tablet@3x.jpg": "/soyummy/static/media/wellcomePage-tablet@3x.0e244f90322c432233ca.jpg",
     "static/media/wellcomePage-desktop@2x.jpg": "/soyummy/static/media/wellcomePage-desktop@2x.04057b0a9ae476197ab8.jpg",
@@ -45,11 +45,11 @@
     "static/media/Rectangle-8970-tablet@3x.png": "/soyummy/static/media/Rectangle-8970-tablet@3x.d8dba5e62e9fbeb8691e.png",
     "static/media/spinach-mobile.webp": "/soyummy/static/media/spinach-mobile.fcf80e39aba42eb2c439.webp",
     "index.html": "/soyummy/index.html",
-    "main.39f30edf.css.map": "/soyummy/static/css/main.39f30edf.css.map",
-    "main.df46e21b.js.map": "/soyummy/static/js/main.df46e21b.js.map"
+    "main.30f44d35.css.map": "/soyummy/static/css/main.30f44d35.css.map",
+    "main.12266e6f.js.map": "/soyummy/static/js/main.12266e6f.js.map"
   },
   "entrypoints": [
-    "static/css/main.39f30edf.css",
-    "static/js/main.df46e21b.js"
+    "static/css/main.30f44d35.css",
+    "static/js/main.12266e6f.js"
   ]
 }
