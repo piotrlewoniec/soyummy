@@ -34,4 +34,19 @@ const recipeSchema = new mongoose.Schema({
 
 const Recipe = mongoose.model("recipe", recipeSchema);
 
+const categorySchema = new Schema({
+  title: {
+    type: String,
+  },
+  thumb: {
+    type: String,
+  },
+  description: {
+    type: String,
+  },
+});
+const Categories = mongoose.model("categorieslists", categorySchema);
+
+module.exports = Categories;
+
 module.exports = Recipe;

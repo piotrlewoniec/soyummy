@@ -45,7 +45,7 @@ export const fetchSomeCategories = createAsyncThunk(
           category.title
         )
       );
-      console.log(categories);
+      // console.log(categories);
       return categories;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -89,9 +89,7 @@ export const fetchCategoryMeals = createAsyncThunk(
       const filteredRecipes = recipes.filter(recipe =>
         arr.includes(recipe.category)
       );
-
-      // console.log('Filtered recipes:', filteredRecipes);
-
+      console.log('z filtra', filteredRecipes);
       return filteredRecipes;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
