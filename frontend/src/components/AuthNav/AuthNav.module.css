@@ -112,6 +112,10 @@
     height: 67px;
     min-width: 141px;
   }
+  .diagonalButtonText {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .diagonalButtonText {
   text-decoration: none;
@@ -120,12 +124,7 @@
   font-weight: 400;
   line-height: 21px;
 }
-@media (min-width: 768px) {
-  .diagonalButtonText {
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
+
 .diagonalButton:hover {
   background: #8baa36;
   border: none;

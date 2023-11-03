@@ -9,7 +9,6 @@
   flex-direction: column;
   align-items: center;
   background-color: #22252a;
-  width: 100%;
 }
 .elements {
   display: flex;
@@ -203,7 +202,7 @@ label {
 }
 
 /* Obraz tła na tabletach */
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) and (max-width: 1279px) {
   .soYummy {
     margin-top: 0;
     margin-bottom: 24px;
@@ -295,7 +294,7 @@ label {
 }
 
 /* Obraz tła na komputerach */
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
   .container {
     display: flex;
     flex-direction: column;

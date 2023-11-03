@@ -1,0 +1,17 @@
+.searchTypeSelector {
+  display: flex;
+  flex-direction: row;
+}
+.searchText {
+  font-weight: 500;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.customSelect {
+  width: 146px;
+  height: 34px;
+  border-radius: 4px;
+  background-color: #ece4e4c3;
+  border: none;
+}

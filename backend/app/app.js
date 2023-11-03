@@ -9,6 +9,7 @@ const { usersRouter } = require("../features/users");
 
 const categoriesRouter = require("../features/categories/categories.route");
 
+const recipeRouter = require("../features/recipe/recipe.route");
 const app = express();
 
 const formatsLogger = app.get("env") === "development" ? "dev" : "short";
@@ -19,6 +20,7 @@ app.use(express.json());
 
 app.use("/api/v1/users", usersRouter);
 app.use("/soyummy/recipes", categoriesRouter);
+app.use("/soyummy", recipeRouter);
 
 app.use("/info", swaggerRouter);
 
