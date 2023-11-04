@@ -1,11 +1,12 @@
-import { SearchForm } from '../../components/SearchForm/SearchForm';
-import { SearchTypeSelector } from '../../components/SearchTypeSelector/SearchTypeSelector';
+import React from 'react';
 import styles from './SeachBar.module.css';
+import { SearchForm } from '../SearchForm/SearchForm';
+import { SearchTypeSelector } from '../SearchTypeSelector/SearchTypeSelector';
 
-export const SearchBar = () => {
+export const SearchBar = ({ onSearch }) => {
   return (
     <div className={styles.searchBar}>
-      <SearchForm />
+      <SearchForm onSearch={onSearch} />
       <SearchTypeSelector />
     </div>
   );
