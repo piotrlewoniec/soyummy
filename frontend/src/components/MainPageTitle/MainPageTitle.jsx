@@ -8,7 +8,6 @@ export const MainPageTitle = ({ title }) => {
         <div className={styles.element + ' ' + styles.element_two} />
         <div className={styles.element + ' ' + styles.element_three} />
         <h2 className={styles.title}>{title}</h2>
-        <div className={styles.element_four} />
       </div>
     </section>
   );

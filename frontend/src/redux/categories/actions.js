@@ -8,7 +8,7 @@ export const fetchCategories = createAsyncThunk(
     try {
       const response = await axios.get('/soyummy/recipes/category-list');
       const categories = response.data.categories;
-      //   console.log(categories);
+      console.log(categories);
       return categories;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
