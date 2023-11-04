@@ -20,6 +20,7 @@ export const MainData = () => {
   }, []);
 
   const meals = useSelector(state => state.categories.recipes);
+  const state = useSelector(state => state.categories);
   const categorie = useSelector(state => state.categories.somecategories);
   const [categories, setCategories] = useState([]);
 
@@ -34,6 +35,8 @@ export const MainData = () => {
     }
   }, [meals]);
   console.log('mad', meals);
+  console.log('categorie', categorie);
+  console.log('state', state);
 
   return (
     <div className={s.margin}>
