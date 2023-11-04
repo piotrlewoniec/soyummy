@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import axios from 'axios';
-axios.defaults.baseURL = 'https://soyummy-gilt.vercel.app';
+axios.defaults.baseURL = 'http://localhost:3000';
 export const fetchCategories = createAsyncThunk(
   'categories/FETCH',
   async (_, thunkAPI) => {
@@ -45,7 +45,7 @@ export const fetchSomeCategories = createAsyncThunk(
           category.title
         )
       );
-      // console.log(categories);
+      console.log('fetchsomecategories', categories);
       return categories;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

@@ -1,5 +1,4 @@
-const Recipe = require("./recipe.model");
-const Categories = require("./recipe.model");
+const { Recipe, Categories } = require("./recipe.model");
 
 const getRecipe = async (req, res, next) => {
   try {
