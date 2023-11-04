@@ -20,7 +20,7 @@ export const MainData = () => {
   }, []);
 
   const meals = useSelector(state => state.categories.recipes);
-  const state = useSelector(state => state.categories);
+
   const categorie = useSelector(state => state.categories.somecategories);
   const [categories, setCategories] = useState([]);
 
