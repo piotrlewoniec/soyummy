@@ -1,5 +1,9 @@
 const express = require("express");
-const { getRecipe, getCategories } = require("./recipe.controler");
+const {
+  getRecipe,
+  getCategories,
+  getOneRecipe,
+} = require("./recipe.controler");
 const router = express.Router();
 
 router.get("/recipes/category-list", getCategories);

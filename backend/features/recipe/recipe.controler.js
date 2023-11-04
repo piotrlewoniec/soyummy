@@ -1,5 +1,4 @@
-const Recipe = require("./recipe.model");
-const Categories = require("./recipe.model");
+const { Recipe, Categories } = require("./recipe.model");
 
 const getRecipe = async (req, res, next) => {
   try {
@@ -10,6 +9,20 @@ const getRecipe = async (req, res, next) => {
   }
 };
 
+const getOneRecipe = async (req, res, next) => {
+  try {
+    const category = req.params.category;
+    const recipe = await Recipe.findOne({ category });
+
+    if (!recipe) {
+      return res.status(404).json({ message: "error" });
+    }
+
+    res.status(200).json({ recipe });
+  } catch (error) {
+    next(error);
+  }
+};
 const getCategories = async (req, res, next) => {
   try {
     const categories = await Categories.find();
@@ -22,4 +35,5 @@ const getCategories = async (req, res, next) => {
 module.exports = {
   getCategories,
   getRecipe,
+  getOneRecipe,
 };
