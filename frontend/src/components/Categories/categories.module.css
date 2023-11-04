@@ -1,6 +1,7 @@
 .App {
   display: flex;
   flex-direction: column;
+  margin-bottom: 200px;
 }
 
 .container {
@@ -88,6 +89,7 @@
   .App {
     display: flex;
     flex-direction: column;
+    margin-bottom: 400px;
   }
 
   .container {
@@ -172,6 +174,7 @@
   .App {
     display: flex;
     flex-direction: column;
+    margin-bottom: 400px;
   }
 
   .container {
