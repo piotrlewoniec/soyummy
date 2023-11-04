@@ -34,9 +34,6 @@ export const MainData = () => {
     if (meals.length > 0) {
     }
   }, [meals]);
-  console.log('mad', meals);
-  console.log('categorie', categorie);
-  console.log('state', state);
 
   return (
     <div className={s.margin}>

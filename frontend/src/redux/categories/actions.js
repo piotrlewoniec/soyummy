@@ -2,6 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import axios from 'axios';
 axios.defaults.baseURL = 'https://soyummy-gilt.vercel.app';
+
 export const fetchCategories = createAsyncThunk(
   'categories/FETCH',
   async (_, thunkAPI) => {
@@ -55,11 +56,11 @@ export const fetchCategoryMeals = createAsyncThunk(
 
 export const fetchRecipes = createAsyncThunk(
   'categories/fetchMeals',
-  async (categories, thunkAPI) => {
+  async ({ categories }, thunkAPI) => {
     try {
       const response = await axios.get(`/soyummy/recipes/${categories}`);
       const recipes = response.data.recipes;
-
+      console.log('z dispatcha', recipes);
       return recipes;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
