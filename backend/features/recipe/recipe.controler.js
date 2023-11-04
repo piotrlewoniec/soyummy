@@ -12,13 +12,13 @@ const getRecipe = async (req, res, next) => {
 const getOneRecipe = async (req, res, next) => {
   try {
     const category = req.params.category;
-    const recipe = await Recipe.findOne({ category });
+    const recipes = await Recipe.find({ category });
 
-    if (!recipe) {
+    if (!recipes) {
       return res.status(404).json({ message: "error" });
     }
 
-    res.status(200).json({ recipe });
+    res.status(200).json({ recipes });
   } catch (error) {
     next(error);
   }
