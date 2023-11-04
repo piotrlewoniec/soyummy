@@ -40,10 +40,13 @@ const options = {
 
 const specs = swaggerJsdoc(options);
 
+const CSS_URL =
+  "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css";
+
 router.use(
   "/api-docs",
   swaggerUi.serve,
-  swaggerUi.setup(specs, { explorer: true })
+  swaggerUi.setup(specs, { explorer: true, customCssUrl: CSS_URL })
 );
 
 module.exports = { router };
