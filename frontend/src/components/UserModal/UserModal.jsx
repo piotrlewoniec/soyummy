@@ -2,10 +2,24 @@ import React, { useEffect, useRef } from 'react';
 import css from './UserModal.module.css';
 import sprite from '../../assets/icons/icons.svg';
 import { useTheme } from 'components/ToggleSwitch/ThemeContext';
+import { logOut } from 'redux/userAPI/actions';
+import { useDispatch } from 'react-redux';
 
 const UserModal = ({ onClose }) => {
   const { theme } = useTheme();
   const modalRef = useRef(null);
+  const dispatch = useDispatch();
+
+  const handleLogoutClick = () => {
+    dispatch(logOut())
+      .then(() => {
+        onClose();
+        window.location.href = 'http://localhost:3001/soyummy/';
+      })
+      .catch(error => {
+        console.error('Logout error:', error);
+      });
+  };
 
   useEffect(() => {
     const handleClickOutside = event => {
@@ -35,7 +49,11 @@ const UserModal = ({ onClose }) => {
             <use href={`${sprite}#icon-pencil`}></use>
           </svg>
         </button>
-        <button type="button" className={css.logOutButton}>
+        <button
+          type="button"
+          className={css.logOutButton}
+          onClick={handleLogoutClick}
+        >
           <span className={css.logOutLabel}>Log out</span>
           <svg className={css.iconArrowRight}>
             <use href={`${sprite}#icon-arrow-right-white`}></use>

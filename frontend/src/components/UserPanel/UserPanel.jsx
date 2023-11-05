@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchUserData } from '../../redux/user/operation';
+import { fetchUserData } from '../../redux/userAPI/actions';
 import css from './UserPanel.module.css';
 import UserModal from '../UserModal/UserModal';
 
 const UserPanel = () => {
   const dispatch = useDispatch();
-  const { name, avatarURL } = useSelector(state => state.user);
+  const { name, avatarURL } = useSelector(state => state.auth);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
