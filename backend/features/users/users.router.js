@@ -10,7 +10,7 @@ const router = express.Router();
 router.post("/signup", usersController.postUserRegister);
 router.post("/login", usersController.postUserLogin);
 router.get("/logout", authMiddleware, usersController.getUserLogout);
-router.get("/current", authMiddleware, usersController.getUserCurrent);
+router.get("/current", usersController.getUserCurrent);
 router.patch(
   "/:userId/subscription",
   authMiddleware,
