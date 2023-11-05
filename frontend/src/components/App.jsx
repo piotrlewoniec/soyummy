@@ -9,6 +9,7 @@ import { MyRecipesPage } from 'pages/MyRecipesPage/MyRecipesPage';
 import { SearchPage } from '../pages/SearchPage/SearchPage';
 import { Categories } from 'pages/Categories/categories';
 import { FavoritesPage } from 'pages/FavoritesPage/FavoritesPage';
+import { RecipeDetails } from './RecipeDetails/RecipeDetails';
 
 export const App = () => {
   return (
@@ -24,6 +25,7 @@ export const App = () => {
         <Route path="/search" element={<SearchPage />} />
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/categories/:categoryName" element={<Categories />} />
+        <Route path="/recipes/:id" element={<RecipeDetails />} />
       </Routes>
     </div>
   );
