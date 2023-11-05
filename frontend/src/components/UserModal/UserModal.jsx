@@ -1,13 +1,25 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import css from './UserModal.module.css';
 import sprite from '../../assets/icons/icons.svg';
 import { useTheme } from 'components/ToggleSwitch/ThemeContext';
-import { LogoutModal } from 'components/LogOutModal/LogOutModal';
+import { logOut } from 'redux/userAPI/actions';
+import { useDispatch } from 'react-redux';
 
 const UserModal = ({ onClose }) => {
   const { theme } = useTheme();
   const modalRef = useRef(null);
-  const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
+  const dispatch = useDispatch();
+
+  const handleLogoutClick = () => {
+    dispatch(logOut())
+      .then(() => {
+        onClose();
+        window.location.href = 'http://localhost:3001/soyummy/';
+      })
+      .catch(error => {
+        console.error('Logout error:', error);
+      });
+  };
 
   useEffect(() => {
     const handleClickOutside = event => {
@@ -22,14 +34,6 @@ const UserModal = ({ onClose }) => {
       window.removeEventListener('mousedown', handleClickOutside);
     };
   }, [onClose]);
-
-  const handleLogoutModalOpen = () => {
-    setIsLogoutModalOpen(true);
-  };
-
-  const handleLogoutModalClose = () => {
-    setIsLogoutModalOpen(false);
-  };
 
   return (
     <div className={css.modalOverlay}>
@@ -48,7 +52,7 @@ const UserModal = ({ onClose }) => {
         <button
           type="button"
           className={css.logOutButton}
-          onClick={handleLogoutModalOpen}
+          onClick={handleLogoutClick}
         >
           <span className={css.logOutLabel}>Log out</span>
           <svg className={css.iconArrowRight}>
@@ -56,7 +60,6 @@ const UserModal = ({ onClose }) => {
           </svg>
         </button>
       </div>
-      {isLogoutModalOpen && <LogoutModal onClose={handleLogoutModalClose} />}
     </div>
   );
 };

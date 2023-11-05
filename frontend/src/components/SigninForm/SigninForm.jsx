@@ -2,20 +2,26 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './SigninForm.module.css';
 import icons from '../../assets/icons/icons.svg';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { logIn } from 'redux/userAPI/actions';
 
 export const SigninForm = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(email, password);
-    // Wywołaj funkcję logIn, przekazując obiekt z danymi logowania
     dispatch(logIn({ email, password }));
+    setEmail('');
+    setPassword('');
   };
+  if (isLoggedIn) {
+    window.location.href = 'http://localhost:3001/soyummy/main';
+  } else {
+    <SigninForm />;
+  }
 
   return (
     <div>

@@ -6,8 +6,7 @@ import UserModal from '../UserModal/UserModal';
 
 const UserPanel = () => {
   const dispatch = useDispatch();
-  const { name, avatarURL } = useSelector(state => state);
-
+  const { name, avatarURL } = useSelector(state => state.auth);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
