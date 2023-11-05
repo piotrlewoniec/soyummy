@@ -8,7 +8,7 @@ export const ChooseYourBreakfast = () => {
         <span className={s.span}>Delicious and healthy</span> way to enjoy a
         variety of fresh ingredients in one satisfying meal <br></br>
         <br></br>
-        <Link to="/categories/breakfast" className={s.see}>
+        <Link to="/categories/Breakfast" className={s.see}>
           See recipes ---{' '}
         </Link>
       </div>

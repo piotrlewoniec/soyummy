@@ -1,4 +1,5 @@
 import s from './categories.module.css';
+
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -14,20 +15,14 @@ export const CategoriesData = () => {
   const posilki = useSelector(state => state.categories.recipes);
 
   useEffect(() => {
-    dispatch(fetchCategories());
-    dispatch(fetchRecipes());
-    setRecipes(posilki);
-    // eslint-disable-next-line
-  }, []);
+    const fetchData = async () => {
+      await dispatch(fetchCategories());
+      setRecipes(posilki);
+      await dispatch(fetchRecipes({ categories: selectedCategory }));
+    };
 
-  useEffect(() => {
-    dispatch(fetchRecipes(selectedCategory));
-    const filtermeals = posilki.filter(
-      one => one.category === selectedCategory
-    );
-    setRecipes(filtermeals);
-    // eslint-disable-next-line
-  }, [selectedCategory, dispatch]);
+    fetchData();
+  }, [dispatch, selectedCategory, posilki]);
 
   const handleCategoryClick = category => {
     setSelectedCategory(category);
