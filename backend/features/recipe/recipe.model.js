@@ -47,6 +47,4 @@ const categorySchema = new Schema({
 });
 const Categories = mongoose.model("categorieslists", categorySchema);
 
-module.exports = Categories;
-
-module.exports = Recipe;
+module.exports = { Categories, Recipe };

@@ -12,7 +12,7 @@ const Navigation = ({ onClose }) => {
         theme === 'dark' ? css.darkTheme : ''
       }`}
     >
-      <NavLink to="/categories/:categoryName" onClick={onClose}>
+      <NavLink to="/categories/Beef" onClick={onClose}>
         Categories
       </NavLink>
       <NavLink to="/addrecipes" onClick={onClose}>
