@@ -1,11 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import css from './UserModal.module.css';
 import sprite from '../../assets/icons/icons.svg';
 import { useTheme } from 'components/ToggleSwitch/ThemeContext';
+import { LogoutModal } from 'components/LogOutModal/LogOutModal';
 
 const UserModal = ({ onClose }) => {
   const { theme } = useTheme();
   const modalRef = useRef(null);
+  const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = event => {
@@ -21,6 +23,14 @@ const UserModal = ({ onClose }) => {
     };
   }, [onClose]);
 
+  const handleLogoutModalOpen = () => {
+    setIsLogoutModalOpen(true);
+  };
+
+  const handleLogoutModalClose = () => {
+    setIsLogoutModalOpen(false);
+  };
+
   return (
     <div className={css.modalOverlay}>
       <div
@@ -35,13 +45,18 @@ const UserModal = ({ onClose }) => {
             <use href={`${sprite}#icon-pencil`}></use>
           </svg>
         </button>
-        <button type="button" className={css.logOutButton}>
+        <button
+          type="button"
+          className={css.logOutButton}
+          onClick={handleLogoutModalOpen}
+        >
           <span className={css.logOutLabel}>Log out</span>
           <svg className={css.iconArrowRight}>
             <use href={`${sprite}#icon-arrow-right-white`}></use>
           </svg>
         </button>
       </div>
+      {isLogoutModalOpen && <LogoutModal onClose={handleLogoutModalClose} />}
     </div>
   );
 };
