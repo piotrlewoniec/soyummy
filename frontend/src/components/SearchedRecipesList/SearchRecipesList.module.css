@@ -12,6 +12,14 @@
   line-height: 14px;
   letter-spacing: -0.02em;
 }
+.searchedRecipesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  list-style: none;
+}
 .recipeImageWithText {
   width: 343px;
   height: 323px;
@@ -23,15 +31,16 @@
 
 .recipeName {
   position: absolute;
-  bottom: 10px;
-  padding: 10px;
-  left: 0;
-  right: 0;
-  background-color: #ffff;
+  bottom: 20px;
+  left: 10px;
+  width: 90%;
+  background-color: white;
+  border-radius: 8px;
   color: black;
   padding: 5px;
-  margin: 0;
-  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 @media (max-width: 767px) {

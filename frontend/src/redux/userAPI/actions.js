@@ -26,7 +26,22 @@ export const logIn = createAsyncThunk(
     }
   }
 );
-
+export const registerUser = createAsyncThunk(
+  'AUTH/REGISTER',
+  async ({ name, email, password }, thunkAPI) => {
+    try {
+      const response = await axios.post('api/v1/users/signup', {
+        name,
+        email,
+        password,
+      });
+      setHeader(response.data.data.token);
+      return response.data.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
 export const fetchUserData = createAsyncThunk(
   'AUTH/CURRENT',
   async (_, thunkAPI) => {
