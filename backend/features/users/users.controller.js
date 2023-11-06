@@ -197,11 +197,13 @@ const getUserCurrent = async (req, res, next) => {
     code: 200,
     message: "current user info",
     data: {
+      id: currentLoggedIn._id,
       name: currentLoggedIn.name,
       email: currentLoggedIn.email,
       avatarURL: currentLoggedIn.avatarURL,
       subscription: currentLoggedIn.subscription,
       newslettersubscription: currentLoggedIn.newslettersubscription,
+      favorites: currentLoggedIn.favorites,
     },
   });
 };
