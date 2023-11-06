@@ -31,7 +31,8 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:3000",
+        // url: "http://localhost:3000",
+        url: "https://soyummy-gilt.vercel.app/",
       },
     ],
   },
@@ -40,10 +41,19 @@ const options = {
 
 const specs = swaggerJsdoc(options);
 
+const CSS_URL =
+  "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.6.3/swagger-ui.min.css";
+
 router.use(
   "/api-docs",
   swaggerUi.serve,
-  swaggerUi.setup(specs, { explorer: true })
+  swaggerUi.setup(specs, { explorer: true, customCssUrl: CSS_URL })
 );
+
+// router.use(
+//   "/api-docs",
+//   swaggerUi.serve,
+//   swaggerUi.setup(specs, { explorer: true })
+// );
 
 module.exports = { router };

@@ -8,6 +8,9 @@ import { ShoppingListPage } from '../pages/ShoppingListPage/ShoppingListPage';
 import { MyRecipesPage } from 'pages/MyRecipesPage/MyRecipesPage';
 import { SearchPage } from '../pages/SearchPage/SearchPage';
 import { Categories } from 'pages/Categories/categories';
+import { FavoritesPage } from 'pages/FavoritesPage/FavoritesPage';
+import { RecipeDetails } from './RecipeDetails/RecipeDetails';
+import { AddRecipePage } from 'pages/AddRecipePage/AddRecipePage';
 
 export const App = () => {
   return (
@@ -19,9 +22,12 @@ export const App = () => {
         <Route path="/main" element={<Main />} />
         <Route path="/shopping-list" element={<ShoppingListPage />} />
         <Route path="/myrecipes" element={<MyRecipesPage />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/categories/:categoryName" element={<Categories />} />
+        <Route path="/recipes/:id" element={<RecipeDetails />} />
+        <Route path='/addrecipe' element={<AddRecipePage />} />
       </Routes>
     </div>
   );

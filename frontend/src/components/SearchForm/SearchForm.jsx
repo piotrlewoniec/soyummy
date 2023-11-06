@@ -1,13 +1,13 @@
+import React, { useState } from 'react';
 import styles from './SearchForm.module.css';
 
-export const SearchForm = () => {
+export const SearchForm = ({ onSearch }) => {
+  const [query, setQuery] = useState('');
+
   const handleSubmit = e => {
     e.preventDefault();
-    // Tutaj dodaj logikę obsługi przesłania formularza
+    onSearch(query);
   };
-
-  const urlSearchParams = new URLSearchParams(window.location.search);
-  const query = urlSearchParams.get('query');
 
   return (
     <form className={styles.searchForm} onSubmit={handleSubmit}>
@@ -20,7 +20,8 @@ export const SearchForm = () => {
         minLength={3}
         placeholder="Search..."
         name="query"
-        defaultValue={query}
+        value={query}
+        onChange={e => setQuery(e.target.value)}
       ></input>
       <button type="submit" className={styles.buttonSearch}>
         Search

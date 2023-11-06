@@ -28,33 +28,6 @@ export const MyRecipes = () => {
           </button>
         </div>
       </div>
-      <div className={styles.pagination}>
-        <button className={styles.arrowButton}>
-          <svg className={styles.arrowButtonIcon}>
-            <use href={`${svgsprite}#icon-pagination-arrow-left`} />
-          </svg>
-        </button>
-        <button className={styles.pageNumberButtonActive}>
-          <span>1</span>
-        </button>
-        <button className={styles.pageNumberButton}>
-          <span>2</span>
-        </button>
-        <button className={styles.pageNumberButton}>
-          <span>3</span>
-        </button>
-        <button className={styles.pageNumberButton}>
-          <span>4</span>
-        </button>
-        <button className={styles.pageNumberButton}>
-          <span>5</span>
-        </button>
-        <button className={styles.arrowButton}>
-          <svg className={styles.arrowButtonIcon}>
-            <use href={`${svgsprite}#icon-pagination-arrow-right`} />
-          </svg>
-        </button>
-      </div>
     </div>
   );
 };

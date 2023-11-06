@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styles from './SearchTypeSelector.module.css';
 
 export const SearchTypeSelector = () => {

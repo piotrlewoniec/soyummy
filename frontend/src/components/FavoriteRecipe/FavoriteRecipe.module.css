@@ -1,0 +1,247 @@
+.containerFavorites {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 50px;
+}
+.favoriteContainer {
+  width: 343px;
+  height: 152px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #fff;
+}
+.favoritePhoto {
+  width: 124px;
+  height: 124px;
+  border-radius: 8px;
+  margin-left: 8px;
+}
+.favoriteInfo {
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  height: 124px;
+  border-radius: 8px;
+  position: relative;
+  gap: 14px;
+}
+.favoriteTitle {
+  color: #3e4462;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 100% */
+  letter-spacing: -0.24px;
+  margin: 0;
+}
+.favoriteDescription {
+  overflow: hidden;
+  color: #23262a;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  font-family: Poppins;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 10px; /* 125% */
+  letter-spacing: -0.16px;
+  width: 163px;
+  height: 39px;
+}
+.favoriteShortDescription {
+  display: none;
+}
+.favoritePrepTime {
+  color: #3e4462;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.deleteButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: #ebf3d4;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+}
+.deleteIcon {
+  width: 14px;
+  height: 14px;
+  stroke: #22252a;
+  fill: none;
+  padding: 0;
+}
+.openRecipeButton {
+  background: transparent;
+  border: none;
+  padding: 0;
+  width: 87px;
+  height: 27px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='87' height='27' viewBox='0 0 87 27' fill='none'><path d='M0 9C0 4.02944 4.02944 0 9 0H69C78.9411 0 87 8.05888 87 18C87 22.9706 82.9706 27 78 27H18C8.05887 27 0 18.9411 0 9Z' fill='%2322252A'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.openRecipeButton span {
+  color: #fafafa;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .favoriteContainer {
+    width: 704px;
+    height: 288px;
+    gap: 16px;
+  }
+  .favoritePhoto {
+    width: 228px;
+    height: 232px;
+    margin-left: 24px;
+  }
+  .favoriteInfo {
+    width: 420px;
+    height: 232px;
+  }
+  .favoriteTitle {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 14px;
+  }
+  .favoriteDescription {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.28px;
+    width: 353px;
+    height: auto;
+  }
+  .favoriteShortDescription {
+    display: block;
+    overflow: hidden;
+    color: #23262a;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.28px;
+    width: 353px;
+    height: 21px;
+  }
+  .favoritePrepTime {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+  }
+  .deleteButton {
+    width: 38px;
+    height: 38px;
+  }
+  .deleteIcon {
+    width: 22px;
+    height: 22px;
+  }
+  .openRecipeButton {
+    width: 138px;
+    height: 45px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='138' height='45' viewBox='0 0 138 45' fill='none'><path d='M0 15C0 6.71573 6.71573 0 15 0H108C124.569 0 138 13.4315 138 30C138 38.2843 131.284 45 123 45H30C13.4315 45 0 31.5685 0 15Z' fill='%2322252A'/></svg>");
+  }
+  .openRecipeButton span {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .favoriteContainer {
+    width: 1240px;
+    height: 404px;
+    gap: 54px;
+  }
+  .favoritePhoto {
+    width: 318px;
+    height: 324px;
+    margin-left: 40px;
+  }
+  .favoriteInfo {
+    width: 806px;
+    height: 324px;
+  }
+  .favoriteTitle {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 26px;
+  }
+  .favoriteDescription {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.36px;
+    width: 806px;
+    height: auto;
+  }
+  .favoriteShortDescription {
+    display: block;
+    overflow: hidden;
+    color: #23262a;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.36px;
+    width: 806px;
+    height: 50px;
+  }
+  .favoritePrepTime {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+  }
+  .deleteButton {
+    width: 44px;
+    height: 44px;
+  }
+  .deleteIcon {
+    width: 24px;
+    height: 24px;
+  }
+  .openRecipeButton {
+    width: 172px;
+    height: 59px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='172' height='59' viewBox='0 0 138 45' fill='none'><path d='M0 15C0 6.71573 6.71573 0 15 0H108C124.569 0 138 13.4315 138 30C138 38.2843 131.284 45 123 45H30C13.4315 45 0 31.5685 0 15Z' fill='%2322252A'/></svg>");
+  }
+  .openRecipeButton span {
+    font-size: 16px;
+  }
+}

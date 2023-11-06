@@ -4,6 +4,7 @@ import css from './Header.module.css';
 import Navigation from 'components/Navigation/Navigation';
 import Logo from 'components/Logo/Logo';
 import ToggleSwitch from 'components/ToggleSwitch/ToggleSwitch';
+import UserPanel from 'components/UserPanel/UserPanel';
 
 const Header = () => {
   return (
@@ -14,8 +15,7 @@ const Header = () => {
           <Navigation />
         </nav>
         <div className={css.userInfo}>
-          <div>User Picture</div>
-          <div>User Name</div>
+          <UserPanel />
         </div>
         <div className={css.toggleSwitch}>
           <ToggleSwitch />
