@@ -25,6 +25,22 @@ const getOneRecipe = async (req, res, next) => {
   }
 };
 
+const getOneRecipeById = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    console.log("id zconrolera", id);
+    const recipe = await Recipe.findById(id);
+
+    if (!recipe) {
+      return res.status(404).json({ message: "error" });
+    }
+
+    res.status(200).json({ recipe });
+  } catch (error) {
+    next(error);
+  }
+};
+
 const getCategories = async (req, res, next) => {
   try {
     const categories = await Categories.find();
@@ -84,4 +100,5 @@ module.exports = {
   searchRecipesByName,
   getFavRecipes,
   getOneFavRecipe,
+  getOneRecipeById,
 };
