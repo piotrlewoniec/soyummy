@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'http://localhost:3000/';
+axios.defaults.baseURL = 'https://soyummy-gilt.vercel.app/';
 
 const setHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
@@ -37,7 +37,8 @@ export const fetchUserData = createAsyncThunk(
       const response = await axios.get('api/v1/users/current');
       const avatarURL = response.data.data.avatarURL;
       const name = response.data.data.name;
-      return { name, avatarURL };
+      const favorites = response.data.data.favorites;
+      return { name, avatarURL, favorites };
     } catch (error) {
       console.error(error);
       throw new Error('Failed to retrieve user data.');
