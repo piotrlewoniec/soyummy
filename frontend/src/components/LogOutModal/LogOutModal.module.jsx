@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 export const LogOutContainer = styled.div`
   position: absolute;
   top: 50%;
@@ -32,7 +32,7 @@ export const LogOutText = styled.p`
   left: 106px;
   top: 50px;
 
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -56,7 +56,7 @@ export const LogOutButton = styled.div`
   border-radius: 6px;
   border: 1px solid transparent;
 
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -68,12 +68,11 @@ export const LogOutButton = styled.div`
 
   transition: all cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
-  &:hover, 
+  &:hover,
   &:focus {
     background: ${({ theme }) => `${theme.colors.titleColor}`};
     color: ${({ theme }) => theme.colors.backgroundPrimary};
   }
-
 
   @media (min-width: 375px) {
     width: 137px;
@@ -93,12 +92,12 @@ export const LogOutButton = styled.div`
 
     transition: all cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
-    &:hover, 
+    &:hover,
     &:focus {
       background: ${({ theme }) => theme.colors.backgroundCard};
       border: 1px solid ${({ theme }) => theme.colors.textPrimary};
       color: ${({ theme }) => theme.colors.textPrimary};
-}
+    }
   }
 `;
 
