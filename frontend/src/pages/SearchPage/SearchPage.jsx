@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
-import { SampleRecipes } from '../../components/SearchedRecipesList/SampleRecipes';
-import styles from './SearchPage.module.css';
+import { useDispatch, useSelector } from 'react-redux';
 import { SearchBar } from '../../components/SearchBar/SearchBar';
 import { SearchedRecipesList } from '../../components/SearchedRecipesList/SearchRecipesList';
 import { Pagination } from 'components/Pagination/Pagination';
 import { Footer } from '../../components/Footer/Footer';
 import { MainPageTitle } from '../../components/MainPageTitle/MainPageTitle';
 import Header from '../../components/Header/Header';
+import { searchRecipesByName } from '../../redux/search/actions';
+import styles from './SearchPage.module.css';
 
 export const SearchPage = () => {
-  const [searchResults, setSearchResults] = useState([]);
+  const dispatch = useDispatch();
+  const searchResults = useSelector(state => state.search.recipes);
 
   const handleSearch = query => {
-    const filteredRecipes = SampleRecipes.filter(recipe =>
-      recipe.name.toLowerCase().includes(query.toLowerCase())
-    );
-    setSearchResults(filteredRecipes);
+    dispatch(searchRecipesByName(query));
   };
 
   return (

@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { authReducer } from './userAPI/reducers';
 import storage from 'redux-persist/lib/storage';
 import { categoriesReducer } from './categories/slice';
+import searchReducer from './search/reducer';
 
 import {
   persistStore,
@@ -24,6 +25,7 @@ export const store = configureStore({
   reducer: {
     categories: categoriesReducer,
     auth: persistReducer(persistConfig, authReducer),
+    search: searchReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
