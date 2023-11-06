@@ -1,4 +1,3 @@
-// searchReducer.js
 import { createSlice } from '@reduxjs/toolkit';
 import { searchRecipesByName } from './actions';
 
@@ -24,7 +23,7 @@ const searchSlice = createSlice({
       })
       .addCase(searchRecipesByName.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.payload;
+        state.error = action.error.message;
       });
   },
 });

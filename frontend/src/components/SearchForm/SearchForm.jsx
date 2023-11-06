@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './SearchForm.module.css';
 
 export const SearchForm = ({ onSearch }) => {
+  const [query, setQuery] = useState('');
+
   const handleSubmit = e => {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    const query = formData.get('query');
     onSearch(query);
   };
 
@@ -20,6 +20,8 @@ export const SearchForm = ({ onSearch }) => {
         minLength={3}
         placeholder="Search..."
         name="query"
+        value={query}
+        onChange={e => setQuery(e.target.value)}
       ></input>
       <button type="submit" className={styles.buttonSearch}>
         Search
