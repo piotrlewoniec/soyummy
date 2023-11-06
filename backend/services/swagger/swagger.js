@@ -42,7 +42,7 @@ const options = {
 const specs = swaggerJsdoc(options);
 
 const CSS_URL =
-  "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.3.0/swagger-ui.min.css";
+  "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.6.3/swagger-ui.min.css";
 
 router.use(
   "/api-docs",
