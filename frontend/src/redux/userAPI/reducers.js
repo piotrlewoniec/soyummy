@@ -32,6 +32,7 @@ export const authReducer = createReducer(initialState, {
     state.isLoading = false;
     state.name = action.payload.name;
     state.avatarURL = action.payload.avatarURL;
+    state.favorites = action.payload.favorites;
     state.isLoggedIn = true;
   },
   [logOut.fulfilled]: state => {

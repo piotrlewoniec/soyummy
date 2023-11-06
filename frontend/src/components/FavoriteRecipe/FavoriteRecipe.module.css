@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fafafa;
+
+  gap: 50px;
 }
 .favoriteContainer {
   width: 343px;
