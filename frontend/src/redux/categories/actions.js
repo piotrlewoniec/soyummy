@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import axios from 'axios';
-axios.defaults.baseURL = 'https://soyummy-gilt.vercel.app';
+axios.defaults.baseURL = ' http://localhost:3000';
 
 export const fetchOneRecipes = createAsyncThunk(
   'fetch/onerecipse',
