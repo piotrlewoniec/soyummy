@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import s from './RecipeDetails.module.css';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { fetchIngredients, fetchOneRecipes } from 'redux/categories/actions';
 import { useParams } from 'react-router-dom';
 import Header from 'components/Header/Header';
