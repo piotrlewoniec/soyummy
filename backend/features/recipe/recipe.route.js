@@ -6,6 +6,8 @@ const {
   searchRecipesByName,
   getFavRecipes,
   getOneFavRecipe,
+  getOneRecipeById,
+  getIngredients,
 } = require("./recipe.controler");
 const router = express.Router();
 
@@ -15,5 +17,7 @@ router.get("/recipes/:category", getOneRecipe);
 router.get("/search", searchRecipesByName);
 router.get("/favorites/:userid", getFavRecipes);
 router.get("/favorites/recipes/:recipeid", getOneFavRecipe);
+router.get("/recipe/:id", getOneRecipeById);
+router.get("/ingredients", getIngredients);
 
 module.exports = router;
