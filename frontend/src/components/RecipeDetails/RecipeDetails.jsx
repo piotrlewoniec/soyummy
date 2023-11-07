@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import s from './RecipeDetails.module.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { fetchIngredients, fetchOneRecipes } from 'redux/categories/actions';
 import { useParams } from 'react-router-dom';
 import Header from 'components/Header/Header';
@@ -10,6 +10,7 @@ export const RecipeDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const recipe = useSelector(state => state.categories.oneRecipe);
+  const [dataFetched, setDataFetched] = useState(false);
 
   //   const ingredientData = useSelector(state => state.categories.ingr);
 
@@ -19,15 +20,19 @@ export const RecipeDetails = () => {
     const fetchData = async () => {
       await dispatch(fetchOneRecipes({ id }));
       await dispatch(fetchIngredients());
+      setDataFetched(true);
     };
 
     fetchData();
   }, [dispatch, id]);
 
+  if (!dataFetched) {
+    return <div>Loading... Please wait.</div>;
+  }
   const instructions = recipe.instructions;
-  // console.log(instructions);
 
   const steps = instructions.split('\r\n');
+
   return (
     <div>
       <div className={s.bg}>
