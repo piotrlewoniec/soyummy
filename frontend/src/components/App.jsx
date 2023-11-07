@@ -10,7 +10,6 @@ import { SearchPage } from '../pages/SearchPage/SearchPage';
 import { Categories } from 'pages/Categories/categories';
 import { FavoritesPage } from 'pages/FavoritesPage/FavoritesPage';
 import { AddRecipePage } from 'pages/AddRecipePage/AddRecipePage';
-
 import { DescriptionPage } from 'pages/descRecipe/descriptionRecipe';
 
 export const App = () => {
