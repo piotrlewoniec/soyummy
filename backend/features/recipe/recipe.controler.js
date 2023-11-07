@@ -1,10 +1,18 @@
 const { User: usersCollection } = require("../users/users.schema");
-const { Recipe, Categories } = require("./recipe.model");
+const { Recipe, Categories, Ingredients } = require("./recipe.model");
 
 const getRecipe = async (req, res, next) => {
   try {
     const recipes = await Recipe.find();
     res.status(200).json({ recipes });
+  } catch (error) {
+    next(error);
+  }
+};
+const getIngredients = async (req, res, next) => {
+  try {
+    const igredients = await Ingredients.find();
+    res.status(200).json({ igredients });
   } catch (error) {
     next(error);
   }
@@ -101,4 +109,5 @@ module.exports = {
   getFavRecipes,
   getOneFavRecipe,
   getOneRecipeById,
+  getIngredients,
 };

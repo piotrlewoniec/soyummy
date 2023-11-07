@@ -1,28 +1,26 @@
 import { useDispatch, useSelector } from 'react-redux';
 import s from './RecipeDetails.module.css';
 import { useEffect } from 'react';
-import { fetchOneRecipes } from 'redux/categories/actions';
+import { fetchIngredients, fetchOneRecipes } from 'redux/categories/actions';
 import { useParams } from 'react-router-dom';
 import Header from 'components/Header/Header';
 
-export const RecipeDetails = ({ id }) => {
+export const RecipeDetails = () => {
+  const { id } = useParams();
   const dispatch = useDispatch();
   const recipe = useSelector(state => state.categories.oneRecipe);
-  const state = useSelector(state => state.categories);
+  //   const ingredientData = useSelector(state => state.categories.ingr);
+
+  //   const state = useSelector(state => state.categories);
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log('id w akcji:', id);
       await dispatch(fetchOneRecipes({ id }));
-      console.log('id', id);
-      console.log('recipe', recipe);
-      console.log('state', state);
+      await dispatch(fetchIngredients());
     };
 
     fetchData();
   }, [dispatch, id]);
-
-  console.log(recipe);
 
   return (
     <div>
@@ -41,7 +39,14 @@ export const RecipeDetails = ({ id }) => {
         </div>
       </div>
 
-      {/* <img src={recipe.thumb} /> */}
+      <div className={s.category}>
+        <div className={s.ingredients}>Ingredients</div>
+        <div className={s.zespanem}>
+          Number<span className={s.add}>Add to list</span>
+        </div>
+      </div>
+
+      <div></div>
     </div>
   );
 };

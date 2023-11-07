@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import {
   fetchCategories,
   fetchCategoryMeals,
+  fetchIngredients,
   fetchOneRecipes,
   fetchRecipes,
   fetchSomeCategories,
@@ -21,6 +22,7 @@ const categoriesSlice = createSlice({
   initialState: {
     items: [],
     meals: [],
+    ingr: [],
     somecategories: [],
     recipes: [],
     oneRecipe: [],
@@ -61,9 +63,15 @@ const categoriesSlice = createSlice({
       state.isLoading = false;
       state.error = null;
       state.oneRecipe = action.payload;
-      console.log('Dane z akcji:', action.payload);
     },
     [fetchOneRecipes.rejected]: handleRejected,
+    [fetchIngredients.pending]: handlePending,
+    [fetchIngredients.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.error = null;
+      state.ingr = action.payload;
+    },
+    [fetchIngredients.rejected]: handleRejected,
   },
 });
 

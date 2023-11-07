@@ -9,7 +9,7 @@ import { MyRecipesPage } from 'pages/MyRecipesPage/MyRecipesPage';
 import { SearchPage } from '../pages/SearchPage/SearchPage';
 import { Categories } from 'pages/Categories/categories';
 import { FavoritesPage } from 'pages/FavoritesPage/FavoritesPage';
-import { RecipeDetails } from './RecipeDetails/RecipeDetails';
+
 import { DescriptionPage } from 'pages/descRecipe/descriptionRecipe';
 
 export const App = () => {
