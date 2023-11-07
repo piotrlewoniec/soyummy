@@ -27,7 +27,7 @@ export const App = () => {
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/categories/:categoryName" element={<Categories />} />
         <Route path="/recipes/:id" element={<RecipeDetails />} />
-        <Route path='/addrecipe' element={<AddRecipePage />} />
+        <Route path='/addrecipes' element={<AddRecipePage />} />
       </Routes>
     </div>
   );

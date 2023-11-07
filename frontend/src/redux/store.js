@@ -3,6 +3,8 @@ import { authReducer } from './userAPI/reducers';
 import storage from 'redux-persist/lib/storage';
 import { categoriesReducer } from './categories/slice';
 import searchReducer from './search/reducer';
+import dataReducer from './slice/addRecipeForm';
+import addRecipeReducer from './slice/addRecipe';
 
 import {
   persistStore,
@@ -26,6 +28,8 @@ export const store = configureStore({
     categories: categoriesReducer,
     auth: persistReducer(persistConfig, authReducer),
     search: searchReducer,
+    data: dataReducer,
+    addRecipe: addRecipeReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

@@ -3,7 +3,7 @@ import {
   fetchAddRecipe,
   fetchCategories,
   fetchIngredients,
-} from '../../addRecipe/operations';
+} from '../addRecipe/operations';
 
 const handlePending = (state, field) => {
   state[field].isLoading = true;
