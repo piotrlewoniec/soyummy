@@ -1,3 +1,41 @@
 .title {
   font-size: 30px;
+  /* width: 80%; */
+}
+
+.fl {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 80px;
+}
+
+.flexik {
+  height: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #8baa36;
+  margin-bottom: 50px;
+  width: 80%;
+  border-radius: 10px;
+  margin: 0 auto 50px auto;
+}
+.ttl {
+  margin-left: 20px;
+  margin-top: 60px;
+}
+.input {
+  margin-right: 50px;
+  height: 40px;
+  width: 40px;
+  margin-top: 60px;
+}
+.measure {
+  margin-top: 60px;
+}
+.img {
+  /* margin-top: 30px; */
+  width: 150px;
+  height: 150px;
 }

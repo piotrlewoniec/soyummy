@@ -53,9 +53,8 @@ export const RecipeDetails = () => {
 
       <div className={s.category}>
         <div className={s.ingredients}>Ingredients</div>
-        <div className={s.zespanem}>
-          Number<span className={s.add}>Add to list</span>
-        </div>
+        <div className={s.zespanem}>Number</div>
+        <div className={s.add}>Add to list</div>
       </div>
       <div>
         <Ingr />
@@ -63,7 +62,7 @@ export const RecipeDetails = () => {
       <div className={s.fotodiv}>
         <ol>
           {steps.map((step, index) => (
-            <li key={index}>{`${step}`}</li>
+            <li className={s.czcionka} key={index}>{`${step}`}</li>
           ))}
         </ol>
         <img className={s.foto} src={recipe.thumb} alt={recipe.title} />

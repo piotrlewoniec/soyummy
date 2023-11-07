@@ -48,6 +48,9 @@
 }
 .add {
   margin-left: 70px;
+  margin-top: 20px;
+  color: white;
+  font-weight: 600;
 }
 
 .ingredients {
@@ -77,9 +80,11 @@
 }
 .instr {
   margin-right: 25px;
-  font-size: 15px;
+  font-size: 20px;
 }
-
+.czcionka {
+  font-size: 20px;
+}
 @media (min-width: 768px) {
   .title {
     text-align: center;
@@ -140,6 +145,7 @@
     margin-top: 20px;
     color: white;
     font-weight: 600;
+    margin-left: 90px;
   }
 
   .fotodiv {

@@ -32,6 +32,8 @@ export const Ingr = () => {
   console.log('ingredata', ingredientData);
 
   const ajdiki = recipe.ingredients.map(el => el.id);
+  const measur = recipe.ingredients.map(el => el.measure);
+  console.log('measure', measur);
   console.log('ajdiki', ajdiki);
 
   const ajdikiigredientow = ingredientData.filter(el =>
@@ -44,11 +46,18 @@ export const Ingr = () => {
   return (
     <div className={s.title}>
       <div>
-        {ajdikiigredientow.map(el => (
+        {ajdikiigredientow.map((el, index) => (
           <div className={s.flexik}>
-            <img src={el.thb} />
-            <div>{el.ttl}</div>
-            <div>{recipe.ingredients.measure}</div>
+            <div className={s.fl}>
+              {' '}
+              <img className={s.img} src={el.thb} />
+              <div className={s.ttl}>{el.ttl}</div>
+            </div>
+            <div className={s.f}>
+              {' '}
+              <div className={s.measure}>{measur[index]}</div>
+            </div>
+            <input className={s.input} type="checkbox"></input>
           </div>
         ))}
       </div>
