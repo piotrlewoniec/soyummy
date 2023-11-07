@@ -1,14 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux';
 import s from './RecipeDetails.module.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { fetchIngredients, fetchOneRecipes } from 'redux/categories/actions';
 import { useParams } from 'react-router-dom';
 import Header from 'components/Header/Header';
+import { Footer } from 'components/Footer/Footer';
 
 export const RecipeDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const recipe = useSelector(state => state.categories.oneRecipe);
+
   //   const ingredientData = useSelector(state => state.categories.ingr);
 
   //   const state = useSelector(state => state.categories);
@@ -22,6 +24,10 @@ export const RecipeDetails = () => {
     fetchData();
   }, [dispatch, id]);
 
+  const instructions = recipe.instructions;
+  // console.log(instructions);
+
+  const steps = instructions.split('\r\n');
   return (
     <div>
       <div className={s.bg}>
@@ -45,8 +51,18 @@ export const RecipeDetails = () => {
           Number<span className={s.add}>Add to list</span>
         </div>
       </div>
-
-      <div></div>
+      <div>Tutaj ingredienty</div>
+      <div className={s.fotodiv}>
+        <ol>
+          {steps.map((step, index) => (
+            <li key={index}>{`${step}`}</li>
+          ))}
+        </ol>
+        <img className={s.foto} src={recipe.thumb} alt={recipe.title} />
+      </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 };
