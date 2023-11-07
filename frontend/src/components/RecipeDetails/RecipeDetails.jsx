@@ -5,6 +5,7 @@ import { fetchIngredients, fetchOneRecipes } from 'redux/categories/actions';
 import { useParams } from 'react-router-dom';
 import Header from 'components/Header/Header';
 import { Footer } from 'components/Footer/Footer';
+import { Ingr } from './Ingredients/ingredients';
 
 export const RecipeDetails = () => {
   const { id } = useParams();
@@ -56,7 +57,9 @@ export const RecipeDetails = () => {
           Number<span className={s.add}>Add to list</span>
         </div>
       </div>
-      <div>Tutaj ingredienty</div>
+      <div>
+        <Ingr />
+      </div>
       <div className={s.fotodiv}>
         <ol>
           {steps.map((step, index) => (
