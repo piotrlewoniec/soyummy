@@ -3,13 +3,27 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 axios.defaults.baseURL = 'https://soyummy-gilt.vercel.app';
 
+export const fetchOneRecipes = createAsyncThunk(
+  'fetch/onerecipse',
+  async ({ id }, thunkAPI) => {
+    try {
+      const response = await axios.get(`/soyummy/recipe/${id}`);
+      const recipe = response.data.recipe;
+
+      return recipe;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
 export const fetchCategories = createAsyncThunk(
   'categories/FETCH',
   async (_, thunkAPI) => {
     try {
       const response = await axios.get('/soyummy/recipes/category-list');
       const categories = response.data.categories;
-      console.log(categories);
+
       return categories;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -27,7 +41,7 @@ export const fetchSomeCategories = createAsyncThunk(
           category.title
         )
       );
-      console.log('fetchsomecategories', categories);
+
       return categories;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -46,7 +60,7 @@ export const fetchCategoryMeals = createAsyncThunk(
       const filteredRecipes = recipes.filter(recipe =>
         arr.includes(recipe.category)
       );
-      console.log('z filtra', filteredRecipes);
+
       return filteredRecipes;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -60,8 +74,22 @@ export const fetchRecipes = createAsyncThunk(
     try {
       const response = await axios.get(`/soyummy/recipes/${categories}`);
       const recipes = response.data.recipes;
-      console.log('z dispatcha', recipes);
+
       return recipes;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const fetchIngredients = createAsyncThunk(
+  'ingredients/FETCH',
+  async (_, thunkAPI) => {
+    try {
+      const response = await axios.get('/soyummy/ingredients');
+      const igredients = response.data.igredients;
+
+      return igredients;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }

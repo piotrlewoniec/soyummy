@@ -1,10 +1,18 @@
 const { User: usersCollection } = require("../users/users.schema");
-const { Recipe, Categories } = require("./recipe.model");
+const { Recipe, Categories, Ingredients } = require("./recipe.model");
 
 const getRecipe = async (req, res, next) => {
   try {
     const recipes = await Recipe.find();
     res.status(200).json({ recipes });
+  } catch (error) {
+    next(error);
+  }
+};
+const getIngredients = async (req, res, next) => {
+  try {
+    const igredients = await Ingredients.find();
+    res.status(200).json({ igredients });
   } catch (error) {
     next(error);
   }
@@ -20,6 +28,22 @@ const getOneRecipe = async (req, res, next) => {
     }
 
     res.status(200).json({ recipes });
+  } catch (error) {
+    next(error);
+  }
+};
+
+const getOneRecipeById = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    console.log("id zconrolera", id);
+    const recipe = await Recipe.findById(id);
+
+    if (!recipe) {
+      return res.status(404).json({ message: "error" });
+    }
+
+    res.status(200).json({ recipe });
   } catch (error) {
     next(error);
   }
@@ -84,4 +108,6 @@ module.exports = {
   searchRecipesByName,
   getFavRecipes,
   getOneFavRecipe,
+  getOneRecipeById,
+  getIngredients,
 };

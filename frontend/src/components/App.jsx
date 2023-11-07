@@ -9,8 +9,9 @@ import { MyRecipesPage } from 'pages/MyRecipesPage/MyRecipesPage';
 import { SearchPage } from '../pages/SearchPage/SearchPage';
 import { Categories } from 'pages/Categories/categories';
 import { FavoritesPage } from 'pages/FavoritesPage/FavoritesPage';
-import { RecipeDetails } from './RecipeDetails/RecipeDetails';
 import { AddRecipePage } from 'pages/AddRecipePage/AddRecipePage';
+
+import { DescriptionPage } from 'pages/descRecipe/descriptionRecipe';
 
 export const App = () => {
   return (
@@ -26,8 +27,8 @@ export const App = () => {
         <Route path="/search" element={<SearchPage />} />
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/categories/:categoryName" element={<Categories />} />
-        <Route path="/recipes/:id" element={<RecipeDetails />} />
         <Route path='/addrecipes' element={<AddRecipePage />} />
+        <Route path="/recipes/:id" element={<DescriptionPage />} />
       </Routes>
     </div>
   );

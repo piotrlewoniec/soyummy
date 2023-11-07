@@ -9,7 +9,7 @@ export const ChooseYourBreakfast = () => {
         variety of fresh ingredients in one satisfying meal <br></br>
         <br></br>
         <Link to="/categories/Breakfast" className={s.see}>
-          See recipes ---{' '}
+          See recipes{' '}
         </Link>
       </div>
     </div>

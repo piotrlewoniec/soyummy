@@ -17,18 +17,17 @@ export const CategoriesData = () => {
   useEffect(() => {
     const fetchData = async () => {
       await dispatch(fetchCategories());
-      setRecipes(posilki);
       await dispatch(fetchRecipes({ categories: selectedCategory }));
+      setRecipes(posilki);
     };
 
     fetchData();
-  }, [dispatch, selectedCategory, posilki]);
+  }, [selectedCategory, posilki, dispatch]);
 
   const handleCategoryClick = category => {
     setSelectedCategory(category);
   };
 
-  console.log('recipes', recipes);
   return (
     <div className={s.App}>
       <div className={s.name}>Categories</div>
