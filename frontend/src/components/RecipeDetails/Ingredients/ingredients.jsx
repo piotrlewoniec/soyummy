@@ -25,7 +25,7 @@ export const Ingr = () => {
   }, [dispatch, id]);
 
   if (!dataFetched) {
-    return <div>Loading... Please wait.</div>;
+    return <div className={s.loading}>Loading... Please wait.</div>;
   }
   //   const recipeingr = recipe.map(el => el.ingredients);
   console.log('recipe', recipe.ingredients);

@@ -6,6 +6,10 @@
   color: #8baa36;
   font-weight: 600;
 }
+.loading {
+  font-size: 60px;
+  margin: 100px auto 600px auto;
+}
 
 .bgclock {
   background-image: url('../../assets/images/descVegetable/clock.png');

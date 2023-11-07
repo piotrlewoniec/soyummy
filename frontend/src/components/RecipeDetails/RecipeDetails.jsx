@@ -28,7 +28,7 @@ export const RecipeDetails = () => {
   }, [dispatch, id]);
 
   if (!dataFetched) {
-    return <div>Loading... Please wait.</div>;
+    return <div className={s.loading}>Loading... Please wait.</div>;
   }
   const instructions = recipe.instructions;
 

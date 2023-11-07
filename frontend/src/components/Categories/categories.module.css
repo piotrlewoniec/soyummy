@@ -4,6 +4,11 @@
   margin-bottom: 200px;
 }
 
+.loading {
+  font-size: 60px;
+  margin: 100px auto 600px auto;
+}
+
 .container {
   width: 80%;
   overflow-x: auto;
