@@ -50,7 +50,7 @@ export const Ingr = () => {
           <div className={s.flexik}>
             <div className={s.fl}>
               {' '}
-              <img className={s.img} src={el.thb} />
+              <img alt={el.ttl} className={s.img} src={el.thb} />
               <div className={s.ttl}>{el.ttl}</div>
             </div>
             <div className={s.f}>
