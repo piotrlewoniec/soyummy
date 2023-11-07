@@ -18,6 +18,7 @@ export const FollowList = styled.ul`
       gap: 20px;
       height: 26px;
       margin-top: 40px;
+      list-style: none;
    }
 `;
 
