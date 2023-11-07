@@ -33,6 +33,7 @@ const getCategories = async (req, res, next) => {
     next(error);
   }
 };
+
 const searchRecipesByName = async (req, res, next) => {
   try {
     const name = req.query.name;
@@ -42,6 +43,7 @@ const searchRecipesByName = async (req, res, next) => {
     next(error);
   }
 };
+
 const getFavRecipes = async (req, res, next) => {
   try {
     const userId = req.params.userid;
