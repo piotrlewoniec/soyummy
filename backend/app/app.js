@@ -6,6 +6,7 @@ const path = require("path");
 
 const { swaggerRouter } = require("../services/swagger");
 const { usersRouter } = require("../features/users");
+const ingredientRoute = require("../features/ingredients/ingredients.route");
 
 const recipeRouter = require("../features/recipe/recipe.route");
 const app = express();
@@ -17,6 +18,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/v1/users", usersRouter);
+app.use("/soyummy", ingredientRoute);
 
 app.use("/soyummy", recipeRouter);
 

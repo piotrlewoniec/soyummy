@@ -4,6 +4,7 @@ import styles from './RegisterForm.module.css';
 import icons from '../../assets/icons/icons.svg';
 import { useDispatch } from 'react-redux';
 import { registerUser } from 'redux/userAPI/actions';
+import Notiflix from 'notiflix';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,6 @@ export const RegisterForm = () => {
     email: '',
     password: '',
   });
-  const [error, setError] = useState(null);
 
   const navigate = useNavigate();
 
@@ -28,27 +28,54 @@ export const RegisterForm = () => {
     navigate('/signin');
   };
 
-  const handleSubmit = async e => {
+  const handleSubmit = e => {
     e.preventDefault();
 
-    try {
-      const response = await dispatch(registerUser(formData));
+    const regexEmailPattern =
+      /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+    const regexEmail = new RegExp(regexEmailPattern);
+    const regexPwdPattern =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-      if (response.payload.isEmailVerified) {
-        handleRegistrationSuccess();
-      } else {
-        setError('Registration failed. Please try again.');
-      }
-    } catch (error) {
-      setError('Registration failed. Please try again.');
+    if (!formData.name) {
+      Notiflix.Notify.failure('Please enter a username.');
+      return;
     }
+
+    if (!formData.email || !regexEmail.test(formData.email)) {
+      Notiflix.Notify.failure('Please enter a valid email address.');
+      return;
+    }
+
+    if (!formData.password || !regexPwdPattern.test(formData.password)) {
+      Notiflix.Notify.failure('Please enter a valid password.');
+      return;
+    }
+
+    dispatch(registerUser(formData))
+      .then(response => {
+        if (response.payload.isEmailVerified) {
+          handleRegistrationSuccess();
+          Notiflix.Notify.success('Registration successful');
+        } else {
+          Notiflix.Notify.failure('Registration failed. Please try again.');
+        }
+      })
+      .catch(error => {
+        if (error.message === 'User already exists') {
+          Notiflix.Notify.failure(
+            'User with this name or email already exists'
+          );
+        } else {
+          Notiflix.Notify.failure('Registration failed. Please try again.');
+        }
+      });
   };
 
   return (
     <div>
       <form className={styles.registerForm} onSubmit={handleSubmit}>
         <h2 className={styles.registerTitle}>Registration</h2>
-        {error && <p className={styles.error}>{error}</p>}
         <div className={styles.inputContainer}>
           <label className={styles.label}>
             <svg className={styles.icon}>

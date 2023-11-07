@@ -29,6 +29,7 @@
   transition: color 0.3s, background-color 0.3s;
   width: 27px;
   height: 27px;
+  cursor: pointer;
 }
 
 .pageNumber:hover {
