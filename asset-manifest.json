@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/soyummy/static/css/main.95e1e122.css",
-    "main.js": "/soyummy/static/js/main.e5c68b7d.js",
+    "main.js": "/soyummy/static/js/main.87548af6.js",
     "static/media/descgarden.png": "/soyummy/static/media/descgarden.e4f02a0c3f7c51f56909.png",
     "static/media/spinach-background-image@x3.png": "/soyummy/static/media/spinach-background-image@x3.0538344c9446f7f1c69f.png",
     "static/media/wellcomePage-desktop@3x.jpg": "/soyummy/static/media/wellcomePage-desktop@3x.ec0298f5e0856a8bf3cf.jpg",
@@ -60,10 +60,10 @@
     "static/media/spinach-mobile.webp": "/soyummy/static/media/spinach-mobile.fcf80e39aba42eb2c439.webp",
     "index.html": "/soyummy/index.html",
     "main.95e1e122.css.map": "/soyummy/static/css/main.95e1e122.css.map",
-    "main.e5c68b7d.js.map": "/soyummy/static/js/main.e5c68b7d.js.map"
+    "main.87548af6.js.map": "/soyummy/static/js/main.87548af6.js.map"
   },
   "entrypoints": [
     "static/css/main.95e1e122.css",
-    "static/js/main.e5c68b7d.js"
+    "static/js/main.87548af6.js"
   ]
 }
