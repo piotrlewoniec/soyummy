@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5bc5ecfb.css",
-    "main.js": "/static/js/main.42d670d0.js",
+    "main.js": "/static/js/main.5b4208cd.js",
     "static/media/descgarden.png": "/static/media/descgarden.e4f02a0c3f7c51f56909.png",
     "static/media/spinach-background-image@x3.png": "/static/media/spinach-background-image@x3.0538344c9446f7f1c69f.png",
     "static/media/wellcomePage-desktop@3x.jpg": "/static/media/wellcomePage-desktop@3x.ec0298f5e0856a8bf3cf.jpg",
@@ -60,10 +60,10 @@
     "static/media/spinach-mobile.webp": "/static/media/spinach-mobile.fcf80e39aba42eb2c439.webp",
     "index.html": "/index.html",
     "main.5bc5ecfb.css.map": "/static/css/main.5bc5ecfb.css.map",
-    "main.42d670d0.js.map": "/static/js/main.42d670d0.js.map"
+    "main.5b4208cd.js.map": "/static/js/main.5b4208cd.js.map"
   },
   "entrypoints": [
     "static/css/main.5bc5ecfb.css",
-    "static/js/main.42d670d0.js"
+    "static/js/main.5b4208cd.js"
   ]
 }
