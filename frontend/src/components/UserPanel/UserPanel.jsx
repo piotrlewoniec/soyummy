@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchUserData } from '../../redux/userAPI/actions';
+import { refreshUser } from '../../redux/userAPI/actions';
 import css from './UserPanel.module.css';
 import UserModal from '../UserModal/UserModal';
 
@@ -18,7 +18,7 @@ const UserPanel = () => {
   };
 
   useEffect(() => {
-    dispatch(fetchUserData());
+    dispatch(refreshUser());
   }, [dispatch]);
 
   return (

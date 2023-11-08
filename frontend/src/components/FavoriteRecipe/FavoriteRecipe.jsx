@@ -2,14 +2,14 @@ import styles from './FavoriteRecipe.module.css';
 import svgsprite from '../../assets/icons/icons.svg';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchUserData } from 'redux/userAPI/actions';
+import { refreshUser } from 'redux/userAPI/actions';
 export const FavoriteRecipe = () => {
   const dispatch = useDispatch();
   const { favorites } = useSelector(state => state.auth);
   const [favoriteRecipesData, setFavoriteRecipesData] = useState([]);
   console.log(favorites);
   useEffect(() => {
-    dispatch(fetchUserData());
+    dispatch(refreshUser());
   }, [dispatch]);
   useEffect(() => {
     const fetchFavoriteRecipesData = async () => {
