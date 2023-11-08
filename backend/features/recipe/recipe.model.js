@@ -47,4 +47,24 @@ const categorySchema = new Schema({
 });
 const Categories = mongoose.model("categorieslists", categorySchema);
 
-module.exports = { Categories, Recipe };
+const ingredientSchema = new mongoose.Schema({
+  _id: {
+    type: mongoose.Schema.Types.ObjectId,
+  },
+  ttl: {
+    type: String,
+  },
+  desc: {
+    type: String,
+  },
+  t: {
+    type: String,
+  },
+  thb: {
+    type: String,
+  },
+});
+
+const Ingredients = mongoose.model("ingredients", ingredientSchema);
+
+module.exports = { Categories, Recipe, Ingredients };

@@ -1,0 +1,141 @@
+.title {
+  font-size: 30px;
+  /* width: 80%; */
+}
+
+.fl {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 80px;
+}
+
+.flexik {
+  height: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #8baa36;
+  margin-bottom: 50px;
+  width: 80%;
+  border-radius: 10px;
+  margin: 0 auto 50px auto;
+}
+.ttl {
+  margin-left: 20px;
+  margin-top: 60px;
+  font-size: 20px;
+}
+.input {
+  /* margin-right: 50px; */
+  height: 40px;
+  width: 40px;
+  margin-top: 60px;
+}
+.measure {
+  margin-top: 60px;
+  font-size: 20px;
+}
+.img {
+  margin-top: 30px;
+  width: 100px;
+  height: 100px;
+}
+.loading {
+  font-size: 30px;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 30px;
+    /* width: 80%; */
+  }
+
+  .fl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 80px;
+  }
+
+  .flexik {
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #8baa36;
+    margin-bottom: 50px;
+    width: 80%;
+    border-radius: 10px;
+    margin: 0 auto 50px auto;
+  }
+  .ttl {
+    margin-left: 20px;
+    margin-top: 60px;
+  }
+  .input {
+    margin-right: 50px;
+    height: 40px;
+    width: 40px;
+    margin-top: 60px;
+  }
+  .measure {
+    margin-top: 60px;
+  }
+  .img {
+    /* margin-top: 30px; */
+    width: 150px;
+    height: 150px;
+    margin-top: 1px;
+  }
+  .loading {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .title {
+    font-size: 30px;
+    /* width: 80%; */
+  }
+
+  .fl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 80px;
+  }
+
+  .flexik {
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #8baa36;
+    margin-bottom: 50px;
+    width: 80%;
+    border-radius: 10px;
+    margin: 0 auto 50px auto;
+  }
+  .ttl {
+    margin-left: 20px;
+    margin-top: 60px;
+  }
+  .input {
+    margin-right: 50px;
+    height: 40px;
+    width: 40px;
+    margin-top: 60px;
+  }
+  .measure {
+    margin-top: 60px;
+  }
+  .img {
+    margin-top: 1px;
+
+    width: 150px;
+    height: 150px;
+  }
+  .loading {
+    font-size: 30px;
+  }
+}
