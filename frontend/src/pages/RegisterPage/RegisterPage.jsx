@@ -1,24 +1,24 @@
 import { RegisterForm } from '../../components/RegisterForm/RegisterForm';
 import styles from './RegisterPage.module.css';
 import { useEffect, useState } from 'react';
-import { isUserLoged } from '../../redux/userAPI/selectors';
+import { isUserRegistred } from '../../redux/userAPI/selectors';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 export const RegisterPage = () => {
-  const userIsLogged = useSelector(isUserLoged);
+  const userIsRegistred = useSelector(isUserRegistred);
   const navigate = useNavigate();
   const [hasRedirected, setHasRedirected] = useState(false);
 
   useEffect(() => {
-    if (userIsLogged && !hasRedirected) {
+    if (userIsRegistred && !hasRedirected) {
       navigate('/signin');
       setHasRedirected(true);
     }
-    if (!userIsLogged) {
+    if (!userIsRegistred) {
       setHasRedirected(false);
     }
-  }, [userIsLogged, navigate, hasRedirected]);
+  }, [userIsRegistred, navigate, hasRedirected]);
   return (
     <div className={styles.registerPageContainer}>
       <div className={styles.registerContainer}>
