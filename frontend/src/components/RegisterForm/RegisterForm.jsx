@@ -1,54 +1,33 @@
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './RegisterForm.module.css';
 import icons from '../../assets/icons/icons.svg';
+import { register } from '../../redux/userAPI/actions';
 import { useDispatch } from 'react-redux';
-import { registerUser } from 'redux/userAPI/actions';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-  });
-  const [error, setError] = useState(null);
 
-  const navigate = useNavigate();
-
-  const handleChange = e => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleRegistrationSuccess = () => {
-    navigate('/signin');
-  };
-
-  const handleSubmit = async e => {
+  const handleSubmit = e => {
     e.preventDefault();
-
-    try {
-      const response = await dispatch(registerUser(formData));
-
-      if (response.payload.isEmailVerified) {
-        handleRegistrationSuccess();
-      } else {
-        setError('Registration failed. Please try again.');
-      }
-    } catch (error) {
-      setError('Registration failed. Please try again.');
-    }
+    const form = e.currentTarget;
+    dispatch(
+      register({
+        name: form.elements.name.value,
+        email: form.elements.email.value,
+        password: form.elements.password.value,
+      })
+    );
+    // form.reset();
   };
 
   return (
     <div>
-      <form className={styles.registerForm} onSubmit={handleSubmit}>
+      <form
+        className={styles.registerForm}
+        onSubmit={handleSubmit}
+        autoComplete="on"
+      >
         <h2 className={styles.registerTitle}>Registration</h2>
-        {error && <p className={styles.error}>{error}</p>}
         <div className={styles.inputContainer}>
           <label className={styles.label}>
             <svg className={styles.icon}>
@@ -59,8 +38,6 @@ export const RegisterForm = () => {
               type="text"
               name="name"
               placeholder="Username"
-              value={formData.name}
-              onChange={handleChange}
             />
           </label>
 
@@ -73,8 +50,6 @@ export const RegisterForm = () => {
               type="email"
               name="email"
               placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
             />
           </label>
 
@@ -87,8 +62,6 @@ export const RegisterForm = () => {
               type="password"
               name="password"
               placeholder="Password"
-              value={formData.password}
-              onChange={handleChange}
             />
           </label>
         </div>

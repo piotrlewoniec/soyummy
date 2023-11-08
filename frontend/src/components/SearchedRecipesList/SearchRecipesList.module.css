@@ -77,4 +77,13 @@
     line-height: 24px;
     letter-spacing: -0.02em;
   }
+  .recipeImageWithText {
+    width: 300px;
+    height: 323px;
+  }
+  .searchedRecipesList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
 }
