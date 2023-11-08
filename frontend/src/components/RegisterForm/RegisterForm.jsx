@@ -17,7 +17,7 @@ export const RegisterForm = () => {
         password: form.elements.password.value,
       })
     );
-    form.reset();
+    // form.reset();
   };
 
   return (
@@ -25,7 +25,7 @@ export const RegisterForm = () => {
       <form
         className={styles.registerForm}
         onSubmit={handleSubmit}
-        autoComplete="off"
+        autoComplete="on"
       >
         <h2 className={styles.registerTitle}>Registration</h2>
         <div className={styles.inputContainer}>
