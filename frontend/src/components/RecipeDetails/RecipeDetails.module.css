@@ -1,10 +1,14 @@
 .title {
   text-align: center;
-  margin-top: 200px;
-  margin-left: 40px;
+  margin-top: 100px;
+  margin-left: 80px;
   font-size: 35px;
   color: #8baa36;
   font-weight: 600;
+}
+.loading {
+  font-size: 60px;
+  margin: 100px auto 600px auto;
 }
 
 .bgclock {
@@ -16,14 +20,15 @@
 }
 .bg {
   background-image: url('../../assets/images/descVegetable/descgarden.png');
-  height: 700px;
+  height: 500px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .desc {
   text-align: center;
-  width: 300px;
+  width: 200px;
   margin: 30px auto 0 auto;
+  font-weight: 500;
 }
 .btnplace {
   text-align: center;
@@ -32,6 +37,7 @@
 
 .span {
   margin-left: 60px;
+  font-weight: 500;
 }
 .category {
   height: 60px;
@@ -46,6 +52,9 @@
 }
 .add {
   margin-left: 70px;
+  margin-top: 20px;
+  color: white;
+  font-weight: 600;
 }
 
 .ingredients {
@@ -75,9 +84,11 @@
 }
 .instr {
   margin-right: 25px;
-  font-size: 15px;
+  font-size: 20px;
 }
-
+.czcionka {
+  font-size: 20px;
+}
 @media (min-width: 768px) {
   .title {
     text-align: center;
@@ -138,6 +149,7 @@
     margin-top: 20px;
     color: white;
     font-weight: 600;
+    margin-left: 90px;
   }
 
   .fotodiv {

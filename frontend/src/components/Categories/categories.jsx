@@ -9,6 +9,7 @@ import { fetchCategories, fetchRecipes } from 'redux/categories/actions';
 export const CategoriesData = () => {
   const [selectedCategory, setSelectedCategory] = useState(['Beef']);
   const [recipes, setRecipes] = useState([]);
+  const [dataFetched, setDataFetched] = useState(false);
 
   const dispatch = useDispatch();
   const categories = useSelector(state => state.categories.items);
@@ -19,6 +20,7 @@ export const CategoriesData = () => {
       await dispatch(fetchCategories());
       await dispatch(fetchRecipes({ categories: selectedCategory }));
       setRecipes(posilki);
+      setDataFetched(true);
     };
 
     fetchData();
@@ -27,7 +29,9 @@ export const CategoriesData = () => {
   const handleCategoryClick = category => {
     setSelectedCategory(category);
   };
-
+  if (!dataFetched) {
+    return <div className={s.loading}>Loading data.....</div>;
+  }
   return (
     <div className={s.App}>
       <div className={s.name}>Categories</div>

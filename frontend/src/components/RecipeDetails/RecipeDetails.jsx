@@ -5,6 +5,7 @@ import { fetchIngredients, fetchOneRecipes } from 'redux/categories/actions';
 import { useParams } from 'react-router-dom';
 import Header from 'components/Header/Header';
 import { Footer } from 'components/Footer/Footer';
+import { Ingr } from './Ingredients/ingredients';
 
 export const RecipeDetails = () => {
   const { id } = useParams();
@@ -27,7 +28,7 @@ export const RecipeDetails = () => {
   }, [dispatch, id]);
 
   if (!dataFetched) {
-    return <div>Loading... Please wait.</div>;
+    return <div className={s.loading}>Loading... Please wait.</div>;
   }
   const instructions = recipe.instructions;
 
@@ -52,15 +53,16 @@ export const RecipeDetails = () => {
 
       <div className={s.category}>
         <div className={s.ingredients}>Ingredients</div>
-        <div className={s.zespanem}>
-          Number<span className={s.add}>Add to list</span>
-        </div>
+        <div className={s.zespanem}>Number</div>
+        <div className={s.add}>Add to list</div>
       </div>
-      <div>Tutaj ingredienty</div>
+      <div>
+        <Ingr />
+      </div>
       <div className={s.fotodiv}>
         <ol>
           {steps.map((step, index) => (
-            <li key={index}>{`${step}`}</li>
+            <li className={s.czcionka} key={index}>{`${step}`}</li>
           ))}
         </ol>
         <img className={s.foto} src={recipe.thumb} alt={recipe.title} />
