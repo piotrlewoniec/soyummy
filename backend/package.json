@@ -2,8 +2,10 @@
   "name": "soyummy",
   "version": "0.1.0",
   "private": true,
+   "engines": {
    "npm": "9.6.1",
-  "node": "18.14.0",
+  "node": "18.14.0"
+     },
   "scripts": {
     "start": "cross-env NODE_ENV=production node ./server.js",
     "dev": "cross-env NODE_ENV=development nodemon ./server.js",
