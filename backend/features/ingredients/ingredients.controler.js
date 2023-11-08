@@ -1,11 +1,12 @@
-const Ingredient = require("./ingredients.model.js");
+// const Ingredient = require("./ingredients.model");
+const { Ingredients } = require("../recipe/recipe.model");
 const { v4: uuidv4 } = require("uuid");
 
 const addProductToList = async (req, res) => {
   try {
-    const { userId, product } = req.body;
+    const { product } = req.body;
 
-    const newIngredient = new Ingredient({
+    const newIngredient = new Ingredients({
       _id: uuidv4(),
       ttl: product.title,
       desc: product.description,
@@ -28,10 +29,9 @@ const addProductToList = async (req, res) => {
 
 const removeProductFromList = async (req, res) => {
   try {
-    const userId = req.params.userId;
     const productId = req.params.productId;
 
-    await Ingredient.findByIdAndRemove(productId);
+    await Ingredients.findByIdAndRemove(productId);
 
     res.status(200).json({
       message: "Product has been removed from the user's shopping list.",
@@ -49,7 +49,7 @@ const getUserShoppingList = async (req, res) => {
   try {
     const userId = req.params.userId;
 
-    const shoppingList = await Ingredient.find({ _id: userId });
+    const shoppingList = await Ingredients.find({ _id: userId });
     res.status(200).json({ shoppingList });
   } catch (error) {
     console.error(error);
@@ -62,7 +62,7 @@ const getUserShoppingList = async (req, res) => {
 const searchRecipesByIngredient = async (req, res, next) => {
   try {
     const ingredient = req.query.ingredients;
-    const recipes = await Ingredient.find({ ttl: ingredient });
+    const recipes = await Ingredients.find({ ttl: ingredient });
     res.status(200).json({ recipes });
   } catch (error) {
     console.error(error);
