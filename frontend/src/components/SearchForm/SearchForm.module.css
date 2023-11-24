@@ -29,6 +29,11 @@
   font-weight: 400;
   line-height: 21px;
   letter-spacing: 0em;
+  transition: transform 0.3s ease-in-out;
+}
+
+.buttonSearch:hover {
+  transform: scale(1.1);
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .searchForm {
@@ -58,4 +63,11 @@
     padding: 16px 52px;
     width: 161px;
   }
+}
+.searchForm.darkTheme {
+  background-color: transparent;
+  border: 1px solid #fafafa33;
+}
+.input.darkTheme {
+  color: #fafafa;
 }

@@ -2,8 +2,6 @@
   color: #fafafa;
   font-family: Poppins;
   font-style: normal;
-  width: 100vw;
-
   position: relative;
   overflow: visible;
   z-index: 2;
@@ -188,6 +186,7 @@ label {
   background: none;
   position: relative;
   overflow: hidden;
+  color: #22252a;
 }
 .copyrights::before {
   content: '';
@@ -211,7 +210,7 @@ label {
     background-image: url('../../assets/images/footer/footer-background-image@x3.png');
   }
 }
-.copyrights p {
+.copyrights .p {
   color: #22252a;
   font-family: Poppins;
   font-size: 10px;
@@ -222,7 +221,7 @@ label {
   opacity: 0.5;
   margin: 0;
 }
-.copyrights a {
+.copyrights .a {
   color: #22252a;
   font-family: Poppins;
   font-size: 10px;
@@ -319,12 +318,12 @@ label {
   .copyrights {
     height: 78px;
   }
-  .copyrights a {
+  .copyrights .a {
     font-size: 14px;
     line-height: 14px; /* 100% */
     letter-spacing: -0.14px;
   }
-  .copyrights p {
+  .copyrights .p {
     font-size: 14px;
     line-height: 14px; /* 100% */
     letter-spacing: -0.14px;
@@ -463,12 +462,12 @@ label {
   .copyrights {
     height: 114px;
   }
-  .copyrights a {
+  .copyrights .a {
     font-size: 14px;
     line-height: 14px; /* 100% */
     letter-spacing: -0.14px;
   }
-  .copyrights p {
+  .copyrights .p {
     font-size: 14px;
     line-height: 14px; /* 100% */
     letter-spacing: -0.14px;
@@ -478,4 +477,10 @@ label {
     width: 438px;
     height: 474px;
   }
+}
+.p.darkTheme {
+  color: #fafafa;
+}
+.a.darkTheme {
+  color: #fafafa;
 }

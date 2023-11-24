@@ -1,0 +1,40 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.loaderCircle {
+  border: 8px solid #2a2c36;
+  border-top: 8px solid #8baa36;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  position: relative;
+}
+
+.loaderText {
+  color: #2a2c36;
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loaderText.darkTheme {
+  color: #fafafa;
+}
+.loaderCircle.darkTheme {
+  border: 8px solid #fafafa;
+  border-top: 8px solid #8baa36;
+}

@@ -84,6 +84,7 @@
 .ingredientName {
   margin-right: 16px;
   width: 70px;
+  color: black;
 }
 
 .ingredientQuantity {
@@ -148,4 +149,12 @@
   height: 14px;
   fill: #fafafa;
   stroke: #2a2c36;
+}
+
+.removeIcon.darkTheme {
+  stroke: #fafafa;
+}
+
+.ingredientName.darkTheme {
+  color: #fafafa;
 }

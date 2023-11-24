@@ -1,38 +1,37 @@
 .imageFlex {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  width: 100%;
-
-  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
 }
 .margin {
-  margin: 0 auto 0 auto;
   display: flex;
-}
-.position {
-  margin: 0 auto 100px auto;
-  max-width: 300px;
+  justify-content: center;
+  align-items: center;
 }
 
-.img {
-  width: 100%;
-  margin-right: 20px;
+.gridItem {
+  width: 343px;
+  height: 323px;
   border-radius: 8px;
-  height: 200px;
-}
-.grid {
-  margin: 10px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 .overlay {
-  color: black;
-  margin: 0 auto;
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  width: 80%;
   background-color: white;
-  padding: 3px;
-  width: 90%;
-  position: relative;
   border-radius: 8px;
-  top: -50px;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
 }
 .underline {
   text-decoration: none;
@@ -44,12 +43,7 @@
   margin-left: 30px;
   margin-bottom: 40px;
 }
-.baton {
-  background-color: #8aa936;
-  border-radius: 8px;
-  display: flex;
-  margin-right: 60px;
-}
+
 .batonFlex {
   display: flex;
   justify-content: center;
@@ -61,157 +55,81 @@
   justify-content: center;
   text-decoration: none;
   cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.img {
+  width: 300px;
+  height: 323px;
+
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  margin-right: 20px;
+}
+.baton {
+  background-color: #8aa936;
+  border-radius: 8px;
+  display: flex;
+  margin-right: 60px;
+  width: 94px;
+  height: 38px;
+  border: none;
+  padding: 10px 24px 10px 24px;
+  color: #fafafa;
+  margin-top: 20px;
+}
+.batonFlex {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+
+.oth {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
 }
 .other {
   background-color: transparent;
-  color: #22252a;
-
   border-radius: 24px 44px;
   border: 1px solid green;
   width: 200px;
   height: 50px;
   cursor: pointer;
+  color: #22252a;
 }
-
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .position {
-    margin: -200px auto 200px auto;
-    max-width: 700px;
+    width: 1240px;
   }
   .imageFlex {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    width: 90%;
-    margin: 0 auto;
+    justify-content: space-between;
   }
-
-  .img {
-    width: 100%;
-    margin-right: 20px;
-    border-radius: 8px;
-    height: 200px;
-  }
-  .grid {
-    margin: 10px;
-  }
-  .overlay {
-    color: black;
-    margin: 0 auto;
-    background-color: white;
-    padding: 3px;
-    width: 90%;
-    position: relative;
-    border-radius: 8px;
-    top: -50px;
-  }
-  .underline {
-    text-decoration: none;
-  }
-
-  .title {
-    font-size: 40px;
-    font-weight: 700;
-    margin-left: 40px;
-    margin-bottom: 40px;
-  }
-  .baton {
-    background-color: #8aa936;
-    border-radius: 8px;
-    display: flex;
-    margin-right: 200px;
-  }
-  .batonFlex {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 50px;
-  }
-  .oth {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .other {
-    background-color: transparent;
-    color: #22252a;
-
-    border-radius: 24px 44px;
-    border: 1px solid green;
-    width: 200px;
-    height: 50px;
-    cursor: pointer;
+  .gridItem {
+    width: calc(25% - 10px);
+    margin-bottom: 20px;
   }
 }
-
-@media (min-width: 1280px) {
-  .position {
-    margin: -200px auto 300px auto;
-    max-width: 1200px;
-  }
-
-  .imageFlex {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .img {
-    width: 100%;
-    margin-right: 20px;
-    border-radius: 8px;
-    height: 200px;
-  }
-  .grid {
-    margin: 10px;
-  }
-  .overlay {
-    color: black;
-    margin: 0 auto;
-    background-color: white;
-    padding: 3px;
-    width: 90%;
-    position: relative;
-    border-radius: 8px;
-    top: -50px;
-  }
-  .underline {
-    text-decoration: none;
-  }
-  .title {
-    font-size: 40px;
-    font-weight: 700;
-    margin-left: 70px;
-    margin-bottom: 40px;
-  }
-  .baton {
-    background-color: #8aa936;
-    border-radius: 8px;
-    display: flex;
-    margin-right: 60px;
-  }
-  .batonFlex {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 50px;
-  }
-
-  .oth {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .other {
-    background-color: transparent;
-
-    border-radius: 24px 44px;
-    border: 1px solid green;
-    width: 200px;
-    height: 50px;
-    cursor: pointer;
-    color: #22252a;
-  }
+.margin.darkTheme {
+  background-color: #1e1f28;
+}
+.title.darkTheme {
+  color: #fafafa;
+}
+.overlay.darkTheme {
+  background-color: #2a2c36;
+  color: #fafafa;
+}
+.other.darkTheme {
+  color: #fafafa;
 }

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Pagination.module.css';
 import icons from '../../assets/icons/icons.svg';
+import { useTheme } from '../../components/ToggleSwitch/ThemeContext';
 
 export const Pagination = () => {
+  const { theme } = useTheme();
   const [pageCount, setPageCount] = useState(5);
 
   const updatePageCount = () => {
@@ -29,14 +31,23 @@ export const Pagination = () => {
     }
 
     return pageNumbers.map(pageNumber => (
-      <span key={pageNumber} className={styles.pageNumber}>
+      <span
+        key={pageNumber}
+        className={`${styles.pageNumber} ${
+          theme === 'dark' ? styles.darkTheme : ''
+        }`}
+      >
         {pageNumber}
       </span>
     ));
   };
 
   return (
-    <div className={styles.pagination}>
+    <div
+      className={`${styles.pagination} ${
+        theme === 'dark' ? styles.darkTheme : ''
+      }`}
+    >
       <svg className={styles.icon} viewBox="0 0 12 12">
         <use href={`${icons}#icon-pagination-arrow-left`} />
       </svg>

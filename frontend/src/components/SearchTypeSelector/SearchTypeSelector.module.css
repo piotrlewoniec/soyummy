@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
 }
+
 .searchText {
   font-weight: 500;
   font-size: 12px;
@@ -9,9 +10,25 @@
 }
 
 .customSelect {
+  position: relative;
   width: 146px;
   height: 34px;
-  border-radius: 4px;
-  background-color: #fff;
+  background-color: #fafafa;
   border: none;
+  color: black;
+  border-radius: 4px;
+}
+
+.customSelect.darkTheme {
+  background-color: transparent;
+  color: #8baa36;
+  border: 1px solid #fafafa33;
+}
+
+.searchText.darkTheme {
+  color: #fafafa;
+}
+option.darkTheme {
+  background-color: #8baa36;
+  color: #fafafa;
 }

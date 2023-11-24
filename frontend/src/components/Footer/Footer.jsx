@@ -1,8 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import styles from './Footer.module.css';
 import svgsprite from '../../assets/icons/icons.svg';
+import { useTheme } from '../../components/ToggleSwitch/ThemeContext';
 
 export const Footer = () => {
+  const { theme } = useTheme();
   return (
     <section className={styles.footer}>
       <div className={styles.container}>
@@ -84,9 +86,22 @@ export const Footer = () => {
           </a>
         </div>
       </div>
-      <div className={styles.copyrights}>
-        <p>© 2023 All Rights Reserved.</p>
-        <a href="/tos">Terms of Service</a>
+      <div
+        className={`${styles.copyrights} ${
+          theme === 'dark' ? styles.darkTheme : ''
+        }`}
+      >
+        <p
+          className={`${styles.p} ${theme === 'dark' ? styles.darkTheme : ''}`}
+        >
+          © 2023 All Rights Reserved.
+        </p>
+        <a
+          className={`${styles.a} ${theme === 'dark' ? styles.darkTheme : ''}`}
+          href="/tos"
+        >
+          Terms of Service
+        </a>
       </div>
     </section>
   );

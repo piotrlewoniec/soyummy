@@ -13,6 +13,7 @@
   font-weight: 600;
   line-height: 1;
   margin-left: 40px;
+  color: black;
 }
 
 .element {
@@ -142,4 +143,10 @@
     height: 852px;
     top: 730px;
   }
+}
+.title.darkTheme {
+  color: #fff;
+}
+.element_three.darkTheme {
+  background-color: #fff;
 }

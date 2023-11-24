@@ -258,3 +258,24 @@
     margin-bottom: 50px;
   }
 }
+.loaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.075);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.category.darkTheme {
+  color: #fafafa;
+}
+
+.recipes .recipe .overlay.darkTheme {
+  color: #fafafa;
+  background-color: #2a2c36;
+}
