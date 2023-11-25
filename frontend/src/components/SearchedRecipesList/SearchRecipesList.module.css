@@ -1,3 +1,9 @@
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .image {
   width: 208px;
   height: 133px;
@@ -42,7 +48,10 @@
   font-size: 16px;
   font-weight: 500;
 }
-
+.pagination {
+  display: flex;
+  justify-content: center;
+}
 @media (max-width: 767px) {
   .image {
     background-image: url('../../assets/images/basket-with-vegetables/kisspng-vegetable-fruit-basket-mobile@1x.png');
@@ -86,4 +95,11 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
   }
+}
+.imageText.darkTheme {
+  color: #fafafa;
+}
+.recipeName.darkTheme {
+  background-color: #2a2c36;
+  color: #fafafa;
 }

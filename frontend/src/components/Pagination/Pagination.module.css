@@ -67,3 +67,12 @@
     height: 15px;
   }
 }
+.pagination.darkTheme {
+  background-color: #2a2c36;
+}
+.pageNumber:hover.darkTheme {
+  background-color: #8baa36;
+}
+.pageNumber.darkTheme {
+  color: #fafafa;
+}

@@ -1,71 +1,91 @@
+.recipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .title {
-  text-align: center;
   margin-top: 100px;
-  margin-left: 80px;
-  font-size: 35px;
+  font-size: 24px;
   color: #8baa36;
   font-weight: 600;
-}
-.loading {
-  font-size: 60px;
-  margin: 100px auto 600px auto;
+  margin-bottom: 20px;
 }
 
 .bgclock {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+.clock {
   background-image: url('../../assets/images/descVegetable/clock.png');
   background-repeat: no-repeat;
-  background-position: center;
-  margin: 20px auto 0 auto;
-  text-align: center;
+  fill: #2a2c36;
+  width: 18px;
+  height: 18px;
+  padding: 2px;
 }
 .bg {
-  background-image: url('../../assets/images/descVegetable/descgarden.png');
-  height: 500px;
+  background-image: url('../../assets/images/descVegetable/flat-lay-assortment-vegetables-with-copy-space@1x.png');
+  height: 455px;
+  min-width: 375px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .desc {
+  width: 303px;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.02em;
   text-align: center;
-  width: 200px;
-  margin: 30px auto 0 auto;
-  font-weight: 500;
 }
 .btnplace {
-  text-align: center;
   margin: 40px auto 0 auto;
+  border-radius: 24px 44px;
+  height: 35px;
+  width: 150px;
+  background-color: transparent;
+  border: 2px solid #8baa36;
+  cursor: pointer;
+  font-size: 10px;
 }
 
 .span {
-  margin-left: 60px;
   font-weight: 500;
 }
 .category {
   height: 60px;
   border-radius: 8px;
   background-color: #8baa36;
-  margin: 40px auto 40px auto;
+  margin: 24px auto 24px auto;
   width: 80%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
+  align-items: center;
 }
 .add {
-  margin-left: 70px;
-  margin-top: 20px;
   color: white;
   font-weight: 600;
+  font-size: 10px;
+  margin-right: 10px;
 }
 
 .ingredients {
-  margin-top: 20px;
   color: white;
   font-weight: 600;
+  width: 76px;
+  font-size: 10px;
+  margin-right: 160px;
 }
 .zespanem {
-  margin-top: 20px;
   color: white;
   font-weight: 600;
+  font-size: 10px;
+  margin-right: 50px;
 }
 
 .fotodiv {
@@ -75,7 +95,10 @@
   width: 80%;
   margin: 0 auto 80px auto;
 }
-
+.orientation {
+  display: flex;
+  flex-direction: column;
+}
 .foto {
   width: 100%;
   height: auto;
@@ -87,25 +110,23 @@
   font-size: 20px;
 }
 .czcionka {
-  font-size: 20px;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  position: relative;
+  counter-increment: my-awesome-counter;
+  padding-left: 10px;
+  margin-bottom: 15px;
 }
 @media (min-width: 768px) {
   .title {
-    text-align: center;
-    margin-top: 200px;
-    margin-left: 40px;
-    font-size: 35px;
-    color: #8baa36;
+    font-size: 44px;
     font-weight: 600;
   }
 
-  .bgclock {
-    background-image: url('../../assets/images/descVegetable/clock.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 20px auto 0 auto;
-    text-align: center;
-  }
   .bg {
     background-image: url('../../assets/images/descVegetable/descgarden.png');
     height: 700px;
@@ -113,43 +134,44 @@
     background-repeat: no-repeat;
   }
   .desc {
+    width: 506px;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.02em;
     text-align: center;
-    width: 300px;
-    margin: 30px auto 0 auto;
   }
   .btnplace {
-    text-align: center;
-    margin: 40px auto 0 auto;
-  }
-
-  .span {
-    margin-left: 60px;
+    height: 59px;
+    width: 278px;
+    font-size: 16px;
   }
   .category {
     height: 60px;
     border-radius: 8px;
     background-color: #8baa36;
-    margin: 40px auto 40px auto;
+    margin: 24px auto 24px auto;
     width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
+    align-items: center;
   }
   .add {
-    margin-left: 70px;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 20px;
   }
 
   .ingredients {
-    margin-top: 20px;
-    color: white;
-    font-weight: 600;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-right: 260px;
   }
   .zespanem {
-    margin-top: 20px;
-    color: white;
-    font-weight: 600;
-    margin-left: 90px;
+    font-size: 18px;
   }
 
   .fotodiv {
@@ -170,23 +192,11 @@
     margin-right: 25px;
     font-size: 15px;
   }
+  .czcionka {
+    font-size: 14px;
+  }
 }
 @media (min-width: 1280px) and (max-width: 1440px) {
-  .title {
-    text-align: center;
-    margin-top: 250px;
-    font-size: 44px;
-    color: #8baa36;
-    font-weight: 600;
-  }
-
-  .bgclock {
-    background-image: url('../../assets/images/descVegetable/clock.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 20px auto 0 auto;
-    text-align: center;
-  }
   .bg {
     background-image: url('../../assets/images/descVegetable/descgarden.png');
     height: 700px;
@@ -203,38 +213,22 @@
     margin: 40px auto 0 auto;
   }
 
-  .span {
-    margin-left: 60px;
-  }
-  .category {
-    height: 60px;
-    border-radius: 8px;
-    background-color: #8baa36;
-    margin: 40px auto 40px auto;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
-  }
   .add {
     margin-left: 70px;
   }
 
   .ingredients {
-    margin-top: 20px;
     color: white;
     font-weight: 600;
+    margin-right: 600px;
   }
   .zespanem {
-    margin-top: 20px;
     color: white;
     font-weight: 600;
   }
 
   .fotodiv {
     display: flex;
-    flex-direction: row;
     width: 80%;
     margin: 0 auto 150px auto;
   }
@@ -248,4 +242,66 @@
     margin-right: 25px;
     font-size: 15px;
   }
+  .fotodiv {
+    flex-direction: row;
+  }
+}
+.loaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.075);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.loaderContainer.darkTheme {
+  background-color: #2a2c36;
+}
+ol {
+  list-style-type: none;
+  counter-reset: my-awesome-counter;
+  padding: 0;
+}
+
+.czcionka {
+  position: relative;
+  counter-increment: my-awesome-counter;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.czcionka:before {
+  content: counter(my-awesome-counter);
+  position: absolute;
+  left: -30px;
+  top: 20%;
+  transform: translateY(-50%);
+  background-color: #8baa36;
+  color: #fff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+.recipePreparation {
+  color: #3e4462;
+  width: 225px;
+  height: 24px;
+
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+.recipePreparation.darkTheme {
+  color: #fafafa;
+}
+.czcionka.darkTheme {
+  color: #fafafa;
 }

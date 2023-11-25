@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import styles from './SearchForm.module.css';
+import { useTheme } from '../../components/ToggleSwitch/ThemeContext';
 
 export const SearchForm = ({ onSearch }) => {
+  const { theme } = useTheme();
   const [query, setQuery] = useState('');
 
   const handleSubmit = e => {
@@ -10,9 +12,16 @@ export const SearchForm = ({ onSearch }) => {
   };
 
   return (
-    <form className={styles.searchForm} onSubmit={handleSubmit}>
+    <form
+      className={`${styles.searchForm} ${
+        theme === 'dark' ? styles.darkTheme : ''
+      }`}
+      onSubmit={handleSubmit}
+    >
       <input
-        className={styles.input}
+        className={`${styles.input} ${
+          theme === 'dark' ? styles.darkTheme : ''
+        }`}
         type="text"
         autoComplete="off"
         autoFocus

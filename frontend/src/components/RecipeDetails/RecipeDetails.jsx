@@ -6,16 +6,14 @@ import { useParams } from 'react-router-dom';
 import Header from 'components/Header/Header';
 import { Footer } from 'components/Footer/Footer';
 import { Ingr } from './Ingredients/ingredients';
-
+import { Loader } from '../../components/Loader/Loader';
+import { useTheme } from '../../components/ToggleSwitch/ThemeContext';
 export const RecipeDetails = () => {
+  const { theme } = useTheme();
   const { id } = useParams();
   const dispatch = useDispatch();
   const recipe = useSelector(state => state.categories.oneRecipe);
   const [dataFetched, setDataFetched] = useState(false);
-
-  //   const ingredientData = useSelector(state => state.categories.ingr);
-
-  //   const state = useSelector(state => state.categories);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,10 +26,18 @@ export const RecipeDetails = () => {
   }, [dispatch, id]);
 
   if (!dataFetched) {
-    return <div className={s.loading}>Loading... Please wait.</div>;
+    return (
+      <div
+        className={`${s.loaderContainer} ${
+          theme === 'dark' ? s.darkTheme : ''
+        }`}
+      >
+        <Loader />
+      </div>
+    );
   }
-  const instructions = recipe.instructions;
 
+  const instructions = recipe.instructions;
   const steps = instructions.split('\r\n');
 
   return (
@@ -40,14 +46,14 @@ export const RecipeDetails = () => {
         <div>
           <Header />
         </div>
-        <div className={s.title}>{recipe.title}</div>
-
-        <div className={s.desc}>{recipe.description}</div>
-        <div className={s.btnplace}>
-          <button>Add to favorite</button>{' '}
-        </div>
-        <div className={s.bgclock}>
-          <span className={s.span}>{recipe.time}'</span>
+        <div className={s.recipe}>
+          <div className={s.title}>{recipe.title}</div>
+          <div className={s.desc}>{recipe.description}</div>
+          <button className={s.btnplace}>Add to favorite recipes</button>
+          <div className={s.bgclock}>
+            <div className={s.clock}></div>
+            <span className={s.span}>{recipe.time}'</span>
+          </div>
         </div>
       </div>
 
@@ -60,11 +66,25 @@ export const RecipeDetails = () => {
         <Ingr />
       </div>
       <div className={s.fotodiv}>
-        <ol>
-          {steps.map((step, index) => (
-            <li className={s.czcionka} key={index}>{`${step}`}</li>
-          ))}
-        </ol>
+        <div className={s.orientation}>
+          <p
+            className={`${s.recipePreparation} ${
+              theme === 'dark' ? s.darkTheme : ''
+            }`}
+          >
+            Recipe Preparation
+          </p>
+          <ol>
+            {steps.map((step, index) => (
+              <li
+                className={`${s.czcionka} ${
+                  theme === 'dark' ? s.darkTheme : ''
+                }`}
+                key={index}
+              >{`${step}`}</li>
+            ))}
+          </ol>
+        </div>
         <img className={s.foto} src={recipe.thumb} alt={recipe.title} />
       </div>
       <div>

@@ -1,5 +1,6 @@
 import styles from './MyRecipes.module.css';
 import svgsprite from '../../assets/icons/icons.svg';
+import { Pagination } from 'components/Pagination/Pagination';
 export const MyRecipes = () => {
   return (
     <div className={styles.containerMyRecipes}>
@@ -27,6 +28,9 @@ export const MyRecipes = () => {
             <span>See recipes</span>
           </button>
         </div>
+      </div>
+      <div className={styles.pagination}>
+        <Pagination />
       </div>
     </div>
   );

@@ -3,14 +3,20 @@ import svgsprite from '../../assets/icons/icons.svg';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { refreshUser } from 'redux/userAPI/actions';
+import { Pagination } from '../../components/Pagination/Pagination';
+import { Loader } from '../../components/Loader/Loader';
+
 export const FavoriteRecipe = () => {
   const dispatch = useDispatch();
   const { favorites } = useSelector(state => state.auth);
   const [favoriteRecipesData, setFavoriteRecipesData] = useState([]);
-  console.log(favorites);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 4;
+
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
+
   useEffect(() => {
     const fetchFavoriteRecipesData = async () => {
       const recipeData = [];
@@ -39,11 +45,22 @@ export const FavoriteRecipe = () => {
 
     fetchFavoriteRecipesData();
   }, [favorites]);
-  console.log(favoriteRecipesData, 'test');
+
+  const handlePageChange = newPage => {
+    setCurrentPage(newPage);
+  };
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentFavoriteRecipes = favoriteRecipesData.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
+
   return (
     <div className={styles.containerFavorites}>
-      {favoriteRecipesData.length > 0 ? (
-        favoriteRecipesData.map((recipeData, index) => (
+      {currentFavoriteRecipes.length > 0 ? (
+        currentFavoriteRecipes.map((recipeData, index) => (
           <div key={index} className={styles.favoriteContainer}>
             <img
               alt={recipeData.recipes[0].title}
@@ -76,9 +93,17 @@ export const FavoriteRecipe = () => {
           </div>
         ))
       ) : (
-        <div>Loading...</div>
+        <div className={styles.loaderContainer}>
+          <Loader />
+        </div>
       )}
-      {/* ---------------------------------- */}
+      <div className={styles.pagination}>
+        <Pagination
+          pageCount={Math.ceil(favoriteRecipesData.length / itemsPerPage)}
+          currentPage={currentPage}
+          onPageChange={handlePageChange}
+        />
+      </div>
     </div>
   );
 };

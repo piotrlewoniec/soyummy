@@ -6,7 +6,7 @@ import { Footer } from 'components/Footer/Footer';
 
 export const ShoppingListPage = () => {
   return (
-    <div className={styles.containerShopingList}>
+    <div>
       <Header />
       <MainPageTitle title="Shopping List" />
       <div className={styles.shoppingListContainer}>

@@ -3,8 +3,10 @@ import s from './ingredients.module.css';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchIngredients, fetchOneRecipes } from 'redux/categories/actions';
+import { useTheme } from '../../../components/ToggleSwitch/ThemeContext';
 
 export const Ingr = () => {
+  const { theme } = useTheme();
   const { id } = useParams();
   const dispatch = useDispatch();
   const [dataFetched, setDataFetched] = useState(false);
@@ -47,17 +49,41 @@ export const Ingr = () => {
     <div className={s.title}>
       <div>
         {ajdikiigredientow.map((el, index) => (
-          <div className={s.flexik}>
+          <div className={`${s.flexik} ${theme === 'dark' ? s.darkTheme : ''}`}>
             <div className={s.fl}>
               {' '}
               <img alt={el.ttl} className={s.img} src={el.thb} />
-              <div className={s.ttl}>{el.ttl}</div>
+              <div
+                className={`${s.ttl} ${theme === 'dark' ? s.darkTheme : ''}`}
+              >
+                {el.ttl}
+              </div>
             </div>
             <div className={s.f}>
               {' '}
-              <div className={s.measure}>{measur[index]}</div>
+              <div
+                className={`${s.measure} ${
+                  theme === 'dark' ? s.darkTheme : ''
+                }`}
+              >
+                {measur[index]}
+              </div>
             </div>
-            <input className={s.input} type="checkbox"></input>
+            <div className={s.checkboxContainer}>
+              <input
+                className={`${s.checkbox} ${
+                  theme === 'dark' ? s.darkTheme : ''
+                }`}
+                type="checkbox"
+                id={`ingredientCheckbox-${index}`}
+              />
+              <label
+                htmlFor={`ingredientCheckbox-${index}`}
+                className={`${s.checkboxLabel} ${
+                  theme === 'dark' ? s.darkTheme : ''
+                }`}
+              ></label>
+            </div>
           </div>
         ))}
       </div>

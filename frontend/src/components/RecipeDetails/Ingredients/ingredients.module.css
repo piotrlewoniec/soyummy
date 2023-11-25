@@ -1,54 +1,99 @@
 .title {
   font-size: 30px;
-  /* width: 80%; */
 }
 
 .fl {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 80px;
 }
 
 .flexik {
-  height: 160px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: #8baa36;
-  margin-bottom: 50px;
+  height: 86px;
+  background-color: #ebf3d4;
   width: 80%;
   border-radius: 10px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto 24px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
 }
 .ttl {
-  margin-left: 20px;
-  margin-top: 60px;
-  font-size: 20px;
-}
-.input {
-  /* margin-right: 50px; */
-  height: 40px;
-  width: 40px;
-  margin-top: 60px;
-}
-.measure {
-  margin-top: 60px;
-  font-size: 20px;
-}
-.img {
-  margin-top: 30px;
-  width: 100px;
-  height: 100px;
-}
-.loading {
-  font-size: 30px;
+  text-align: start;
+  margin-top: 70px;
+  font-size: 12px;
+  width: 95px;
 }
 
+.measure {
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 4px;
+  width: 63px;
+  height: 23px;
+  text-align: center;
+  background-color: #8baa36;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img {
+  margin-top: 80px;
+  width: 65px;
+  height: 65px;
+  margin-left: 10px;
+}
+.checkboxContainer {
+  position: relative;
+  margin-top: -20px;
+  margin-right: 40px;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkboxLabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  border: 1px solid #2a2c36;
+  border-radius: 5px;
+}
+
+.checkbox:checked + .checkboxLabel {
+  background-color: transparent;
+  border: 1px solid #2a2c36;
+}
+
+.checkboxLabel:after {
+  content: '\2713';
+  font-size: 15px;
+  color: #4caf50;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkbox:checked + .checkboxLabel:after {
+  opacity: 1;
+}
 @media (min-width: 768px) {
   .title {
     font-size: 30px;
-    /* width: 80%; */
   }
 
   .fl {
@@ -59,37 +104,36 @@
   }
 
   .flexik {
-    height: 160px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #8baa36;
-    margin-bottom: 50px;
-    width: 80%;
-    border-radius: 10px;
-    margin: 0 auto 50px auto;
+    height: 178px;
   }
   .ttl {
-    margin-left: 20px;
-    margin-top: 60px;
+    width: 208px;
+    font-size: 24px;
   }
-  .input {
-    margin-right: 50px;
-    height: 40px;
-    width: 40px;
-    margin-top: 60px;
-  }
+
   .measure {
-    margin-top: 60px;
+    width: 68px;
+    height: 36px;
+    font-size: 18px;
+    margin-right: 90px;
   }
   .img {
-    /* margin-top: 30px; */
-    width: 150px;
-    height: 150px;
-    margin-top: 1px;
+    width: 112px;
+    height: 112px;
+    margin-right: 10px;
+    margin-left: 20px;
   }
-  .loading {
-    font-size: 30px;
+
+  .checkboxContainer {
+    margin-right: 70px;
+  }
+  .checkboxLabel {
+    width: 35px;
+    height: 35px;
+    top: -10px;
+  }
+  .checkboxLabel:after {
+    font-size: 17px;
   }
 }
 @media (min-width: 1280px) and (max-width: 1440px) {
@@ -106,36 +150,35 @@
   }
 
   .flexik {
-    height: 160px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #8baa36;
-    margin-bottom: 50px;
-    width: 80%;
-    border-radius: 10px;
-    margin: 0 auto 50px auto;
+    height: 182px;
   }
   .ttl {
-    margin-left: 20px;
-    margin-top: 60px;
+    margin-right: 300px;
   }
-  .input {
-    margin-right: 50px;
-    height: 40px;
-    width: 40px;
-    margin-top: 60px;
-  }
-  .measure {
-    margin-top: 60px;
-  }
-  .img {
-    margin-top: 1px;
 
-    width: 150px;
-    height: 150px;
+  .img {
+    width: 128px;
+    height: 128px;
   }
-  .loading {
-    font-size: 30px;
+
+  .checkboxContainer {
+    margin-right: 100px;
   }
+}
+
+.flexik.darkTheme {
+  background: #2a2c36;
+}
+.measure.darkTheme {
+  color: #fafafa;
+}
+.ttl.darkTheme {
+  color: #fafafa;
+}
+.checkboxLabel.darkTheme {
+  border: 1px solid #fafafa;
+}
+
+.checkbox:checked + .checkboxLabel.darkTheme {
+  border: 1px solid #fafafa;
 }
