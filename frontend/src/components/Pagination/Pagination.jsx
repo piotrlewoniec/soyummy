@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './Pagination.module.css';
 import icons from '../../assets/icons/icons.svg';
 import { useTheme } from '../../components/ToggleSwitch/ThemeContext';
 
-export const Pagination = () => {
+export const Pagination = ({ currentPage, onPageChange }) => {
   const { theme } = useTheme();
   const [pageCount, setPageCount] = useState(5);
 
@@ -12,6 +12,7 @@ export const Pagination = () => {
       setPageCount(8);
     } else {
       setPageCount(5);
+      onPageChange(1);
     }
   };
 
@@ -21,25 +22,39 @@ export const Pagination = () => {
     return () => {
       window.removeEventListener('resize', updatePageCount);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const renderPageNumbers = () => {
     const pageNumbers = [];
 
     for (let i = 1; i <= pageCount; i++) {
-      pageNumbers.push(i);
+      pageNumbers.push(
+        <span
+          key={i}
+          className={`${styles.pageNumber} ${
+            theme === 'dark' ? styles.darkTheme : ''
+          } ${currentPage === i ? styles.activePage : ''}`}
+          onClick={() => onPageChange(i)}
+        >
+          {i}
+        </span>
+      );
     }
 
-    return pageNumbers.map(pageNumber => (
-      <span
-        key={pageNumber}
-        className={`${styles.pageNumber} ${
-          theme === 'dark' ? styles.darkTheme : ''
-        }`}
-      >
-        {pageNumber}
-      </span>
-    ));
+    return pageNumbers;
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      onPageChange(currentPage - 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < pageCount) {
+      onPageChange(currentPage + 1);
+    }
   };
 
   return (
@@ -48,11 +63,19 @@ export const Pagination = () => {
         theme === 'dark' ? styles.darkTheme : ''
       }`}
     >
-      <svg className={styles.icon} viewBox="0 0 12 12">
+      <svg
+        className={`${styles.icon} ${styles.arrow}`}
+        viewBox="0 0 12 12"
+        onClick={handlePrevPage}
+      >
         <use href={`${icons}#icon-pagination-arrow-left`} />
       </svg>
       {renderPageNumbers()}
-      <svg className={styles.icon} viewBox="0 0 12 12">
+      <svg
+        className={`${styles.icon} ${styles.arrow}`}
+        viewBox="0 0 12 12"
+        onClick={handleNextPage}
+      >
         <use href={`${icons}#icon-pagination-arrow-right`} />
       </svg>
     </div>
