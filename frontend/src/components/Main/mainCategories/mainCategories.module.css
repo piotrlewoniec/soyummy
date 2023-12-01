@@ -84,6 +84,7 @@
   padding: 10px 24px 10px 24px;
   color: #fafafa;
   margin-top: 20px;
+  cursor: pointer;
 }
 .batonFlex {
   display: flex;
@@ -105,6 +106,11 @@
   height: 50px;
   cursor: pointer;
   color: #22252a;
+}
+@media (min-width: 768px) {
+  .margin {
+    margin-top: -400px;
+  }
 }
 @media (min-width: 1280px) {
   .position {

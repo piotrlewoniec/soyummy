@@ -1,14 +1,14 @@
 import Header from 'components/Header/Header';
 import { ChooseYourBreakfast } from './ChooseYourBeakfast/ChooseYourBreakfast';
 import { Search } from './Search/Search';
-import s from './main.module.css';
+
 import { MainData } from './mainCategories/mainCategories';
 
 export const Main = () => {
   return (
-    <div className={s.container}>
+    <div>
       <Header />
-      <div className={s.position}>
+      <div>
         <Search />
         <ChooseYourBreakfast />
         <MainData />

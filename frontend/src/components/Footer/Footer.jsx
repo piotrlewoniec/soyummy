@@ -7,7 +7,11 @@ export const Footer = () => {
   const { theme } = useTheme();
   return (
     <section className={styles.footer}>
-      <div className={styles.container}>
+      <div
+        className={`${styles.container} ${
+          theme === 'dark' ? styles.darkTheme : ''
+        }`}
+      >
         <div className={styles.elements}>
           <div className={styles.description}>
             <div className={styles.descriptionBody}>
@@ -56,7 +60,9 @@ export const Footer = () => {
             </label>
             <button
               id="subscriptionButton"
-              className={styles.subscriptionButton}
+              className={`${styles.subscriptionButton} ${
+                theme === 'dark' ? styles.darkTheme : ''
+              }`}
               type="submit"
             >
               Subscribe
@@ -65,22 +71,38 @@ export const Footer = () => {
         </div>
         <div className={styles.socialsIcons}>
           <a href="https://facebook.com/">
-            <svg className={styles.logoSvg2}>
+            <svg
+              className={`${styles.logoSvg2} ${
+                theme === 'dark' ? styles.darkTheme : ''
+              }`}
+            >
               <use href={`${svgsprite}#icon-facebook`} />
             </svg>
           </a>
           <a href="https://youtube.com/">
-            <svg className={styles.logoSvg2}>
+            <svg
+              className={`${styles.logoSvg2} ${
+                theme === 'dark' ? styles.darkTheme : ''
+              }`}
+            >
               <use href={`${svgsprite}#icon-youtube`} />
             </svg>
           </a>
           <a href="https://twitter.com/">
-            <svg className={styles.logoSvg2}>
+            <svg
+              className={`${styles.logoSvg2} ${
+                theme === 'dark' ? styles.darkTheme : ''
+              }`}
+            >
               <use href={`${svgsprite}#icon-twitter`} />
             </svg>
           </a>
           <a href="https://instagram.com/">
-            <svg className={styles.logoSvg2}>
+            <svg
+              className={`${styles.logoSvg2} ${
+                theme === 'dark' ? styles.darkTheme : ''
+              }`}
+            >
               <use href={`${svgsprite}#icon-instagram`} />
             </svg>
           </a>

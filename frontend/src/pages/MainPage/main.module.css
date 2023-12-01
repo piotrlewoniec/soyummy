@@ -1,6 +1,5 @@
 .container {
   background-image: url('../../assets/images/mainPage/HeroMain-mobile-1x.webp');
-
   background-repeat: no-repeat;
   background-position: top right;
 }
@@ -8,19 +7,18 @@
 .containerback {
   background-image: url('../../assets/images/mainPage/spinach-mobile.webp');
   /* height: 200px; */
-  background-size: auto;
+
   background-repeat: no-repeat;
   /* background-position: 0 0; */
-  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .container {
     background-image: url('../../assets/images/mainPage/HeroMain-tablet-1x.webp');
-    height: 700px;
+
     background-size: auto;
     background-repeat: no-repeat;
     background-position: top right;
-    /* margin: 0 auto; */
+    margin: 0 auto;
   }
   .containerback {
     background-image: url('../../assets/images/mainPage/spinach-tablet.webp');
@@ -43,7 +41,6 @@
   .container {
     background-image: url('../../assets/images/mainPage/HeroMain.webp');
 
-    height: 800px;
     background-size: auto;
     background-repeat: no-repeat;
     background-position: right top;
@@ -59,10 +56,4 @@
     background-position: 0 0;
     margin: 0 auto;
   }
-
-  /* .position {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  } */
 }

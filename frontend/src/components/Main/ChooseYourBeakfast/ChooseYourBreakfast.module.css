@@ -1,7 +1,6 @@
 .seeRecipe {
   /* border: 2px solid black; */
-  padding-left: 12px;
-  padding-top: 12px;
+  padding: 12px;
   width: 225px;
   height: 92px;
   background-color: white;
@@ -19,7 +18,7 @@
 }
 
 .see {
-  margin-left: 60px;
+  margin-left: 120px;
   color: black;
   text-decoration: none;
 }
@@ -28,7 +27,7 @@
 @media (min-width: 768px) {
   .seeRecipe {
     /* border: 2px solid black; */
-    padding: 20px;
+
     width: 261px;
     height: 100px;
     background-color: white;
@@ -67,8 +66,7 @@
   }
 
   .see {
-    margin-left: 140px;
-    margin-top: 10px;
+    margin-left: 200px;
   }
 }
 .arrowIcon {
