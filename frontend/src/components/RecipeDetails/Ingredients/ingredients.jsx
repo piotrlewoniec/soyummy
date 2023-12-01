@@ -14,8 +14,6 @@ export const Ingr = () => {
   const ingredientData = useSelector(state => state.categories.ingr);
   const recipe = useSelector(state => state.categories.oneRecipe);
 
-  //   const state = useSelector(state => state.categories);
-
   useEffect(() => {
     const fetchData = async () => {
       await dispatch(fetchOneRecipes({ id }));
@@ -29,7 +27,7 @@ export const Ingr = () => {
   if (!dataFetched) {
     return <div className={s.loading}>Loading... Please wait.</div>;
   }
-  //   const recipeingr = recipe.map(el => el.ingredients);
+
   console.log('recipe', recipe.ingredients);
   console.log('ingredata', ingredientData);
 
@@ -42,7 +40,6 @@ export const Ingr = () => {
     ajdiki.includes(el._id)
   );
 
-  //   const zwrot = ingredientData.filter(el => el.includes(ajdiki));
   console.log('redd', ajdikiigredientow);
 
   return (
