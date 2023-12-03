@@ -8,13 +8,12 @@ export const IngredientsShoppingList = () => {
   const [selectedIngredients, setSelectedIngredients] = useState([]);
 
   useEffect(() => {
-    // Pobierz z local storage i przypisz do stanu po montowaniu komponentu
     const storedIngredients =
       JSON.parse(localStorage.getItem('selectedIngredients')) || [];
     setSelectedIngredients(
       storedIngredients.map(ingredient => ({
         ...ingredient,
-        measure: (ingredient.measure || '').slice(0, 4), // Ogranicz do maksymalnie 6 znaków
+        measure: (ingredient.measure || '').slice(0, 4),
       }))
     );
   }, []);

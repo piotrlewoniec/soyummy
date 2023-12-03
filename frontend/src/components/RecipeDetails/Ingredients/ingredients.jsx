@@ -26,7 +26,6 @@ export const Ingr = () => {
   }, [dispatch, id]);
 
   useEffect(() => {
-    // Pobierz z local storage i przypisz do stanu po montowaniu komponentu
     const storedIngredients =
       JSON.parse(localStorage.getItem('selectedIngredients')) || [];
     setSelectedIngredients(storedIngredients);
@@ -34,15 +33,31 @@ export const Ingr = () => {
 
   const handleCheckboxChange = index => {
     const selectedIngredient = ajdikiigredientow[index];
-    const updatedSelectedIngredients = [
-      ...selectedIngredients,
-      { ...selectedIngredient, measure: measur[index] },
-    ];
-    setSelectedIngredients(updatedSelectedIngredients);
-    localStorage.setItem(
-      'selectedIngredients',
-      JSON.stringify(updatedSelectedIngredients)
+
+    const isAlreadySelected = selectedIngredients.some(
+      ingredient => ingredient._id === selectedIngredient._id
     );
+
+    if (!isAlreadySelected) {
+      const updatedSelectedIngredients = [
+        ...selectedIngredients,
+        { ...selectedIngredient, measure: measur[index] },
+      ];
+      setSelectedIngredients(updatedSelectedIngredients);
+      localStorage.setItem(
+        'selectedIngredients',
+        JSON.stringify(updatedSelectedIngredients)
+      );
+    } else {
+      const updatedSelectedIngredients = selectedIngredients.filter(
+        ingredient => ingredient._id !== selectedIngredient._id
+      );
+      setSelectedIngredients(updatedSelectedIngredients);
+      localStorage.setItem(
+        'selectedIngredients',
+        JSON.stringify(updatedSelectedIngredients)
+      );
+    }
   };
 
   if (!dataFetched) {
