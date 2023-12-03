@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import s from './ingredients.module.css';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,6 +10,7 @@ export const Ingr = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const [dataFetched, setDataFetched] = useState(false);
+  const [selectedIngredients, setSelectedIngredients] = useState([]);
 
   const ingredientData = useSelector(state => state.categories.ingr);
   const recipe = useSelector(state => state.categories.oneRecipe);
@@ -24,31 +25,46 @@ export const Ingr = () => {
     fetchData();
   }, [dispatch, id]);
 
+  useEffect(() => {
+    // Pobierz z local storage i przypisz do stanu po montowaniu komponentu
+    const storedIngredients =
+      JSON.parse(localStorage.getItem('selectedIngredients')) || [];
+    setSelectedIngredients(storedIngredients);
+  }, []);
+
+  const handleCheckboxChange = index => {
+    const selectedIngredient = ajdikiigredientow[index];
+    const updatedSelectedIngredients = [
+      ...selectedIngredients,
+      { ...selectedIngredient, measure: measur[index] },
+    ];
+    setSelectedIngredients(updatedSelectedIngredients);
+    localStorage.setItem(
+      'selectedIngredients',
+      JSON.stringify(updatedSelectedIngredients)
+    );
+  };
+
   if (!dataFetched) {
     return <div className={s.loading}>Loading... Please wait.</div>;
   }
 
-  console.log('recipe', recipe.ingredients);
-  console.log('ingredata', ingredientData);
-
   const ajdiki = recipe.ingredients.map(el => el.id);
   const measur = recipe.ingredients.map(el => el.measure);
-  console.log('measure', measur);
-  console.log('ajdiki', ajdiki);
 
   const ajdikiigredientow = ingredientData.filter(el =>
     ajdiki.includes(el._id)
   );
 
-  console.log('redd', ajdikiigredientow);
-
   return (
     <div className={s.title}>
       <div>
         {ajdikiigredientow.map((el, index) => (
-          <div className={`${s.flexik} ${theme === 'dark' ? s.darkTheme : ''}`}>
+          <div
+            key={el._id}
+            className={`${s.flexik} ${theme === 'dark' ? s.darkTheme : ''}`}
+          >
             <div className={s.fl}>
-              {' '}
               <img alt={el.ttl} className={s.img} src={el.thb} />
               <div
                 className={`${s.ttl} ${theme === 'dark' ? s.darkTheme : ''}`}
@@ -57,7 +73,6 @@ export const Ingr = () => {
               </div>
             </div>
             <div className={s.f}>
-              {' '}
               <div
                 className={`${s.measure} ${
                   theme === 'dark' ? s.darkTheme : ''
@@ -73,6 +88,10 @@ export const Ingr = () => {
                 }`}
                 type="checkbox"
                 id={`ingredientCheckbox-${index}`}
+                onChange={() => handleCheckboxChange(index)}
+                checked={selectedIngredients.some(
+                  ingredient => ingredient._id === el._id
+                )}
               />
               <label
                 htmlFor={`ingredientCheckbox-${index}`}
