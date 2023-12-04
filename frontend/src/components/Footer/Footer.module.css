@@ -484,3 +484,12 @@ label {
 .a.darkTheme {
   color: #fafafa;
 }
+.container.darkTheme {
+  background-color: #8baa36;
+}
+.subscriptionButton.darkTheme {
+  background-color: #1e1f28;
+}
+.logoSvg2.darkTheme {
+  fill: #ebf3d4;
+}

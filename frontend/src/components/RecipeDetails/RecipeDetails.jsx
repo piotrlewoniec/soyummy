@@ -1,6 +1,5 @@
-import { useDispatch, useSelector } from 'react-redux';
-import s from './RecipeDetails.module.css';
 import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { fetchIngredients, fetchOneRecipes } from 'redux/categories/actions';
 import { useParams } from 'react-router-dom';
 import Header from 'components/Header/Header';
@@ -8,6 +7,9 @@ import { Footer } from 'components/Footer/Footer';
 import { Ingr } from './Ingredients/ingredients';
 import { Loader } from '../../components/Loader/Loader';
 import { useTheme } from '../../components/ToggleSwitch/ThemeContext';
+import { useSelector } from 'react-redux';
+import s from './RecipeDetails.module.css';
+
 export const RecipeDetails = () => {
   const { theme } = useTheme();
   const { id } = useParams();
@@ -40,6 +42,23 @@ export const RecipeDetails = () => {
   const instructions = recipe.instructions;
   const steps = instructions.split('\r\n');
 
+  const handleAddToFavorites = () => {
+    const currentFavorites =
+      JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
+
+    const isAlreadyFavorite = currentFavorites.some(
+      favorite => favorite._id === recipe._id
+    );
+
+    if (!isAlreadyFavorite) {
+      currentFavorites.push({ _id: recipe._id, title: recipe.title });
+      localStorage.setItem('favoriteRecipes', JSON.stringify(currentFavorites));
+      alert('Recipe added to favorites!');
+    } else {
+      alert('Recipe is already in favorites!');
+    }
+  };
+
   return (
     <div>
       <div className={s.bg}>
@@ -49,7 +68,9 @@ export const RecipeDetails = () => {
         <div className={s.recipe}>
           <div className={s.title}>{recipe.title}</div>
           <div className={s.desc}>{recipe.description}</div>
-          <button className={s.btnplace}>Add to favorite recipes</button>
+          <button className={s.btnplace} onClick={handleAddToFavorites}>
+            Add to favorite recipes
+          </button>
           <div className={s.bgclock}>
             <div className={s.clock}></div>
             <span className={s.span}>{recipe.time}'</span>

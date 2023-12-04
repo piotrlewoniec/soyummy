@@ -12,13 +12,10 @@ export const Main = () => {
     <div className={s.container}>
       <div className={s.containerback}>
         <Header />
-        <div className={s.position}>
-          <Search />
-          <ChooseYourBreakfast />
-
-          <MainData />
-          <Footer />
-        </div>
+        <Search />
+        <ChooseYourBreakfast />
+        <MainData />
+        <Footer />
       </div>
     </div>
   );
