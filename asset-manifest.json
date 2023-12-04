@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2be6c0c5.css",
-    "main.js": "/static/js/main.014ca584.js",
+    "main.css": "/static/css/main.91f7e0a2.css",
+    "main.js": "/static/js/main.9f6bbe5d.js",
     "static/media/descgarden.png": "/static/media/descgarden.e4f02a0c3f7c51f56909.png",
     "static/media/spinach-background-image@x3.png": "/static/media/spinach-background-image@x3.0538344c9446f7f1c69f.png",
     "static/media/wellcomePage-desktop@3x.jpg": "/static/media/wellcomePage-desktop@3x.ec0298f5e0856a8bf3cf.jpg",
@@ -53,18 +53,16 @@
     "static/media/Order-food-pana-mobile@1x.png": "/static/media/Order-food-pana-mobile@1x.ee984acfa4a383bda73e.png",
     "static/media/spinachMenu-mobile@1x.png": "/static/media/spinachMenu-mobile@1x.aaa24fe2c9eb44d5ba6a.png",
     "static/media/icons.svg": "/static/media/icons.e4b3131f8e4b21e53cf10baf6aa9917b.svg",
-    "static/media/3.png": "/static/media/3.2675e09bc64a1d5a44d7.png",
     "static/media/spinach-tablet.webp": "/static/media/spinach-tablet.273d1e83ebb1f8b09401.webp",
     "static/media/404-mobile@1x.png": "/static/media/404-mobile@1x.a837b8c29c3be2ab6b4a.png",
-    "static/media/2.png": "/static/media/2.c9884021d8b5901962ee.png",
     "static/media/Rectangle-8970-tablet@3x.png": "/static/media/Rectangle-8970-tablet@3x.d8dba5e62e9fbeb8691e.png",
     "static/media/spinach-mobile.webp": "/static/media/spinach-mobile.fcf80e39aba42eb2c439.webp",
     "index.html": "/index.html",
-    "main.2be6c0c5.css.map": "/static/css/main.2be6c0c5.css.map",
-    "main.014ca584.js.map": "/static/js/main.014ca584.js.map"
+    "main.91f7e0a2.css.map": "/static/css/main.91f7e0a2.css.map",
+    "main.9f6bbe5d.js.map": "/static/js/main.9f6bbe5d.js.map"
   },
   "entrypoints": [
-    "static/css/main.2be6c0c5.css",
-    "static/js/main.014ca584.js"
+    "static/css/main.91f7e0a2.css",
+    "static/js/main.9f6bbe5d.js"
   ]
 }
